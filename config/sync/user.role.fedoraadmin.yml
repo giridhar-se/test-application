@@ -1,0 +1,46 @@
+uuid: 562ed874-38cf-4a77-962a-2f21f755d96e
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.document
+    - node.type.ksul_front_page
+  module:
+    - context_ui
+    - contextual
+    - entity_reference_revisions
+    - media
+    - node
+    - paragraphs
+    - paragraphs_type_permissions
+    - pathauto
+_core:
+  default_config_hash: e6W733rBSNmewsIQsvWQ-8mIE5H-CIeArLBwIbN5vVQ
+id: fedoraadmin
+label: fedoraAdmin
+weight: 3
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'administer contexts'
+  - 'administer paragraphs settings'
+  - 'administer paragraphs types'
+  - 'administer pathauto'
+  - 'bypass paragraphs type content access'
+  - 'create document media'
+  - 'create ksul_front_page content'
+  - 'delete any document media'
+  - 'delete any ksul_front_page content'
+  - 'delete ksul_front_page revisions'
+  - 'delete orphan revisions'
+  - 'delete own document media'
+  - 'delete own ksul_front_page content'
+  - 'edit any document media'
+  - 'edit any ksul_front_page content'
+  - 'edit behavior plugin settings'
+  - 'edit own document media'
+  - 'edit own ksul_front_page content'
+  - 'notify of path changes'
+  - 'revert ksul_front_page revisions'
+  - 'view ksul_front_page revisions'
+  - 'view unpublished paragraphs'

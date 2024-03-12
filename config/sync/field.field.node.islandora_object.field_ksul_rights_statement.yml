@@ -1,0 +1,22 @@
+uuid: d370fefd-4e9a-4047-99d9-f7fce19a29d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ksul_rights_statement
+    - node.type.islandora_object
+  module:
+    - text
+id: node.islandora_object.field_ksul_rights_statement
+field_name: field_ksul_rights_statement
+entity_type: node
+bundle: islandora_object
+label: 'KSUL Rights Statement'
+description: "Rights Statement is a field created by KSUL and is a statement regarding the use, reproduction, restriction, and access of the object.\r\nWhen creating rights statements, please refer to the Rights Statements Guidelines.\r\n<a href=\"https://staffnet.lib.k-state.edu/display/IS/Rights+Statements+Guidelines> Guildlines</a>\r\n<a href=\"https://staffnet.lib.k-state.edu/display/IS/Important+Metadata+Fields+in+Islandora>Metadata Notes</a>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,11 @@
+uuid: 26a745fa-21ed-4905-bde6-1b9cc7f2d123
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ksul_front_page
+id: node.ksul_front_page
+target_entity_type_id: node
+target_bundle: ksul_front_page
+default_langcode: site_default
+language_alterable: false

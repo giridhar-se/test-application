@@ -1,0 +1,98 @@
+uuid: 09a9ee12-66b5-4393-b7bc-6bfed2ffd942
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.default_solr_index
+    - views.view.solr_search_content
+  module:
+    - search_api
+id: facet_summary
+name: 'Facet Summary'
+facet_source_id: 'search_api:views_page__solr_search_content__page_1'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '45'
+    settings: {  }
+  reset_facets:
+    processor_id: reset_facets
+    weights:
+      build: '30'
+    settings:
+      link_text: Clear
+      position: after
+  show_count:
+    processor_id: show_count
+    weights:
+      build: '5'
+    settings: {  }
+  show_summary:
+    processor_id: show_summary
+    weights:
+      build: '20'
+    settings: {  }
+  show_text_when_empty:
+    processor_id: show_text_when_empty
+    weights:
+      build: '10'
+    settings:
+      text:
+        value: 'No results found.'
+        format: plain_text
+facets:
+  author_name:
+    checked: true
+    label: 'Author name'
+    separator: ', '
+    show_count: true
+    weight: 0
+  date_created:
+    checked: true
+    label: 'Date Created'
+    separator: ', '
+    show_count: true
+    weight: 0
+  date_issued:
+    checked: true
+    label: 'Date Issued'
+    separator: ', '
+    show_count: true
+    weight: 0
+  genre:
+    checked: true
+    label: Genre
+    separator: ', '
+    show_count: true
+    weight: 0
+  member_of:
+    checked: true
+    label: 'Member of'
+    separator: ', '
+    show_count: true
+    weight: 0
+  model:
+    checked: true
+    label: Model
+    separator: ', '
+    show_count: true
+    weight: 0
+  physical_form:
+    checked: true
+    label: 'Physical Form'
+    separator: ', '
+    show_count: true
+    weight: 0
+  subject:
+    checked: true
+    label: Subject
+    separator: ', '
+    show_count: true
+    weight: 0
+  subject_name:
+    checked: true
+    label: 'Subject Name'
+    separator: ', '
+    show_count: true
+    weight: 0

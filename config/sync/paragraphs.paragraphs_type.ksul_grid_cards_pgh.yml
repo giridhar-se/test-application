@@ -1,0 +1,10 @@
+uuid: 3bfa244b-eab7-426a-8af8-e1b73a875e8d
+langcode: en
+status: true
+dependencies: {  }
+id: ksul_grid_cards_pgh
+label: 'KSUL grid cards pgh'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

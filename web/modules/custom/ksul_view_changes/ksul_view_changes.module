@@ -1,0 +1,304 @@
+<?php
+
+/**
+ * @file
+ * Contains ksul_view_changes module
+*/
+
+use Drupal\Component\Utility\UrlHelper;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormState;
+use Drupal\Core\Link;
+use Drupal\Core\Render\Element\RenderElement;
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Url;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Views;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\node\NodeInterface;
+use Drupal\islandora\IslandoraUtils;
+use Drupal\group\Entity\GroupContent;
+use Drupal\media\MediaInterface;
+
+/**
+ * Implements hook_entity_view_mode_alter().
+ */
+function ksul_view_changes_entity_view_mode_alter(&$view_mode, EntityInterface $entity, $context) {
+  // Check if the entity is of type "node" and the content type is "Repository Item".
+  if ($entity->getEntityTypeId() === 'node' && $entity->bundle() === 'islandora_object') {
+    // Get the value of the "Model" field.
+    $model_value = $entity->get('field_model');
+    
+    // Define your logic for setting the view mode based on the "Model" field value.
+    // For example, if the Model field value is "Collection(45)", set the view mode to "collection".
+    if ($model_value == 45) {
+      $view_mode = 'collection';
+    }
+    // Repeat for other Model field values and corresponding view modes as needed.
+  }
+  dpm($model_value);
+}
+
+/**
+ * Overrides theme to add additional classes for styling
+ *
+ * @param $variables
+ */
+function ksul_view_changes_preprocess_views_view_unformatted(&$variables) {
+  $is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
+  if (!$is_admin) {
+    // Default
+    $variables['additional_classes'] = 'view-list';
+    $currentDisplay = \Drupal::request()->query->get('display') ?? 'list';
+    $variables['additional_classes'] = "view-{$currentDisplay}";
+
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node) {
+      if (!($node instanceof \Drupal\node\NodeInterface)) {
+        $node = \Drupal\node\Entity\Node::load($node);
+      }
+    }
+    foreach ($variables['rows'] as $result_index => $item) {
+      // Create attributes for rows.
+      if ($variables['rows'][$result_index]['attributes']) {
+        $row_attributes = [
+          'class' => []
+        ];
+      }
+      if (isset($variables['rows'][$result_index]['content']['#row'])) {
+        if ($node && $variables['rows'][$result_index]['content']['#row']->nid == $node->id()) {
+          $row_attributes['class'] = array_merge($row_attributes['class'], ['view-members__item--is-active']);
+          // Add custom row classes.
+          $variables['rows'][$result_index]['attributes'] = new Attribute($row_attributes);
+        }
+      }
+    }
+    // Get facets to make them available for theme files using twig tweak
+    $facetsource_id = ['views_block__solr_search_content__block_1', 'views_page__solr_search_content__page_1'];
+    /** @var Drupal\facets\FacetManager\DefaultFacetManager $resources */
+    $default_facets_namespace = 'search_api';
+    $variables['facets'] = null;
+    $view = $variables['view'];
+    $view->initHandlers();
+    $form_state = new FormState();
+    $form_state->setFormState([
+      'view' => $view,
+      'display' => $view->display_handler->display,
+      'exposed_form_plugin' => $view->display_handler->getPlugin('exposed_form'),
+      'method' => 'get',
+      'rerender' => TRUE,
+      'no_redirect' => TRUE,
+      'always_process' => TRUE,
+    ]);
+    $variables['facets'] = \Drupal::formBuilder()->buildForm('Drupal\views\Form\ViewsExposedForm', $form_state);
+
+    // Set pager if we have more than 1 page
+    if (!empty($variables['view']->getPager()->total_items) && !empty( $variables['view']->getPager()->options['items_per_page'] )) {
+      if (($variables['view']->getPager()->total_items / $variables['view']->getPager()->options['items_per_page']) > 1) {
+        $variables['bottom_pager'] = $variables['view']->renderPager($variables['view']->getExposedInput());
+      }
+    }
+    $variables['#attached']['library'][] = 'field_group/element.horizontal_tabs';
+    $variables['bottom_sort'] = _get_sort_options(2);
+  }
+}
+
+/**
+ * Return default sort dropdown
+ *
+ * @return array
+ */
+function _get_sort_options($unique_index = 1) {
+  $defaultSelectedDirectionValue = (\Drupal::request()->query->get('sort_order') === 'ASC') ? 'up' : 'down';
+  $defaultSelectedFieldValue = (!empty(\Drupal::request()->query->get('sort_by'))) ? \Drupal::request()->query->get('sort_by') : 'field_date_created';
+  if ( ! \Drupal::service('router.admin_context')->isAdminRoute() ) {
+    return  [
+      '#type' => 'select',
+      '#title' => t('Sort Options'),
+      '#label_attributes' => [
+        'class' => ['visually-hidden'],
+        'for' => "sort_order_$unique_index",
+      ],
+      '#wrapper_attributes' => ['class' => ['sort__container']],
+      '#options' =>
+        [
+          'relevance_up' => t('Relevance ↑'),
+          'relevance_down' => t('Relevance ↓'),
+          'field_edtf_date_created_up' => t('Created ↑'),
+          'field_edtf_date_created_down' => t('Created ↓'),
+          'title_up' => t('Title ↑'),
+          'title_down' => t('Title ↓'),
+        ],
+      '#options_attributes' => [
+        'relevance_up' => [
+          'data-sort_by' => 'search_api_relevance',
+          'data-sort_order' => 'ASC',
+        ],
+        'relevance_down' => [
+          'data-sort_by' => 'search_api_relevance',
+          'data-sort_order' => 'DESC',
+        ],
+        'field_edtf_date_created_up' => [
+          'data-sort_by' => 'field_edtf_date_created',
+          'data-sort_order' => 'ASC',
+        ],
+        'field_edtf_date_created_down' => [
+          'data-sort_by' => 'field_edtf_date_created',
+          'data-sort_order' => 'DESC',
+        ],
+        'title_up' => [
+          'data-sort_by' => 'title',
+          'data-sort_order' => 'ASC',
+        ],
+        'title_down' => [
+          'data-sort_by' => 'title',
+          'data-sort_order' => 'DESC',
+        ],
+      ],
+      '#attributes' => [
+        'autocomplete' => 'off',
+        'id' => "sort_order_$unique_index",
+      ],
+      '#name' => 'sort_order',
+      '#value' => "{$defaultSelectedFieldValue}_{$defaultSelectedDirectionValue}",
+    ];
+  } else {
+    return [];
+  }
+}
+
+/**
+ * Implements hook_entity_extra_field_info
+ * Defines Permalink field
+ * @return array
+ */
+function ksul_view_changes_entity_extra_field_info() {
+    $extra_field = [];
+    $extra_field['node']['islandora_object']['display']['permalink_uri'] = [
+      'label' => t('Permalink:'),
+      'description' => t('The Permalink URI to the object'),
+      'weight' => 100,
+      'visible' => TRUE,
+    ];
+    $extra_field['node']['islandora_object']['display']['openseadragon'] = [
+      'label' => t('OpenseaDragon Block as a field'),
+      'description' => t('Passthrough for the OpenseaDragon block to behave as a field'),
+      'weight' => 100,
+      'visible' => TRUE,
+    ];
+    $extra_field['node']['islandora_object']['display']['metadata'] = [
+      'label' => t('Metadata Tabs'),
+      'description' => t('Loads metadata from the metadata/metadata-parent view modes into a field'),
+      'weight' => 100,
+      'visible' => TRUE,
+    ];
+    $extra_field['node']['islandora_object']['display']['metadata_pages'] = [
+      'label' => t('Metadata Tabs + Pages'),
+      'description' => t('Loads metadata  view modes into a field + pages if there\'s any'),
+      'weight' => 100,
+      'visible' => TRUE,
+    ];
+    $extra_field['node']['islandora_object']['display']['object_navigation'] = [
+      'label' => t('Parent, pages and current object navigation'),
+      'description' => t('Display a set of links (3) that gives users the option to navigate to the parent object, children and more'),
+      'weight' => 100,
+      'visible' => TRUE,
+    ];
+    return $extra_field;
+  }
+
+    /**
+     * Implements hook_entity_view().
+     */
+
+function ksul_view_changes_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+
+  // Check for specific view mode to bypass permalink generation
+  if ($view_mode === 'fgsc_strain_thumbnails' || $view_mode === 'search_index' || $view_mode == 'teaser') {
+    return; // Exit the function if the view mode is 'fgsc_strain_thumbnails'
+  }
+
+  if ($entity->getEntityType()->id() === 'node' && $entity->bundle() === 'islandora_object' && $entity->hasField('field_fgsc_member') && $entity->get('field_fgsc_member')->value == TRUE) {
+    // Specific logic for "Repository Item" with fgsc_member = TRUE
+    $itemIdentifier = str_replace(' ', '%20', $entity->label()); // Proper encoding for URL
+    $urlPath = '/deposit/' . $itemIdentifier;
+
+    $options = ['absolute' => TRUE];
+    $url_object = Drupal\Core\Url::fromUri('internal:' . $urlPath, $options);
+
+    $build['permalink_uri'] = [
+      '#type' => 'container',
+      '#attributes' => ['id' => 'field-permalink-uri'],
+      'internal_label' => [
+        '#type' => 'item',
+        '#title' => t('Permalink:'),
+        'internal_uri' => [
+          '#type' => 'link',
+          '#title' => t("@url", ['@url' => $url_object->toString()]),
+          '#url' => $url_object,
+        ],
+      ],
+    ];
+  } else {
+    // Original logic for all other cases
+    if ($display->getComponent('permalink_uri')) {
+      $options = ['absolute' => TRUE];
+      $url_object = Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $entity->id()], $options);
+      $build['permalink_uri'] = [
+        '#type' => 'container',
+        '#attributes' => ['id' => 'field-permalink-uri'],
+        'internal_label' => [
+          '#type' => 'item',
+          '#title' => t('Permalink:'),
+          'internal_uri' => [
+            '#type' => 'link',
+            '#title' => t("@url", ['@url' => $url_object->toString()]),
+            '#url' => $url_object
+          ],
+        ],
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_node_view_alter() to modify specific URLs in node links.
+ */
+function ksul_view_changes_node_view_alter(array &$build, Drupal\Core\Entity\EntityInterface $entity, Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+  // Check if the node is of type 'islandora_object'
+  if ($entity->bundle() === 'islandora_object') {
+    // Initialize a flag to indicate whether the URL should be rewritten
+    $rewrite_url = FALSE;
+
+    // Check if the title contains 'FGSC'
+    if (stripos($entity->getTitle(), 'FGSC') !== FALSE) {
+      $rewrite_url = TRUE;
+    }
+
+    // Check if the 'field_member_of' is set to node ID 1153
+    $field_member_of = $entity->get('field_member_of')->getValue();
+    $field_member_of_target_id = $field_member_of ? reset($field_member_of)['target_id'] : NULL;
+    if ($field_member_of_target_id == 1153) {
+      $rewrite_url = TRUE;
+    }
+  
+
+    // Proceed to rewrite URLs if either condition is met
+    if ($rewrite_url && isset($build['links']['node']['#links']) && is_array($build['links']['node']['#links'])) {
+      foreach ($build['links']['node']['#links'] as &$link) {
+        // replace with the node title in a URL-friendly format
+        $node_title_sanitized = Drupal\Component\Utility\Html::cleanCssIdentifier(strtolower($entity->label()));
+
+        // Replace '/item/fgsc-' with '/deposit/{node_title}'
+        if (isset($link['url'])) {
+          $newUrl = '/deposit/' . $node_title_sanitized;
+          $link['url'] = Drupal\Core\Url::fromUri('internal:' . $newUrl, ['absolute' => TRUE]);
+        }
+      }
+    }
+  }
+  
+}
+
+

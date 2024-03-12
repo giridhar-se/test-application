@@ -1,0 +1,9 @@
+/**
+ * @file
+ * Theme styling for tabs.
+ * from barrio
+ */
+
+nav.tabs {
+  margin-bottom: 1rem;
+}

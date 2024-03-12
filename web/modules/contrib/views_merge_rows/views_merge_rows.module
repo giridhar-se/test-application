@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for the Views Merge Rows module.
+ */
+
+declare(strict_types = 1);
+
+use Drupal\views\ViewExecutable;
+use Drupal\views_merge_rows\HookHandler\ViewsPreRenderHookHandler;
+
+/**
+ * Implements hook_theme().
+ */
+function views_merge_rows_theme(array $existing, string $type, string $theme, string $path) : array {
+  return [
+    'merge_rows_theme' => [
+      'render element' => 'form',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_views_pre_render().
+ *
+ * Merges the rows according to the settings for current display.
+ */
+function views_merge_rows_views_pre_render(ViewExecutable $view) : void {
+  /** @var \Drupal\views_merge_rows\HookHandler\ViewsPreRenderHookHandler $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(ViewsPreRenderHookHandler::class);
+  $instance->process($view);
+}

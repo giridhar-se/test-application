@@ -1,0 +1,31 @@
+uuid: 6385a143-7f10-4200-9427-787018c59036
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grid
+    - node.type.ksul_front_page
+    - paragraphs.paragraphs_type.ksul_grid_cards_pgh
+  module:
+    - entity_reference_revisions
+id: node.ksul_front_page.field_grid
+field_name: field_grid
+entity_type: node
+bundle: ksul_front_page
+label: Grid
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ksul_grid_cards_pgh: ksul_grid_cards_pgh
+    negate: 0
+    target_bundles_drag_drop:
+      ksul_grid_cards_pgh:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

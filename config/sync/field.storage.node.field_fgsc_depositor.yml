@@ -1,0 +1,25 @@
+uuid: 0367c3a2-b9ca-4e98-ad2f-bb2c1803fd75
+langcode: en
+status: true
+dependencies:
+  module:
+    - controlled_access_terms
+    - field_permissions
+    - node
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_fgsc_depositor
+field_name: field_fgsc_depositor
+entity_type: node
+type: typed_relation
+settings:
+  target_type: taxonomy_term
+module: controlled_access_terms
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

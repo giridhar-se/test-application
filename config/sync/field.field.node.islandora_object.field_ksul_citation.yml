@@ -1,0 +1,19 @@
+uuid: 0822ac9c-8949-4a23-bd3b-3a3a76846b66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ksul_citation
+    - node.type.islandora_object
+id: node.islandora_object.field_ksul_citation
+field_name: field_ksul_citation
+entity_type: node
+bundle: islandora_object
+label: Citation
+description: "Citation is a field created by KSUL and is a bibliographic citation that provides relevant information about the resource and is intended to be included in a user's bibliographic information for future reference.\r\nCitations should be written in the following format: \"[title]\". [collection title], [Department/Source of Collection (Most likely \"Morse Department of Special Collections\"], Kansas State University Libraries. Available digitally at [handle link]."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

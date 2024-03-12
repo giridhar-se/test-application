@@ -1,0 +1,51 @@
+uuid: 6780d427-5b6b-41f8-92d8-75bfccbc455a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ksul_grid_cards_pgh.field_image
+    - field.field.paragraph.ksul_grid_cards_pgh.field_link
+    - field.field.paragraph.ksul_grid_cards_pgh.field_title
+    - paragraphs.paragraphs_type.ksul_grid_cards_pgh
+  module:
+    - image
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.ksul_grid_cards_pgh.default
+targetEntityType: paragraph
+bundle: ksul_grid_cards_pgh
+mode: default
+content:
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  layout_builder__layout: true
+  search_api_excerpt: true

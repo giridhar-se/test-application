@@ -1,0 +1,21 @@
+uuid: 4d57ed79-607e-46de-956b-786756d52035
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_of_deposit
+    - node.type.islandora_object
+  module:
+    - controlled_access_terms
+id: node.islandora_object.field_date_of_deposit
+field_name: field_date_of_deposit
+entity_type: node
+bundle: islandora_object
+label: 'Date of Deposit'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: edtf

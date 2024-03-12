@@ -1,0 +1,16 @@
+uuid: bc9ce9f2-60ef-4c8c-845f-144b2063ce09
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.fgsc_depositors
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.fgsc_depositors
+target_entity_type_id: taxonomy_term
+target_bundle: fgsc_depositors
+default_langcode: site_default
+language_alterable: false

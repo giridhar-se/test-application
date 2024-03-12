@@ -1,0 +1,11 @@
+uuid: e4271368-72d1-43db-a99f-36baad8f29e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.paged
+label: Paged
+description: 'Provides a display for FGDC Content for the full record, designed to have pagination for sister/child records'
+targetEntityType: node
+cache: true

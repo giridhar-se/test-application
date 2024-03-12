@@ -1,0 +1,24 @@
+  <form id="search-header-form">
+    <div class="pagination_option_label__container">
+      <dl>
+        <dt class="pagination_option_label">{{ 'Results per page'|t }}</dt>
+        {% for key, item_number in items_per_page %}
+          <dd class="pagination_option_item">{{ link( key , item_number.value, {'class': ['pagination_option_item__link',  item_number.class ]}) }}</dd>
+        {% endfor %}
+      </dl>
+    </div>
+    <div class="display_selector__container">
+      <a href="{{ links.list.value }}" class="{{ links.list.class }}"><i class="fa fa-list" aria-hidden="true">&nbsp;</i>{{ 'List'|t }}</a>
+      <a href="{{ links.grid.value }}" class="{{ links.grid.class }}"><i class="fa fa-th" aria-hidden="true">&nbsp;</i>{{ 'Grid'|t }}</a>
+    </div>
+    {% if exposedFilters %}
+    <div class="exposed-filters">
+      {{ exposedFilters }}
+    </div>
+    {% endif %}
+    {% if pager %}
+    <div class="exposed-pager">
+      {{ pager }}
+    </div>
+    {% endif %}
+  </form>

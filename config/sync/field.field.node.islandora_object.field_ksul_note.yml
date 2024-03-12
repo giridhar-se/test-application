@@ -1,0 +1,19 @@
+uuid: dbbb6623-20e9-41cb-a81e-8f89bb05abc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ksul_note
+    - node.type.islandora_object
+id: node.islandora_object.field_ksul_note
+field_name: field_ksul_note
+entity_type: node
+bundle: islandora_object
+label: 'KSUL Note'
+description: "The KSUL Note field is a field created by KSUL and contains information that is helpful for metadata creators and editors. This field contains more detailed information about the object/record than the general Note field, and is intended to contain information that is used from a back-end perspective. The KSUL Notes field can contain a variety of information such as:\r\nInformation for KSUL workers regarding redactions/additions/modifications of a record/item that aids in the continued use and preservation of the record\r\nInformation about embargo dates\r\n\r\n<a href=\"https://staffnet.lib.k-state.edu/display/IS/Important+Metadata+Fields+in+Islandora\"> Islandora Metadata</a>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

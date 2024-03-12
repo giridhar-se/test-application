@@ -1,0 +1,21 @@
+uuid: 373c702f-d998-473b-b2e4-e76ee7279b97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fgsc_member
+    - node.type.islandora_object
+id: node.islandora_object.field_fgsc_member
+field_name: field_fgsc_member
+entity_type: node
+bundle: islandora_object
+label: 'FGSC Member'
+description: 'Is this record a member of the FGSC repository information.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: 5895de4c-9a25-4c58-8eba-54e8c118d404
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.ksul_grid_cards_pgh
+id: paragraph.ksul_grid_cards_pgh.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: ksul_grid_cards_pgh
+label: Title
+description: 'Label of card'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

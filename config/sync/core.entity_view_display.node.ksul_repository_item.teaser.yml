@@ -1,0 +1,83 @@
+uuid: 22f1f775-b566-4237-b8a7-4f7c9818b0e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ksul_repository_item.field_abstract
+    - field.field.node.ksul_repository_item.field_alt_title
+    - field.field.node.ksul_repository_item.field_classification
+    - field.field.node.ksul_repository_item.field_coordinates
+    - field.field.node.ksul_repository_item.field_ksul_citation
+    - node.type.ksul_repository_item
+  module:
+    - user
+id: node.ksul_repository_item.teaser
+targetEntityType: node
+bundle: ksul_repository_item
+mode: teaser
+content:
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_service_file:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  pdfjs_media_evas_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  show_title:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  created: true
+  field_abstract: true
+  field_alt_title: true
+  field_classification: true
+  field_coordinates: true
+  field_ksul_citation: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

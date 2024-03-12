@@ -1,0 +1,19 @@
+uuid: d61f52e3-ebe9-48c9-a3bc-8753c4095895
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ksul_citation
+    - node.type.ksul_repository_item
+id: node.ksul_repository_item.field_ksul_citation
+field_name: field_ksul_citation
+entity_type: node
+bundle: ksul_repository_item
+label: Citation
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

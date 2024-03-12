@@ -1,0 +1,26 @@
+uuid: 6b096f5c-2beb-4b00-afb9-3222689dd5e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+    - system
+  theme:
+    - kstate_theme
+id: kstate_theme_messages
+theme: kstate_theme
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

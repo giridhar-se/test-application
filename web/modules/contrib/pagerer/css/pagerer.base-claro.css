@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Pagerer base CSS for Claro.
+ */
+
+li.pager__item.pagerer-separator,
+li.pager__item.pagerer-breaker,
+li.pager__item.pagerer-prefix,
+li.pager__item.pagerer-suffix {
+  background: none;
+}

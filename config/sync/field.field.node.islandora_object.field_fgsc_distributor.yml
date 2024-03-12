@@ -1,0 +1,33 @@
+uuid: ac43849c-a72e-45d8-ab01-b052f64f3244
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fgsc_distributor
+    - node.type.islandora_object
+    - taxonomy.vocabulary.fgsc_depositors
+  module:
+    - controlled_access_terms
+id: node.islandora_object.field_fgsc_distributor
+field_name: field_fgsc_distributor
+entity_type: node
+bundle: islandora_object
+label: 'FGSC Distributor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      fgsc_depositors: fgsc_depositors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+  rel_types:
+    'relators:dst': ''
+field_type: typed_relation

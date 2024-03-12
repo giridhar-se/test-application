@@ -1,0 +1,23 @@
+uuid: 24ce3675-470b-4156-aa61-bf2666ab7e92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_link
+    - node.type.islandora_object
+  module:
+    - link
+id: node.islandora_object.field_publication_link
+field_name: field_publication_link
+entity_type: node
+bundle: islandora_object
+label: 'Publication Link'
+description: "A URL (preferably a permalink) that directs the user to the digitally published work.\r\nWhile Publication Link (URL) and Publication Link (URL) are separate fields in the metadata spreadsheet, they are mapped to the same field in Islandora. The URL is the link or linked data identifier that links out to the related resource. The text is the human-readable text that will be hyperlinked with the URI.\r\nIf using this field, Publication Link (link text) is not required. Including the URL only will automatically make the URL the link text as well.\r\n<a href=\"https://staffnet.lib.k-state.edu/display/IS/Important+Metadata+Fields+in+Islandora\">Islandora Metadata Notes</a>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

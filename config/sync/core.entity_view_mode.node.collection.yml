@@ -1,0 +1,11 @@
+uuid: 1426c2a1-dda4-416e-bb0a-3804d42d0ef8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.collection
+label: Collection
+description: 'Display mode for a parent collection record'
+targetEntityType: node
+cache: true

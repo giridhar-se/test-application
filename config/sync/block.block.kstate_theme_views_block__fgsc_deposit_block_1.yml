@@ -1,0 +1,36 @@
+uuid: 9b0290e2-d59e-4075-9025-255e6fc4c236
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.fgsc_deposit
+  module:
+    - islandora
+    - system
+    - views
+  theme:
+    - kstate_theme
+id: kstate_theme_views_block__fgsc_deposit_block_1
+theme: kstate_theme
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:fgsc_deposit-block_1'
+settings:
+  id: 'views_block:fgsc_deposit-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: '48'
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/deposit/*'

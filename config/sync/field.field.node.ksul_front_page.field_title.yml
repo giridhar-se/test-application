@@ -1,0 +1,19 @@
+uuid: 593d3940-d997-4bc5-9e39-77710c4c6b27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title
+    - node.type.ksul_front_page
+id: node.ksul_front_page.field_title
+field_name: field_title
+entity_type: node
+bundle: ksul_front_page
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

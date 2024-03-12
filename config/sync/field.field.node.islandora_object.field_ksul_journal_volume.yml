@@ -1,0 +1,19 @@
+uuid: e1e89e9b-3ab0-4e40-ad45-cba9eacad2eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ksul_journal_volume
+    - node.type.islandora_object
+id: node.islandora_object.field_ksul_journal_volume
+field_name: field_ksul_journal_volume
+entity_type: node
+bundle: islandora_object
+label: 'Journal Volume'
+description: "Journal Volume is a field created by KSUL and is the  number of years a publication has been circulated.\r\n\r\nThe Journal Volume field should only contain a number. Do not include any words to denote volume, like \"vol.,\" \"v.\", etc.\r\n\r\n<a href=\"https://staffnet.lib.k-state.edu/display/IS/Important+Metadata+Fields+in+Islandora\">Islandora Metadata Notes</a>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

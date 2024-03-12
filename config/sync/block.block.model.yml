@@ -1,0 +1,42 @@
+uuid: a78c7a27-d1e7-47e0-bbcd-30e9210e991d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.model
+  module:
+    - context
+    - facets
+    - islandora
+  theme:
+    - kstate_theme
+id: model
+theme: kstate_theme
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'facet_block:model'
+settings:
+  id: 'facet_block:model'
+  label: Model
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: model
+visibility:
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

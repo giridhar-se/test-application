@@ -1,0 +1,22 @@
+uuid: c53cffae-c013-4096-a161-c29770799a59
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: islandora_content
+label: 'Islandora Content'
+type: 'canonical_entities:node'
+pattern: 'item/[node:title]'
+selection_criteria:
+  81564bdc-591b-4666-8b4b-be1e4ba4e267:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 81564bdc-591b-4666-8b4b-be1e4ba4e267
+    context_mapping:
+      node: node
+    bundles:
+      islandora_object: islandora_object
+selection_logic: and
+weight: -5
+relationships: {  }

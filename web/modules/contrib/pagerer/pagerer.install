@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Pagerer installation scripts.
+ */
+
+/**
+ * Add configuration for Pagerer URL management.
+ */
+function pagerer_update_8211() {
+  $config = \Drupal::configFactory()->getEditable('pagerer.settings');
+  if (empty($config->get('url_querystring'))) {
+    $config
+      ->set('url_querystring.core_override', FALSE)
+      ->set('url_querystring.querystring_key', 'pg')
+      ->set('url_querystring.index_base', 0)
+      ->set('url_querystring.encode_method', 'none')
+      ->save(TRUE);
+  }
+}
+
+/**
+ * Remove configuration for removed pagerer style plugins.
+ */
+function pagerer_update_8212() {
+  $configFactory = \Drupal::configFactory();
+  $configFactory->getEditable('pagerer.style.mini')->delete();
+  $configFactory->getEditable('pagerer.style.scrollpane')->delete();
+  $configFactory->getEditable('pagerer.style.slider')->delete();
+}

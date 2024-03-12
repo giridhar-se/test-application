@@ -1,0 +1,109 @@
+uuid: c8666889-2738-4390-845d-9c6765313f67
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.pdfjs
+    - field.field.media.document.field_display_title
+    - field.field.media.document.field_file_size
+    - field.field.media.document.field_media_document
+    - field.field.media.document.field_media_of
+    - field.field.media.document.field_media_use
+    - field.field.media.document.field_mime_type
+    - field.field.media.document.field_original_name
+    - media.type.document
+  module:
+    - field_group
+    - pdf
+third_party_settings:
+  field_group:
+    group_download_options:
+      children:
+        - group_pdfjs_object_detail
+      label: 'Download Options'
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: media-download
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_pdfjs_object_detail:
+      children:
+        - group_item_description
+      label: 'PDFjs object detail'
+      parent_name: group_download_options
+      region: content
+      weight: 14
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_item_description:
+      children:
+        - field_display_title
+      label: 'Item Description'
+      parent_name: group_pdfjs_object_detail
+      region: content
+      weight: 15
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+_core:
+  default_config_hash: 6vOcvK9Iktr-wVFR-MWAJpJbmAMpLs0JBrBVHFoOdcQ
+id: media.document.pdfjs
+targetEntityType: media
+bundle: document
+mode: pdfjs
+content:
+  field_display_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media_document:
+    type: pdf_default
+    label: visually_hidden
+    settings:
+      keep_pdfjs: '1'
+      width: 100%
+      height: 100%
+      page: ''
+      zoom: ''
+      custom_zoom: ''
+      pagemode: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_file_size: true
+  field_gemini_uri: true
+  field_media_of: true
+  field_media_use: true
+  field_mime_type: true
+  field_original_name: true
+  langcode: true
+  name: true
+  pdfjs_media_evas_entity_view_2: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

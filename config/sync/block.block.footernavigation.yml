@@ -1,0 +1,43 @@
+uuid: 49b9f4eb-1963-4779-b89b-41fea64f39d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-navigation
+  module:
+    - context
+    - islandora
+    - system
+  theme:
+    - kstate_theme
+id: footernavigation
+theme: kstate_theme
+region: footer_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-navigation'
+settings:
+  id: 'system_menu_block:footer-navigation'
+  label: 'Footer Navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

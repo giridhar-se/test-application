@@ -1,0 +1,24 @@
+uuid: 22b66e8a-e421-47a9-9266-a0c56733e214
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.ksul_front_page
+  module:
+    - text
+id: node.ksul_front_page.body
+field_name: body
+entity_type: node
+bundle: ksul_front_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

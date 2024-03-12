@@ -1,0 +1,19 @@
+uuid: 48b4a15d-2ed3-42dd-9455-cf9759eadf05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ksul_journal_issue
+    - node.type.islandora_object
+id: node.islandora_object.field_ksul_journal_issue
+field_name: field_ksul_journal_issue
+entity_type: node
+bundle: islandora_object
+label: 'Journal Issue'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

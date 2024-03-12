@@ -1,0 +1,12 @@
+name: 'Views Merge Rows'
+type: module
+description: 'Adds possibility to merge rows with the same values in the specified fields.'
+core_version_requirement: ^9.2 || ^10
+package: 'Views'
+dependencies:
+ - drupal:views
+
+# Information added by Drupal.org packaging script on 2022-01-15
+version: '8.x-2.3'
+project: 'views_merge_rows'
+datestamp: 1642283034

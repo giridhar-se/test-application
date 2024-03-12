@@ -1,0 +1,23 @@
+uuid: 16f29ccc-b50d-43c6-8cbc-3c319cde2c50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ksul_related_to
+    - node.type.islandora_object
+  module:
+    - link
+id: node.islandora_object.field_ksul_related_to
+field_name: field_ksul_related_to
+entity_type: node
+bundle: islandora_object
+label: 'Related To'
+description: "Related To is a field created by KSUL and contains information that identifies other resources related to the one being described (ex. finding aid, related resource not in the same collection).\r\nWhile Related To (text) and Related To (URI) are separate fields in the metadata spreadsheet, they are mapped to the same field in Islandora. The URI is the link or linked data identifier that links out to the related resource. The text is the human-readable text that will be hyperlinked with the URI.\r\nExample:\r\nRelated To (text) - Frank Caldwell Hershberger Papers Finding Aid\r\nRelated To (URI) - https://findingaids.lib.k-state.edu/frank-caldwell-hershberger-papers\r\nWhat shows in Islandora: Frank Caldwell Hershberger Papers Finding Aid\r\n\r\n<a href=\"https://staffnet.lib.k-state.edu/display/IS/Important+Metadata+Fields+in+Islandora\">Important Metadata Fields in Islandora</a>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

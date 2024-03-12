@@ -1,0 +1,14 @@
+a, button /* &c... */ {
+	all: unset;
+}
+
+a:hover {
+	cursor: pointer;
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	border: none;
+   box-shadow: none;
+}

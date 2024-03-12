@@ -1,0 +1,11 @@
+uuid: a6760a97-b1d3-45b2-8712-8690209fa9a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.pdfjs
+label: PDFjs
+description: ''
+targetEntityType: node
+cache: true

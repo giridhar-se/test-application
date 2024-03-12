@@ -1,0 +1,21 @@
+uuid: 3eb4b92d-1ce0-493d-8761-9c4fb20582b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coordinates
+    - node.type.ksul_repository_item
+  module:
+    - geolocation
+id: node.ksul_repository_item.field_coordinates
+field_name: field_coordinates
+entity_type: node
+bundle: ksul_repository_item
+label: Coordinates
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

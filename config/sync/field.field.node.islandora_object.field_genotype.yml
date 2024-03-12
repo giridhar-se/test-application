@@ -1,0 +1,29 @@
+uuid: 20c15a18-e8be-4c37-a53b-04a5e979d3eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_genotype
+    - node.type.islandora_object
+    - taxonomy.vocabulary.genotype
+id: node.islandora_object.field_genotype
+field_name: field_genotype
+entity_type: node
+bundle: islandora_object
+label: Genotype
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      genotype: genotype
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

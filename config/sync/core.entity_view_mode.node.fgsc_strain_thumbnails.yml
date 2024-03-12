@@ -1,0 +1,11 @@
+uuid: 86343c32-c403-4501-af0d-1307d395a029
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.fgsc_strain_thumbnails
+label: 'FGSC Strain Thumbnails'
+description: 'Displays the thumbnails view above the /deposit view'
+targetEntityType: node
+cache: true

@@ -1,0 +1,23 @@
+uuid: f1a1c920-547f-4eb0-bea4-a76e4ac571ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - link
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_ksul_related_to
+field_name: field_ksul_related_to
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

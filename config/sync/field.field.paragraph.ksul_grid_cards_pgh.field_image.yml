@@ -1,0 +1,43 @@
+uuid: e32263e3-3f49-40e5-a190-43c422d3f4f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - paragraphs.paragraphs_type.ksul_grid_cards_pgh
+  module:
+    - filehash
+    - image
+third_party_settings:
+  filehash:
+    dedupe: 0
+    dedupe_original: false
+id: paragraph.ksul_grid_cards_pgh.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: ksul_grid_cards_pgh
+label: image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 7e3847f6-9663-4a96-9816-93cf37633936
+    alt: 'Test Image'
+    title: 'Test Image'
+    width: 640
+    height: 480
+field_type: image

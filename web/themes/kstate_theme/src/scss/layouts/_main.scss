@@ -1,0 +1,114 @@
+.ksul {
+	@include adaptive-value("padding-top", 50, 20, 0);
+	@include adaptive-value("margin-bottom", 100, 20, 0);
+	& .horizontal-tabs, .ui-widget.ui-widget-content, .view-eva.view-members {
+		border: none;
+		box-shadow: none;
+	}
+
+	& .deposit-content  {
+		display: flex;
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
+		@include md-block() {
+			flex-direction: column;
+			justify-content: center;
+		};
+		& .item-metadata {
+			flex: 1 1 480px;
+		}
+
+		& .view-content {
+
+		}
+	}
+
+	& .views-exposed-form.block.block-views.block-views-exposed-filter-blocksolr-search-content-page-1 {
+		padding-top: 20px;
+
+		.form-row {
+			border-radius: 16px;
+			position: relative;
+			.form-control {
+				border-radius: 16px;
+			}
+
+			.button.js-form-submit.form-submit.btn.btn-primary.form-control {
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+	}
+
+	.view-fgsc-deposit .item-metadata,
+	.deposit-view-metadata .deposit-item-viewer {
+		.views-field  {
+			display: table-row;
+			
+			.field-content, .views-label {
+				display: table-cell;
+				padding: 10px;
+			}
+		}
+	}
+
+	.view.view-repository-item-children-view {
+		.item-list {
+			ul {
+				@include row-flex();
+				row-gap: 15px;
+
+				li {
+					@include col();
+					@include size(3);
+					@include size-md(4);
+					@include size-sm(6);
+					@include size-xs(12);
+
+					h2 {
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+
+					.image__wrapper {
+						position: relative;
+						padding-bottom: 80%;
+
+						img {
+							position: absolute;
+							width: calc(100% - 1px);
+							height: 100%;
+							top: 0;
+							left: 0;
+							padding: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.view-content .search-results__content {
+		.views-field.views-field-field-publication-link > .field-content a{
+			display: block;
+		}
+
+		.views-field.views-field-field-linked-agent > .field-content .list-group > li {
+			padding: 0;
+		}
+	}
+
+	.no-description-label.views-row {
+		.node__content .node__details {
+			.field.field--name-field-description-long .field__label {
+				display: none;
+			}
+			.node__title a {
+				font-size: 18px;
+				font-weight: bold;
+			}
+		}
+	}
+}

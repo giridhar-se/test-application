@@ -1,0 +1,217 @@
+<?php
+/**
+ * @file
+ * Functions to support theming in the BD Client SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Link;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility\Xss;
+use Drupal\node\Entity\Node;
+use Drupal\Component\Render\MarkupInterface;
+
+
+ /**
+  * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ */
+function kstate_theme_theme_suggestions_block_alter(&$suggestions, $variables) {
+
+  // Load theme suggestions for blocks from parent theme.
+  foreach ($suggestions as &$suggestion) {
+    $suggestion = str_replace('kstate_theme_', 'kstate_theme_', $suggestion);
+  }
+}
+
+ function kstate_theme_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+   $form['components']['navbar']['kstate_theme_navbar_top_background']['#options'] = [
+     'bg-primary' => t('Primary'),
+     'bg-secondary' => t('Secondary'),
+     'bg-light' => t('Light'),
+     'bg-dark' => t('Dark'),
+     'bg-white' => t('White'),
+     'bg-transparent' => t('Transparent'),
+   ];
+   $form['components']['navbar']['kstate_theme_navbar_background']['#options'] = [
+     'bg-primary' => t('Primary'),
+     'bg-secondary' => t('Secondary'),
+     'bg-light' => t('Light'),
+     'bg-dark' => t('Dark'),
+     'bg-white' => t('White'),
+     'bg-transparent' => t('Transparent'),
+   ];
+   $form['fonts']['fonts']['kstate_theme_google_fonts']['#options']['opensans'] = 'Open Sans';
+ }
+
+ function kstate_theme_preprocess_page(&$variables) {
+  $fonts = theme_get_setting('kstate_theme_google_fonts');
+  if ($fonts)
+    $variables['#attached']['library'][] = (in_array($fonts, ['opensans']) ? 'kstate_theme' : 'kstate_theme' ) . '/' . $fonts;
+}
+
+function kstate_theme_theme_suggestions_paragraph_alter(&$suggestions, $variables) {
+    $paragraph = $variables['elements']['#paragraph'];
+    $parent = $paragraph->getParentEntity();
+
+    $suggestions[] = 'paragraph__' . $parent->bundle() . '__' .  $paragraph->bundle();
+
+    // get the parent field of the current paragraph
+    // assuming that the parent field name is field_test_paragraph
+    $parent_field_name = $paragraph->parent_field_name->value;
+
+    // field_test_paragraph should be added to theme suggestions
+    $suggestions[] = 'paragraph__' . $parent->bundle() . '__' . $parent_field_name . '__' .  $paragraph->bundle();
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK() for block.html.twig.
+ */
+function kstate_theme_preprocess_block(&$variables) {
+  if ($variables['base_plugin_id'] == 'system_menu_block' && isset($variables['attributes']['id'])) {
+    $variables['content']['#attributes']['id'] = $variables['attributes']['id'];
+  }
+  // Add a clearfix class to system branding blocks.
+  if ($variables['plugin_id'] == 'system_branding_block') {
+    $variables['attributes']['class'][] = 'clearfix';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function kstate_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  // Taken from http://kristiankaa.dk/article/drupal8-region-specific-menu-theme-hook-suggestion
+  // kstate_theme_preprocess_block(&$variables)
+  if (isset($variables['attributes']['block'])) {
+    $hook = str_replace(['block-', '-'], ['', '_'], $variables['attributes']['block']);
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $hook;
+  }
+}
+
+function kstate_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if ($variables['element']['#form_id'] == 'block-kstate-theme-exposedformsolr-search-contentpage-1') {
+    $suggestions[] = 'form__search_block_form';
+    $variables['attributes']['class'][] = 'btn btn-primary';
+  }
+  if ($variables['element']['#form_id'] == 'node_form') {
+     $suggestions[] = 'node_edit_form';
+  }
+}
+
+
+/**
+*
+*end
+*/
+
+/**
+ * Implements hook_preprocess_HOOK() for region.html.twig.
+ */
+
+// function kstate_theme_preprocess_region(&$variables) {
+//   $nowrap = [
+//     'breadcrumb',
+//     'highlighted',
+//     'content',
+//     'primary_menu',
+//     'header',
+//     'sidebar_first',
+//     'sidebar_second',
+//   ];
+//   if (theme_get_setting('kstate_theme_region_class_' . $variables['elements']['#region']) !== NULL) {
+//     $variables['attributes']['class'][] = theme_get_setting('kstate_theme_region_class_' . $variables['elements']['#region']);
+//   }
+//   elseif (!in_array($variables['elements']['#region'], $nowrap)) {
+//     $variables['attributes']['class'][] = 'row';
+//   }
+
+// }
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for region templates.
+ */
+function kstate_theme_suggestions_region_alter(array &$suggestions, array $variables) {
+  $nowrap = [
+    'breadcrumb',
+    'highlighted',
+    'content',
+    'primary_menu',
+    'header',
+    'sidebar_first',
+    'sidebar_second',
+  ];
+  if (theme_get_setting('kstate_theme_region_clean_' . $variables['elements']['#region']) !== NULL) {
+    $region_clean = theme_get_setting('kstate_theme_region_clean_' . $variables['elements']['#region']);
+  }
+  else {
+    $region_clean = in_array($variables['elements']['#region'], $nowrap);
+  }
+  if ($region_clean) {
+    $suggestions[] = 'region__nowrap';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu-local-task.html.twig.
+ */
+function kstate_theme_preprocess_menu_local_task(&$variables) {
+  $link = $variables['element']['#link'];
+  $url = $link['url'];
+  $options = $url->getOptions();
+  $url->setOptions($options + $link['localized_options']);
+  $variables['item'] = Link::fromTextAndUrl($link['title'], $url);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu-local-tasks.html.twig.
+ */
+function kstate_theme_preprocess_menu_local_tasks(&$variables) {
+  switch (theme_get_setting('kstate_theme_tabs_style')) {
+    case 'pills':
+      $variables['nav_style'] = 'nav-pills';
+      break;
+    default:
+      $variables['nav_style'] = 'nav-tabs';
+      break;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu-local-action.html.twig.
+ */
+function kstate_theme_preprocess_menu_local_action(&$variables) {
+  $link = $variables['element']['#link'];
+  $link += [
+    'localized_options' => [],
+  ];
+  $link['localized_options']['attributes']['class'][] = 'btn';
+  $link['localized_options']['attributes']['class'][] = 'btn-secondary';
+  $link['localized_options']['set_active_class'] = TRUE;
+  $variables['link'] = [
+    '#type' => 'link',
+    '#title' => $link['title'],
+    '#options' => $link['localized_options'],
+    '#url' => $link['url'],
+  ];
+}
+
+ switch (theme_get_setting('kstate_theme_tabs_style')) {
+    case 'full':
+      $variables['#attached']['library'][] = 'kstate_theme/tabs_full';
+      break;
+  }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for links templates.
+ */
+function kstate_theme_suggestions_links_alter(array &$suggestions, array $variables) {
+  // ToDo get from core a variable to flag inline links.
+  if (isset($variables['attributes']['class'])) {
+    if (in_array('inline', $variables['attributes']['class'])) {
+      $suggestions[] = 'links__inline';
+    }
+  }
+}

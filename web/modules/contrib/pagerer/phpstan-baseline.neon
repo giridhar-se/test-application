@@ -1,0 +1,6 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Call to an undefined method Drupal\\\\Core\\\\Database\\\\Query\\\\ExtendableInterface\\:\\:element\\(\\)\\.$#"
+			count: 3
+			path: pagerer_example/src/Controller/PagererExampleController.php

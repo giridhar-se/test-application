@@ -1,0 +1,16 @@
+uuid: 96e9c733-06c8-4478-b180-2e7af2ba83f5
+langcode: en
+status: true
+dependencies: {  }
+id: fg_pager
+label: 'FG Pager'
+panes:
+  left:
+    style: none
+    config: {  }
+  center:
+    style: adaptive
+    config: {  }
+  right:
+    style: none
+    config: {  }

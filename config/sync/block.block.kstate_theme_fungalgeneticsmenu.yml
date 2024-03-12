@@ -1,0 +1,35 @@
+uuid: 9eacf23e-4300-4fe3-bd5e-52c716284201
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.fungal-genetics-menu
+  module:
+    - islandora
+    - system
+  theme:
+    - kstate_theme
+id: kstate_theme_fungalgeneticsmenu
+theme: kstate_theme
+region: secondary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:fungal-genetics-menu'
+settings:
+  id: 'system_menu_block:fungal-genetics-menu'
+  label: 'Fungal Genetics Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/fungal-genetics\r\n/deposits\r\n/deposits/*\r\n/deposit/*"

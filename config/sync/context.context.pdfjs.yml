@@ -1,0 +1,53 @@
+uuid: 94f973a2-30e6-466a-9ade-5b07b9e79b5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+    - layout_builder
+label: PDFjs
+name: pdfjs
+group: Display
+description: 'Displays the Service File or Original File in PDF.js view mode'
+requireAllConditions: false
+disabled: false
+conditions:
+  node_has_term:
+    id: node_has_term
+    negate: false
+    uuid: 7bbec6a5-86ff-47b4-9027-28e32a3d2947
+    context_mapping:
+      node: '@node.node_route_context:node'
+    uri: 'http://mozilla.github.io/pdf.js'
+    logic: and
+reactions:
+  blocks:
+    id: blocks
+    uuid: a56f50ae-db55-46ef-9b4f-ab0f63cea450
+    blocks:
+      6d5cb087-9a2f-4d53-8ebf-2e886a3b7871:
+        uuid: 6d5cb087-9a2f-4d53-8ebf-2e886a3b7871
+        id: 'extra_field_block:node:islandora_object:display_media_service_file'
+        label: 'EVA: Media EVAs - Service File'
+        provider: layout_builder
+        label_display: '0'
+        region: content
+        weight: '0'
+        custom_id: field_block_node_islandora_object_display_media_service_file
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: pdfjs
+        context_mapping:
+          entity: '@node.node_route_context:node'
+        formatter:
+          settings: {  }
+          third_party_settings: {  }
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+  view_mode_alter:
+    id: view_mode_alter
+    saved: false
+    mode: media.pdfjs
+weight: -5

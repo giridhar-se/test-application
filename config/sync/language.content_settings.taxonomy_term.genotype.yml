@@ -1,0 +1,11 @@
+uuid: 5ca397c4-973b-4f6d-a905-77cae4f4d7ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.genotype
+id: taxonomy_term.genotype
+target_entity_type_id: taxonomy_term
+target_bundle: genotype
+default_langcode: site_default
+language_alterable: false

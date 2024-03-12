@@ -1,0 +1,11 @@
+uuid: dcafbdf1-8000-4783-b202-252b9a5295a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.fgsc_strain_metadata
+label: 'FGSC Strain Metadata'
+description: ''
+targetEntityType: node
+cache: true

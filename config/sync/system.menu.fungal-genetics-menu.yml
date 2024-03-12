@@ -1,0 +1,8 @@
+uuid: 4353b3e6-add1-4ea4-bd9b-0d26d6911e5a
+langcode: en
+status: true
+dependencies: {  }
+id: fungal-genetics-menu
+label: 'Fungal Genetics Menu'
+description: ''
+locked: false
