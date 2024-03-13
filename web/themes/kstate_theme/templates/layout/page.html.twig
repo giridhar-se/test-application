@@ -107,36 +107,44 @@
       <main class="ksul">
         <div class="container">
         {# HIGHLIGHTED AREA STARTS #}
-        {% if page.highlighted %}
-          {% set class_bg = "highlighted" %}
-          {% if node.field_main_banner[0] %}
-            {% set class_bg = 'highlighted page__row--has-bg' %}
-          {% endif %}
-          {# Build a domain URL. This should be moved into a yml variable. #}
-        {% set site_url = url("<current>") %}
-        {% set domain = (site_url|render|render|split('/')[0] ~ '//' ~ site_url|render|render|split('/')[2])|lower %}
-        {% set fetch_src = iiif_server_location ~ '/' ~ (domain ~ node.field_main_banner[0]|file_url)|url_encode ~ '/full/full' ~ '/0/default.jpg' %}
-          <div {{ attributes.addClass(class_bg) }}{% if node.field_main_banner[0] %} style="background-image: url('{{ fetch_src }}');"{% endif %}>
-            <aside class="{{ container }} section clearfix" role="complementary">
-            {# <aside class="container section clearfix" role="complementary"> #}
-              {{ page.highlighted }}
-            </aside>
-          </div>
-        {% endif %}
+          
 
-          {% if page.sidebar_first %}
-              <div{{ sidebar_first_attributes }}>
-                <aside class="section" role="complementary">
-                  {{ page.sidebar_first }}
-                </aside>
+              {# Main Content Area: Render the main content block #}
+              <div class="page-content-grid">
+
+
+                        {% if page.highlighted %}
+                          {% set class_bg = "highlighted" %}
+                          {% if node.field_main_banner[0] %}
+                            {% set class_bg = 'highlighted page__row--has-bg' %}
+                          {% endif %}
+                          {# Build a domain URL. This should be moved into a yml variable. #}
+                        {% set site_url = url("<current>") %}
+                        {% set domain = (site_url|render|render|split('/')[0] ~ '//' ~ site_url|render|render|split('/')[2])|lower %}
+                        {% set fetch_src = iiif_server_location ~ '/' ~ (domain ~ node.field_main_banner[0]|file_url)|url_encode ~ '/full/full' ~ '/0/default.jpg' %}
+                          <div {{ attributes.addClass(class_bg) }}{% if node.field_main_banner[0] %} style="background-image: url('{{ fetch_src }}');"{% endif %}>
+                            <aside class="{{ container }} section clearfix" role="complementary">
+                            {# <aside class="container section clearfix" role="complementary"> #}
+                              {{ page.highlighted }}
+                            </aside>
+                          </div>
+                        {% endif %}
+                        {# HIGHLIGHTED AREA ENDS #}
+                        {# Sidebar First: Check if the sidebar exists and render it #}
+                          {% if page.sidebar_first %}
+                            <div class="sidebar-first" role="complementary">
+                              {{ page.sidebar_first }}
+                            </div>
+                          {% endif %}
+                          <div class="main-content">
+                          {{ page.content }}
+                          </div>
+                        </div>
               </div>
-          {% endif %}
-        {# HIGHLIGHTED AREA ENDS #}
-            
-          {{ page.content }}
-        </div>
+          </div>
       </main>
     {% endblock %}
+
         
     {# KSUL CUSTOM TEMPLATE ENDS #}
     {# KSUL CUSTOM TEMPLATE ENDS #}
