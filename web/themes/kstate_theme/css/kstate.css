@@ -1463,9 +1463,25 @@ img {
   .highlighted {
     grid-row: 1;
     grid-column: 1/3;
+    height: 80px;
+    margin-top: -30px;
   }
 
   .ksul-pager {
     grid-column: 1/3;
   }
   
+  #block-kstate-theme-author,#block-kstate-theme-datecreated,#block-kstate-theme-genre,#block-kstate-theme-memberof {
+    position: relative;
+    z-index: 10;
+  }
+
+  .view-solr-search-content .node__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .node--view-mode-search-index .node__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }

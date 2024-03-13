@@ -20,24 +20,33 @@ use Drupal\node\NodeInterface;
 use Drupal\islandora\IslandoraUtils;
 use Drupal\group\Entity\GroupContent;
 use Drupal\media\MediaInterface;
+use Drupal\taxonomy\Entity\Term;
 
-/**
- * Implements hook_entity_view_mode_alter().
- */
 function ksul_view_changes_entity_view_mode_alter(&$view_mode, EntityInterface $entity, $context) {
-  // Check if the entity is of type "node" and the content type is "Repository Item".
-  if ($entity->getEntityTypeId() === 'node' && $entity->bundle() === 'islandora_object') {
-    // Get the value of the "Model" field.
-    $model_value = $entity->get('field_model');
-    
-    // Define your logic for setting the view mode based on the "Model" field value.
-    // For example, if the Model field value is "Collection(45)", set the view mode to "collection".
-    if ($model_value == 45) {
-      $view_mode = 'collection';
+  // Ensure that the entity is a node and of the "islandora_object" bundle.
+  if ($entity instanceof NodeInterface && $entity->bundle() === 'islandora_object') {
+    // Check if we're on the canonical URL of the node
+    $current_path = \Drupal::service('path.current')->getPath();
+    $node_path = $entity->toUrl()->toString();
+    $is_canonical = Url::fromUserInput($current_path)->toString() == $node_path;
+
+    // Proceed if we are on the canonical URL or its alias
+    if ($is_canonical) {
+      // Proceed with your existing logic to check the field_model value
+      if ($entity->hasField('field_model') && !$entity->get('field_model')->isEmpty()) {
+        $term = $entity->get('field_model')->entity;
+
+        if ($term instanceof Term) {
+          $term_id = $term->id();
+
+          // Define your logic for setting the view mode based on the "Model" field's taxonomy term.
+          if ($term_id == 45) {
+            $view_mode = 'collection';
+          }
+        }
+      }
     }
-    // Repeat for other Model field values and corresponding view modes as needed.
   }
-  dpm($model_value);
 }
 
 /**
