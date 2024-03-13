@@ -37,12 +37,6 @@ Description:  Bootstrap 5 with Sass
     padding-top: 14.7vh;
 }
 
-/* search box */
-#views-exposed-form-solr-search-content-page-1 {
-/*    position: relative;
-    top: 14.5vh;*/
-}
-
 #block-toptitlebanner {
     padding: 4px 0px;
     background-color: #eee;
@@ -1451,7 +1445,7 @@ img {
   .sidebar-first {
     grid-column: 1;
     grid-row: 3;
-    margin-top: 4rem;
+    margin-top: 8rem;
   }
   
   .main-content {
@@ -1484,4 +1478,8 @@ img {
   .node--view-mode-search-index .node__content {
     display: grid;
     grid-template-columns: 1fr 2fr;
+  }
+
+  h4 {
+    font-size: 18px;
   }
