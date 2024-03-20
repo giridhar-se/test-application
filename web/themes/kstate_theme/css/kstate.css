@@ -1483,3 +1483,18 @@ img {
   h4 {
     font-size: 18px;
   }
+
+  .nav-tabs {
+    position: relative;
+    z-index: 10;
+  }
+ 
+  .fgsc-deposit-strains .ksul-pager{
+      display: grid;
+      justify-content: center;
+      padding-top: 1rem;
+    }
+ 
+    .fgsc-deposit-strains .pager-top{
+      display: none;
+    }
