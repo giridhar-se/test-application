@@ -40,7 +40,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'Islandora-Devops/isle-dc'
-          path: '../isle-dc' 
+          path: './isle-dc' 
+
+      - run: mv isle-dc ../
+      - run: mkdir ../isle-dc/codebase
+      - run: cp -R * ../isle-dc/codebase
+
+      - run: ls -lah ../isle-dc
+      - run: ls -lah ../isle-dc/codebase
 
       #- uses: webfactory/ssh-agent@v0.7.0
         #with:
@@ -70,7 +77,7 @@ jobs:
 
       - run: mkdir ../isle-dc/codebase
       - run: cp -R * ../isle-dc/codebase
-      
+
       - run: ls -lah ../isle-dc
       - run: ls -lah ../isle-dc/codebase
 
