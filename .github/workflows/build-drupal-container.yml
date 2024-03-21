@@ -73,7 +73,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: isle-dc
           file: sample.Dockerfile
           build-args: "TAG=3"
           platforms: linux/amd64,linux/arm64
@@ -85,4 +85,4 @@ jobs:
           labels: ${{ steps.meta_build.outputs.labels }}
           #ssh: |
             #default=${{ env.SSH_AUTH_SOCK }}
-        working-directory: isle-dc
+          #working-directory: isle-dc
