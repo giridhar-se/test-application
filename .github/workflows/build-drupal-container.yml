@@ -75,6 +75,7 @@ jobs:
         with:
           context: .
           file: ./isle-dc/sample.Dockerfile
+          build-args: "TAG=3"
           platforms: linux/amd64,linux/arm64
           # For pull requests, we run the Docker build (to ensure no PR changes break the build),
           # but we ONLY do an image push to DockerHub if it's NOT a PR
@@ -82,7 +83,6 @@ jobs:
           # Use tags / labels provided by 'docker/metadata-action' above
           tags: ${{ steps.meta_build.outputs.tags }}
           labels: ${{ steps.meta_build.outputs.labels }}
-          build-args: TAG=3
           #ssh: |
             #default=${{ env.SSH_AUTH_SOCK }}
           working-directory: ./isle-dc
