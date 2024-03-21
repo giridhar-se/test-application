@@ -74,7 +74,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: sample.Dockerfile
+          file: ./isle-dc/sample.Dockerfile
           build-args: "TAG=3"
           platforms: linux/amd64,linux/arm64
           # For pull requests, we run the Docker build (to ensure no PR changes break the build),
@@ -85,4 +85,4 @@ jobs:
           labels: ${{ steps.meta_build.outputs.labels }}
           #ssh: |
             #default=${{ env.SSH_AUTH_SOCK }}
-          working-directory: ./isle-dc
+          #working-directory: ./isle-dc
