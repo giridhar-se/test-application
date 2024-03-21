@@ -77,8 +77,8 @@ jobs:
           tags: ${{ env.IMAGE_TAGS }}
           flavor: ${{ env.TAGS_FLAVOR }}
 
-      - run: mkdir ../isle-dc/codebase
-      - run: cp -R * ../isle-dc/codebase
+      # - run: mkdir ../isle-dc/codebase
+      # - run: cp -R * ../isle-dc/codebase
 
       - run: ls -lah ../isle-dc
       - run: ls -lah ../isle-dc/codebase
