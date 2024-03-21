@@ -70,6 +70,7 @@ jobs:
 
       - run: ls -lah
       - run: ls -lah isle-dc
+      - run: ls -lah ../
 
 
 
