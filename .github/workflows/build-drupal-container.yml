@@ -69,7 +69,7 @@ jobs:
           flavor: ${{ env.TAGS_FLAVOR }}
 
       # https://github.com/docker/build-push-action
-      - name: Build and push 'vea-backend' image
+      - name: Build and push 'ksul-islandora-drupal' image
         id: docker_build
         uses: docker/build-push-action@v4
         with:
@@ -82,6 +82,7 @@ jobs:
           # Use tags / labels provided by 'docker/metadata-action' above
           tags: ${{ steps.meta_build.outputs.tags }}
           labels: ${{ steps.meta_build.outputs.labels }}
+          build-args: TAG=3
           #ssh: |
             #default=${{ env.SSH_AUTH_SOCK }}
           working-directory: ./isle-dc
