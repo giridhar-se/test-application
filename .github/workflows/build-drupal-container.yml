@@ -74,7 +74,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./isle-dc/sample.Dockerfile
+          file: sample.Dockerfile
           build-args: "TAG=3"
           platforms: linux/amd64,linux/arm64
           # For pull requests, we run the Docker build (to ensure no PR changes break the build),
