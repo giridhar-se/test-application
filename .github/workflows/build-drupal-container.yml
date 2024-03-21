@@ -43,8 +43,8 @@ jobs:
           path: './isle-dc' 
 
       - run: mv isle-dc ../
-      #- run: mkdir ../isle-dc/codebase
-      #- run: cp -R * ../isle-dc/codebase
+      - run: mkdir ../isle-dc/codebase
+      - run: cp -R * ../isle-dc/codebase
 
       - run: ls -lah ../isle-dc
       - run: ls -lah ../isle-dc/codebase
