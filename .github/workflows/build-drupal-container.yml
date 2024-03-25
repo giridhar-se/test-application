@@ -48,6 +48,7 @@ jobs:
       - run: mkdir ../isle-dc/codebase
       - run: cp -R * ../isle-dc/codebase
       - run: chmod 750 ../isle-dc/codebase/vendor/bin/*
+      - run: chmod 750 ../isle-dc/build/rootfs/etc/cont-init.d/*
 
       #- run: ls -lah ../isle-dc
       - run: ls -lah ../isle-dc/codebase
