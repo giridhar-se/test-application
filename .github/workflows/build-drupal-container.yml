@@ -50,7 +50,7 @@ jobs:
       - run: chmod 750 ../isle-dc/codebase/vendor/bin/*
 
       #- run: ls -lah ../isle-dc
-      #- run: ls -lah ../isle-dc/codebase
+      - run: ls -lah ../isle-dc/codebase
 
       #- uses: webfactory/ssh-agent@v0.7.0
         #with:
