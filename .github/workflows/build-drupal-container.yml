@@ -42,6 +42,17 @@ jobs:
           repository: 'Islandora-Devops/isle-dc'
           path: './isle-dc' 
 
+      - run: mv isle-dc ../
+      #- run: ls -lah ../
+      #- run: ls -lah ../isle-dc
+      - run: mkdir ../isle-dc/codebase
+      - run: cp -R * ../isle-dc/codebase
+      - run: chmod 750 ../isle-dc/codebase/vendor/bin/*
+      - run: chmod 750 ../isle-dc/build/rootfs/etc/cont-init.d/*
+
+      #- run: ls -lah ../isle-dc
+      - run: ls -lah ../isle-dc/codebase
+
       #- uses: webfactory/ssh-agent@v0.7.0
         #with:
           #ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -68,13 +79,22 @@ jobs:
           tags: ${{ env.IMAGE_TAGS }}
           flavor: ${{ env.TAGS_FLAVOR }}
 
+      # - run: mkdir ../isle-dc/codebase
+      # - run: cp -R * ../isle-dc/codebase
+
+      #- run: ls -lah ../isle-dc
+      #- run: ls -lah ../isle-dc/codebase
+
+
+
       # https://github.com/docker/build-push-action
-      - name: Build and push 'vea-backend' image
+      - name: Build and push 'ksul-islandora-drupal' image
         id: docker_build
         uses: docker/build-push-action@v4
         with:
-          context: .
-          file: ./isle-dc/sample.Dockerfile
+          context: ../isle-dc
+          file: ../isle-dc/sample.Dockerfile
+          build-args: "TAG=3"
           platforms: linux/amd64,linux/arm64
           # For pull requests, we run the Docker build (to ensure no PR changes break the build),
           # but we ONLY do an image push to DockerHub if it's NOT a PR
@@ -84,4 +104,4 @@ jobs:
           labels: ${{ steps.meta_build.outputs.labels }}
           #ssh: |
             #default=${{ env.SSH_AUTH_SOCK }}
-          working-directory: ./isle-dc
+          #working-directory: isle-dc
