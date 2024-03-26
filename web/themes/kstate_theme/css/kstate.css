@@ -1258,6 +1258,10 @@ img {
     font-weight: 400;
 }
 
+.footer__media__contacts p {
+    margin-bottom: .25rem;
+}
+
 .footer__menu__logo img {
     max-width: 100%;
     height: auto;
@@ -1492,9 +1496,17 @@ img {
   .fgsc-deposit-strains .ksul-pager{
       display: grid;
       justify-content: center;
-      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
  
-    .fgsc-deposit-strains .pager-top{
+    .fgsc-deposit-strains .pager-bottom{
       display: none;
+    }
+
+    .node--view-mode-collection .view-display-media{
+    text-align: center;
+    }
+
+    .node--view-mode-collection .block-extra-field-blocknodeislandora-objectdisplay-media-thumbnail:has(>.content:empty){
+    display: none;
     }
