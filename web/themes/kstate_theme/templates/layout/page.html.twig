@@ -73,9 +73,18 @@
 			<a href="https://www.k-state.edu" class="header__row-topnav_link" target="_blank">Kansas State University</a>
 		</div>
 	</div>
-	{% if page.top_header %}
+  
+  {# {% if page.top_header %}
   {{ page.top_header }}
-  {% endif %}
+  {# {% endif %} #}
+  {# Set a static website title/brand #}
+  <div class="header__row header__row-sign">
+    <div class="container"><div class="header__row-sign_logo logo">
+        <a href="https://lib.ksu.edu" class="logo__link" title="Libraries Home" itemprop="url" rel="home"><div class="logo__img">
+            <img src="/themes/kstate_theme/ksulogo.svg" alt="K-state logo">
+          </div><div class="logo__seporator"></div><div class="logo__text">Libraries</div></a>
+      </div></div>
+  </div>
 	<nav class="header__nav nav">
 		<div class="container">
 			{% if page.primary_menu %}
@@ -83,13 +92,14 @@
       {% endif %}
 		</div>
 	</nav>
+
 </header>
 
 <div id="page-wrapper">
   <div id="page">
  
     {# FEATURE_TOP AREA STARTS #}
-    {# {% if page.featured_top %}
+    {% if page.featured_top %}
       {% block featured %}
         <div class="featured-top">
           <aside class="featured-top__inner section {{ container }} clearfix" role="complementary">
@@ -97,7 +107,7 @@
           </aside>
         </div>
       {% endblock %}
-    {% endif %} #}
+    {% endif %}
     {# FEATURE_TOP AREA ENDS #}
 
     {# KSUL CUSTOM TEMPLATE STARTS #}
@@ -123,10 +133,10 @@
                         {% set domain = (site_url|render|render|split('/')[0] ~ '//' ~ site_url|render|render|split('/')[2])|lower %}
                         {% set fetch_src = iiif_server_location ~ '/' ~ (domain ~ node.field_main_banner[0]|file_url)|url_encode ~ '/full/full' ~ '/0/default.jpg' %}
                           <div {{ attributes.addClass(class_bg) }}{% if node.field_main_banner[0] %} style="background-image: url('{{ fetch_src }}');"{% endif %}>
-                            <aside class="{{ container }} section clearfix" role="complementary">
+                            <section class="{{ container }} section clearfix" role="complementary">
                             {# <aside class="container section clearfix" role="complementary"> #}
                               {{ page.highlighted }}
-                            </aside>
+                            </section>
                           </div>
                         {% endif %}
                         {# HIGHLIGHTED AREA ENDS #}
@@ -240,7 +250,11 @@
                 <i class="_icon-facebook-f"></i>
               </a>
               <a target="_blank" href="https://twitter.com/kstatelibraries">
-                <i class="_icon-twitter"></i>
+                {# <i class="bi bi-twitter-x"></i> #}
+                <i><svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                </svg>
+                </i>
               </a>
               <a target="_blank" href="https://www.youtube.com/user/KStateLibraries/featured">
                 <i class="_icon-youtube"></i>
