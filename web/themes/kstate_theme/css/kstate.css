@@ -1930,3 +1930,105 @@ h4 {
 }
 
 /* End Additions 3.28.2024 */
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+
+  /* Facets */
+  .sidebar-first {
+    display: none;
+  }
+
+  /* Search Page and Input */
+  #views-exposed-form-solr-search-content-page-1 .form-row,
+  #views-exposed-form-fgsc-solr-search-content-page-1 .form-row {
+    grid-template-areas:
+      "search"
+      "search_submit"
+      "pager"
+      "sort";
+    grid-template-columns: 100%; /* This changes the grid to a single column */
+  }
+
+  #views-exposed-form-solr-search-content-page-1 .js-form-item-search-text,
+  #views-exposed-form-fgsc-solr-search-content-page-1 .js-form-item-search-text {
+    grid-area: search;
+    justify-self: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  #views-exposed-form-solr-search-content-page-1 .js-form-submit,
+  #views-exposed-form-fgsc-solr-search-content-page-1 .js-form-submit {
+    grid-area: search_submit;
+    justify-self: center;
+    right: unset;
+    margin:auto;
+  }
+  #views-exposed-form-solr-search-content-page-1 .js-form-item-items-per-page,
+  #views-exposed-form-fgsc-solr-search-content-page-1 .js-form-item-items-per-page {
+    grid-area: pager;
+    width: 100%;
+    border-top: solid gray;
+    border-bottom: none;
+    border-width: thin;
+    margin: 0;
+    padding: 10px;
+    flex-direction: column;
+  }
+  #views-exposed-form-solr-search-content-page-1 .js-form-item-items-per-page>label,
+  #views-exposed-form-fgsc-solr-search-content-page-1 .js-form-item-items-per-page>label {
+    text-align: center;
+    margin: 0;
+    align-self: center;
+    display: inline-block;
+    position: relative !important;
+    height: unset;
+    width: 100%;
+    font: revert;
+    font-size: 16px;
+    font-weight: 600;
+    padding-right: 0;
+    flex: 1;
+  }
+
+  #views-exposed-form-solr-search-content-page-1 .js-form-item-items-per-page .bef-links,
+  #views-exposed-form-fgsc-solr-search-content-page-1 .js-form-item-items-per-page .bef-links {
+    align-self: center;
+    margin: auto;
+    flex: 1;
+  }
+
+  #views-exposed-form-solr-search-content-page-1 .js-form-item-sort-bef-combine,
+  #views-exposed-form-fgsc-solr-search-content-page-1 .js-form-item-sort-bef-combine {
+    grid-area: sort;
+    width: 100%;
+    border-top: none;
+    border-bottom: solid gray;
+    border-width: thin;
+    gap: 5px;
+    margin: 0;
+    flex-direction: column;
+  }
+
+  #views-exposed-form-solr-search-content-page-1 .js-form-item-sort-bef-combine label,
+  #views-exposed-form-fgsc-solr-search-content-page-1 .js-form-item-sort-bef-combine label {
+    text-align: center;
+    margin: 0;
+    align-self: center;
+    display: inline-block;
+    position: relative !important;
+    height: unset;
+    width: unset;
+    font: revert;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  #views-exposed-form-solr-search-content-page-1 .js-form-item-sort-bef-combine .form-select,
+  #views-exposed-form-fgsc-solr-search-content-page-1 .js-form-item-sort-bef-combine .form-select {
+    margin: 0;
+    align-self: center;
+    width: 50%;
+  }
+}
