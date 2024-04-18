@@ -228,7 +228,25 @@ function ksul_view_changes_entity_view(array &$build, EntityInterface $entity, E
     return; // Exit the function if the view mode is 'fgsc_strain_thumbnails'
   }
 
-  if ($entity->getEntityType()->id() === 'node' && $entity->bundle() === 'islandora_object' && $entity->hasField('field_fgsc_member') && $entity->get('field_fgsc_member')->value == TRUE) {
+  $fungal_resource_types_views = ['Text']; //Placeholder. Will add the array of selected "resource_type" to display as FGSC
+  $fungal_routing = false;
+
+  if ($entity->hasField('field_resource_type')){
+      $term_id = $entity->get('field_resource_type')->target_id;
+
+      if ($term_id) {
+        $term = Term::load($term_id);
+        if ($term) {
+          $resource_type_label = $term->label();
+
+          if (in_array($resource_type_label,$fungal_resource_types_views)) {
+            $fungal_routing = true;
+          }
+        }
+      }
+  }
+
+  if ($entity->getEntityType()->id() === 'node' && $entity->bundle() === 'islandora_object' && $entity->hasField('field_fgsc_member') && $entity->get('field_fgsc_member')->value == TRUE && $fungal_routing) {
     // Specific logic for "Repository Item" with fgsc_member = TRUE
     $itemIdentifier = str_replace(' ', '%20', $entity->label()); // Proper encoding for URL
     $urlPath = '/deposit/' . $itemIdentifier;
