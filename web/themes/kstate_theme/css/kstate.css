@@ -2032,3 +2032,19 @@ h4 {
     width: 50%;
   }
 }
+
+.field--type-typed-relation .field__item::before {
+  content: '';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.field--type-typed-relation .field__item {
+  font-size: 0; /* Hide all text */
+}
+
+.field--type-typed-relation .field__item a {
+  font-size: 16px; /* Reset font size for the link */
+}

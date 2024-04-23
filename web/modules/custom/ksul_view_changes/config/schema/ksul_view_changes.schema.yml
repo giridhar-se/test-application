@@ -1,0 +1,10 @@
+ksul_view_changes.settings:
+  type: config_object
+  label: 'KSUL View Changes Settings'
+  mapping:
+    fgsc_resource_types:
+      type: sequence
+      label: 'Resource Types'
+      sequence:
+        type: string
+        label: 'Resource Type'

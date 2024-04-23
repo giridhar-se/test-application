@@ -2,20 +2,21 @@
     display: flex;  /* Establishes a flex container */
     justify-content: center; /* Horizontally centers the canvases in the container */
     align-items: center; /* Vertically centers the canvases */
-    height: 100%; /* Full height of the parent element */
-    position: relative; /* Needed for absolute positioning of the loading indicator */
-    /* height: 600px; Adjust based on your needs */
     width: 100%;
+    overflow-y: auto;
+    max-height: 850px;
+    border: 1px solid #512888;
+
 }
 
 canvas {
     flex: 1; /* Each canvas will take an equal amount of space */
-    width: 50%; /* Each canvas will cover half of the container's width */
+    /* width: 50%; Each canvas will cover half of the container's width */
     box-sizing: border-box; /* Includes padding and border in the element's width */
     padding: 5px; /* Optional: adds some space around the canvas */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     /* max-height: 90vh; */
-    overflow: auto;
+    overflow: scroll;
 }
 #pdf-controls {
     text-align: center;
@@ -34,6 +35,7 @@ canvas {
     width: 50px;
     text-align: center;
 }
+
 #loading-indicator {
     position: absolute;
     top: 50%;
@@ -50,6 +52,8 @@ canvas {
 progress {
     width: 100%;
     height: 20px; /* Give it a suitable height */
+    accent-color: #512888;
 }
+
 
 

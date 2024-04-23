@@ -215,3 +215,41 @@ function kstate_theme_suggestions_links_alter(array &$suggestions, array $variab
     }
   }
 }
+
+/**
+ * Implements a hook_preprocess_HOOK() for file-pdf-html.twig
+ * Sets the default viewer file for PDF rendering based on field_model
+ */
+
+ function kstate_theme_preprocess_file_pdf(array &$variables) {
+    
+  // Access the node entity from the current route if available.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node && $node->hasField('field_model') && !$node->get('field_model')->isEmpty()) {
+    // Load the referenced taxonomy term entity.
+    $term = $node->get('field_model')->entity;
+    // \Drupal::logger('KSUL Theme')->notice('Preprocess file-pdf called');
+ 
+    if ($term) {
+      $resourceTypeName = $term->label(); // Get the term name
+      \Drupal::logger('mytheme')->notice('Preprocess file-pdf called with variables: field_model = ' .$resourceTypeName );
+
+      // Determine the correct viewer based on the taxonomy term name.
+      $viewerFile = 'viewer.html'; // Default viewer
+      if ($resourceTypeName == 'Paged Content') {
+        $viewerFile = 'ksul-book-view.html'; // book/2-page viewer
+      }
+   
+
+      // Replace the substring in the src attribute
+      $variables['attributes']['src'] = str_replace('viewer.html', $viewerFile, $variables['attributes']['src']);
+
+    }
+  }
+
+  // Ensure all other attributes are maintained as passed.
+  if (!isset($variables['attributes']['src'])) {
+    // Default src if no specific type matched.
+    $variables['attributes']['src'] = $variables['attributes']['data-src'];
+  }
+}

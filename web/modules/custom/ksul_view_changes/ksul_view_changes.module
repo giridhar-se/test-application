@@ -228,7 +228,9 @@ function ksul_view_changes_entity_view(array &$build, EntityInterface $entity, E
     return; // Exit the function if the view mode is 'fgsc_strain_thumbnails'
   }
 
-  $fungal_resource_types_views = ['Text']; //Placeholder. Will add the array of selected "resource_type" to display as FGSC
+  $config = \Drupal::config('ksul_view_changes.settings');
+  $fungal_resource_types_views = $config->get('fgsc_resource_types');
+
   $fungal_routing = false;
 
   if ($entity->hasField('field_resource_type')){
