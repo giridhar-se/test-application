@@ -1,0 +1,103 @@
+From 49eb672cf0b3b4fbdd51f566a8fa45680abab177 Mon Sep 17 00:00:00 2001
+From: Florent Torregrosa <florent.torregrosa@gmail.com>
+Date: Sat, 3 Aug 2024 18:33:30 +0200
+Subject: [PATCH] Issue #3381979 by Lendude, akshay_d, smustgrave, francismak:
+ More link is missing in pager when using the "Some" pager and there are more
+ records than shown
+
+---
+ codebase/web/core/modules/views/src/Plugin/views/pager/Some.php     | 23 +++++++++++
+ codebase/web/core/tests/src/Kernel/Plugin/SomePagerTest.php | 40 +++++++++++++++++++
+ 2 files changed, 63 insertions(+)
+ create mode 100644 core/modules/views/tests/src/Kernel/Plugin/SomePagerTest.php
+
+diff --git a/codebase/web/core/modules/views/src/Plugin/views/pager/Some.php b/codebase/web/core/modules/views/src/Plugin/views/pager/Some.php
+index a4ec41cbd494..2ca7aab5a682 100644
+--- a/codebase/web/core/modules/views/src/Plugin/views/pager/Some.php
++++ b/codebase/web/core/modules/views/src/Plugin/views/pager/Some.php
+@@ -19,6 +19,13 @@
+ )]
+ class Some extends PagerPluginBase {
+ 
++  /**
++   * Total number of items in the result set before the pager limit is applied.
++   *
++   * @var int
++   */
++  protected int $totalItemsBeforePagerLimit;
++
+   public function summaryTitle() {
+     if (!empty($this->options['offset'])) {
+       return $this->formatPlural($this->options['items_per_page'], '@count item, skip @skip', '@count items, skip @skip', ['@count' => $this->options['items_per_page'], '@skip' => $this->options['offset']]);
+@@ -74,7 +81,23 @@ public function query() {
+    * {@inheritdoc}
+    */
+   public function postExecute(&$result): void {
++    $this->totalItemsBeforePagerLimit = $this->total_items;
+     $this->total_items = count($result);
+   }
+ 
++  /**
++   * {@inheritdoc}
++   */
++  public function hasMoreRecords() {
++    // Determine if there are more records by comparing the total number of
++    // items to the items per page.
++    $totalItems = $this->totalItemsBeforePagerLimit ?? $this->total_items;
++    if ($this->getItemsPerPage() && ($totalItems > $this->getItemsPerPage())) {
++      return TRUE;
++    }
++    else {
++      return FALSE;
++    }
++  }
++
+ }
+diff --git a/codebase/web/core/tests/src/Kernel/Plugin/SomePagerTest.php b/codebase/web/core/tests/src/Kernel/Plugin/SomePagerTest.php
+new file mode 100644
+index 000000000000..17c43dcad772
+--- /dev/null
++++ b/codebase/web/core/tests/src/Kernel/Plugin/SomePagerTest.php
+@@ -0,0 +1,40 @@
++<?php
++
++declare(strict_types=1);
++
++namespace Drupal\Tests\views\Kernel\Plugin;
++
++use Drupal\Tests\views\Kernel\ViewsKernelTestBase;
++use Drupal\views\Tests\ViewTestData;
++use Drupal\views\Views;
++
++/**
++ * Tests the "Some" pager.
++ *
++ * @group views
++ */
++class SomePagerTest extends ViewsKernelTestBase {
++
++  /**
++   * {@inheritdoc}
++   */
++  public static $testViews = ['test_tokens'];
++
++  /**
++   * Tests that the "more" link works correctly with the "Some" pager.
++   *
++   * @see \Drupal\views\Plugin\views\pager\Some::hasMoreRecords()
++   */
++  public function testSomeHasMoreRecords(): void {
++    $view = Views::getView('test_tokens');
++    $view->setDisplay('page_4');
++    $this->executeView($view);
++
++    $total_rows_in_table = ViewTestData::dataSet();
++    $this->assertSame(3, $view->total_rows);
++    $this->assertGreaterThan(3, count($total_rows_in_table));
++
++    $this->assertTrue($view->getPager()->hasMoreRecords());
++  }
++
++}
+-- 
+GitLab

@@ -1,0 +1,51 @@
+@media (max-width: 500px) {
+    .sidebar-second {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 80%; /* Adjust width as needed */
+      max-width: 300px; /* Set max width for the sidebar */
+      height: 100%;
+      z-index: 1050; /* Ensure it's above other content */
+      background-color: #f8f9fa; /* Optional: Background color */
+      box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2); /* Optional: Shadow for depth */
+      padding: 1rem;
+      overflow-y: auto; /* Enable scrolling if content is too tall */
+      transform: translateX(100%); /* Start off-screen to the right */
+      transition: transform 0.3s ease; /* Smooth slide-in effect */
+    }
+  
+    .collapse.show.sidebar-second {
+      transform: translateX(0); /* Slide in when the collapse is triggered */
+    }
+
+    .container {
+        position: relative; /* Ensure the container is the positioned ancestor */
+      }
+    
+    .toggle-sidebar {
+    position: fixed; /* Stick the button to the viewport */
+    right: 1rem;     /* Adjust the right distance */
+    z-index: 1060;   /* Ensure it sits above the sidebar and other elements */
+    background-color: lightgray;
+    color: $ksu-purple;
+    border: none;
+
+      &:focus {
+        color: lightgray;
+        background-color: $ksu-purple;
+      }
+    }
+}
+
+.toggle-sidebar {
+    bottom: 1rem;          /* Position it 1rem from the top */
+    right: 1rem;        /* Position it 1rem from the right */
+    z-index: 1060;      /* Ensure it sits above other elements */
+  }
+
+@media (min-width: 501px) {
+  .sidebar-second.collapse:not(.show) {
+    display: inherit;
+  }
+}

@@ -1,0 +1,81 @@
+#views-exposed-form-solr-search-content-page-3 {
+    margin-bottom: 0;
+
+    .form-row {
+        display: flex;
+        justify-content: center;
+        margin: 0 10rem;
+
+        div {
+            display: flex;
+            gap: 5px;
+            margin: 0.5rem;
+            align-items: center;
+
+            label {
+                margin-bottom: 0;
+            }
+        }
+        .form-item-search-api-fulltext {
+            order: 1;
+            flex-basis: 65%;
+            margin: 0;
+            padding-right: 0;
+            padding-left: 0;
+            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+
+            input {
+                border: 2px solid gray;
+                border-radius: 0;
+                width: 100%;
+
+            }
+        }
+
+        .form-item-items-per-page {
+            order: 3;
+        }
+
+        .form-item-sort-bef-combine {
+            order: 4;
+        }
+
+        .form-submit {
+            order: 2;
+            flex-basis: 10%;
+            border-radius: 0;
+            margin-left: -2px;
+            border: none;
+        }
+
+        #edit-items-per-page--3>ul {
+            display: flex;
+            gap: 10px;
+            margin: 0 auto;
+
+            li {
+                border: solid #000;
+                border-width: thin;
+                width: 35px;
+                height: 25px;
+                text-align: center;
+
+                .bef-link--selected {
+                    background: #a7a7a7;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #views-exposed-form-solr-search-content-page-3 {
+        .form-row {
+            margin: 0;
+        }
+    }
+}

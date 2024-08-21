@@ -1,0 +1,11 @@
+lucene_on_off: 1
+lucene_label: ''
+all_fields_on_off: 1
+list_on_off: 0
+grid_on_off: 0
+default-display-mode: list
+search_query_parameter: a
+search_recursive_parameter: r
+search_add_operator: +
+search_remove_operator: '<i class="fa fa-remove"></i>'
+facet_truncate: '32'

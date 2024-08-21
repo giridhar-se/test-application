@@ -1,0 +1,30 @@
+uuid: a8b60c23-69e5-4d50-8d7f-41fe582d9e07
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.global_date_issued
+  module:
+    - facets
+    - islandora
+  theme:
+    - kstate_theme
+id: kstate_theme_globaldateissued
+theme: kstate_theme
+region: sidebar_second
+weight: -8
+provider: null
+plugin: 'facet_block:global_date_issued'
+settings:
+  id: 'facet_block:global_date_issued'
+  label: 'Date Issued'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: kstate_theme_globaldateissued
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

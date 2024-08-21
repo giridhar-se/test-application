@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: IZr6isXi-gqwzwArB8etjs1Z7r4_JxzR3bz7C9QyUwA
+maxDepth: 5
+includeSelf: true
+referenceFields:
+  - field_member_of

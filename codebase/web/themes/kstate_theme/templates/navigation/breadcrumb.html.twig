@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+{{ attach_library('bootstrap_barrio/breadcrumb') }}
+
+{# Set the maximum string length of the breadcrumb text --some of the titles get pretty long--- #}
+{% set max_length = 30 %}
+
+{% if breadcrumb %}
+  <nav role="navigation" aria-label="breadcrumb" style="{{breadcrumb_divider}}">
+    <ol class="breadcrumb">
+    {# Add Libraries as root breadcrumb #}
+    <li class="breadcrumb-item">
+      <a href="https://lib.k-state.edu" target="_blank">Libraries</a>
+    </li>
+    {% for item in breadcrumb %}
+      {# Replace the default "Home" for the first crumb #}
+      {% if item.text == "Home" %}
+        {% set title = "K-State Digital Collections" %}
+      {% else %}
+        {% set title = item.text %}
+      {% endif %}
+      {# On each iteration, reset the truncated_text to the current crumb/item respecting the max length variable #}
+      {% set truncated_text = (title|length > max_length) ? title|slice(0, max_length) ~ '...' : title %}
+      {# If this is the last breadcrumb, it's the active item and doesnt need a link #}
+      {% set last_run = false %}
+      {% if loop.last %}
+        {% set last_run = true %}
+      {% endif %}
+      {# TODO: The following "if" logic does not make sense to me...but works...so we rolling with it for now #}
+      {% if last_run == false %}
+        <li class="breadcrumb-item">
+          <a href="{{ item.url }}">{{ truncated_text }}</a>
+        </li>
+      {% else %}
+        <li class="breadcrumb-item active">
+          {{ truncated_text }}
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ol>
+  </nav>
+{% endif %}

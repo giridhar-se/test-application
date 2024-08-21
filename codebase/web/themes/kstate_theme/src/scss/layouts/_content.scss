@@ -1,0 +1,15 @@
+.ksul {
+    
+    .sidebar-first, .sidebar-second {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+    .center-content {
+        flex: 1;
+
+        .main-content {
+            padding: 0 1rem;
+        }
+    }
+}

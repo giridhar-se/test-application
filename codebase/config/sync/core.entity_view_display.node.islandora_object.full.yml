@@ -1,0 +1,407 @@
+uuid: ee508c6c-3581-4f6c-904c-21592b27484f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.islandora_object.field_abstract
+    - field.field.node.islandora_object.field_alt_title
+    - field.field.node.islandora_object.field_classification
+    - field.field.node.islandora_object.field_coordinates
+    - field.field.node.islandora_object.field_coordinates_text
+    - field.field.node.islandora_object.field_copyright_date
+    - field.field.node.islandora_object.field_date_captured
+    - field.field.node.islandora_object.field_date_ksul_published
+    - field.field.node.islandora_object.field_date_modified
+    - field.field.node.islandora_object.field_date_of_deposit
+    - field.field.node.islandora_object.field_date_valid
+    - field.field.node.islandora_object.field_description
+    - field.field.node.islandora_object.field_dewey_classification
+    - field.field.node.islandora_object.field_edition
+    - field.field.node.islandora_object.field_edtf_date
+    - field.field.node.islandora_object.field_edtf_date_created
+    - field.field.node.islandora_object.field_edtf_date_issued
+    - field.field.node.islandora_object.field_extent
+    - field.field.node.islandora_object.field_fgsc_depositor
+    - field.field.node.islandora_object.field_fgsc_distributor
+    - field.field.node.islandora_object.field_fgsc_member
+    - field.field.node.islandora_object.field_frequency
+    - field.field.node.islandora_object.field_full_title
+    - field.field.node.islandora_object.field_genotype
+    - field.field.node.islandora_object.field_genre
+    - field.field.node.islandora_object.field_geographic_subject
+    - field.field.node.islandora_object.field_identifier
+    - field.field.node.islandora_object.field_isbn
+    - field.field.node.islandora_object.field_ksul_citation
+    - field.field.node.islandora_object.field_ksul_fgsc_species
+    - field.field.node.islandora_object.field_ksul_handle_identifier
+    - field.field.node.islandora_object.field_ksul_journal_issue
+    - field.field.node.islandora_object.field_ksul_journal_volume
+    - field.field.node.islandora_object.field_ksul_media_type
+    - field.field.node.islandora_object.field_ksul_note
+    - field.field.node.islandora_object.field_ksul_related_to
+    - field.field.node.islandora_object.field_ksul_rights_statement
+    - field.field.node.islandora_object.field_language
+    - field.field.node.islandora_object.field_lcc_classification
+    - field.field.node.islandora_object.field_linked_agent
+    - field.field.node.islandora_object.field_local_identifier
+    - field.field.node.islandora_object.field_member_of
+    - field.field.node.islandora_object.field_mode_of_issuance
+    - field.field.node.islandora_object.field_model
+    - field.field.node.islandora_object.field_note
+    - field.field.node.islandora_object.field_oclc_number
+    - field.field.node.islandora_object.field_physical_form
+    - field.field.node.islandora_object.field_pid
+    - field.field.node.islandora_object.field_place_published
+    - field.field.node.islandora_object.field_place_published_country
+    - field.field.node.islandora_object.field_publication_link
+    - field.field.node.islandora_object.field_representative_image
+    - field.field.node.islandora_object.field_resource_type
+    - field.field.node.islandora_object.field_rights
+    - field.field.node.islandora_object.field_subject
+    - field.field.node.islandora_object.field_subject_general
+    - field.field.node.islandora_object.field_subjects_name
+    - field.field.node.islandora_object.field_table_of_contents
+    - field.field.node.islandora_object.field_temporal_subject
+    - field.field.node.islandora_object.field_viewer_override
+    - field.field.node.islandora_object.field_weight
+    - node.type.islandora_object
+  module:
+    - controlled_access_terms
+    - field_group
+    - layout_builder
+    - link
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  field_group:
+    group_object_details:
+      children:
+        - group_details
+      label: 'Object Details'
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_details:
+      children:
+        - field_full_title
+        - field_edtf_date_created
+        - field_linked_agent
+        - field_ksul_note
+        - field_note
+        - field_ksul_rights_statement
+        - field_subject_general
+        - field_member_of
+        - field_rights
+        - field_publication_link
+        - field_description
+        - field_extent
+        - field_genre
+        - field_identifier
+        - field_isbn
+        - field_ksul_citation
+        - field_ksul_journal_issue
+        - field_ksul_journal_volume
+        - field_date_of_deposit
+        - field_fgsc_depositor
+        - field_fgsc_distributor
+        - field_genotype
+        - field_ksul_fgsc_species
+      label: Details
+      parent_name: group_object_details
+      region: content
+      weight: 1
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+    group_download_options:
+      children:
+        - display_media_entity_view_2
+      label: 'Download Options'
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: 'media-download position-relative'
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: 7nAsgKpklfcldz5UjF5QnwGQqa2f2zypALWMvnJ8PeI
+id: node.islandora_object.full
+targetEntityType: node
+bundle: islandora_object
+mode: full
+content:
+  content_eva_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  display_media_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 60
+    region: content
+  display_media_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 42
+    region: content
+  field_description:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_edtf_date_created:
+    type: edtf_default
+    label: inline
+    settings:
+      date_separator: dash
+      date_order: big_endian
+      month_format: mm
+      day_format: dd
+      year_format: 'y'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_extent:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_full_title:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_genre:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_identifier:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_isbn:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_ksul_citation:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_ksul_journal_issue:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_ksul_journal_volume:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_ksul_note:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ksul_rights_statement:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_linked_agent:
+    type: typed_relation_default
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_member_of:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_note:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_publication_link:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_rights:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_subject_general:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  object_navigation:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  permalink_uri:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  show_title:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  did_image: true
+  display_media_entity_view_1: true
+  display_media_entity_view_3: true
+  display_media_eva_remote_video: true
+  display_media_service_file: true
+  display_media_thumbnail: true
+  fgsc_deposit_entity_view_1: true
+  field_abstract: true
+  field_alt_title: true
+  field_classification: true
+  field_coordinates: true
+  field_coordinates_text: true
+  field_copyright_date: true
+  field_date_captured: true
+  field_date_ksul_published: true
+  field_date_modified: true
+  field_date_of_deposit: true
+  field_date_valid: true
+  field_dewey_classification: true
+  field_edition: true
+  field_edtf_date: true
+  field_edtf_date_issued: true
+  field_fgsc_depositor: true
+  field_fgsc_distributor: true
+  field_fgsc_member: true
+  field_frequency: true
+  field_gemini_uri: true
+  field_genotype: true
+  field_geographic_subject: true
+  field_ksul_fgsc_species: true
+  field_ksul_handle_identifier: true
+  field_ksul_media_type: true
+  field_ksul_related_to: true
+  field_language: true
+  field_lcc_classification: true
+  field_local_identifier: true
+  field_mode_of_issuance: true
+  field_model: true
+  field_oclc_number: true
+  field_physical_form: true
+  field_pid: true
+  field_place_published: true
+  field_place_published_country: true
+  field_representative_image: true
+  field_resource_type: true
+  field_subject: true
+  field_subjects_name: true
+  field_table_of_contents: true
+  field_temporal_subject: true
+  field_viewer_override: true
+  field_weight: true
+  islandora_fits_checksum: true
+  langcode: true
+  links: true
+  metadata: true
+  metadata_pages: true
+  openseadragon: true
+  openseadragon_media_evas_entity_view_1: true
+  openseadragon_media_evas_entity_view_2: true
+  openseadragon_media_evas_service_file: true
+  pdfjs_media_evas_entity_view_1: true
+  pdfjs_media_evas_entity_view_2: true
+  pdfjs_media_evas_service_file: true
+  reposito_entity_view_1: true
+  search_api_excerpt: true
+  search_within_this_collection_link_entity_view_1: true
+  title: true
+  uid: true

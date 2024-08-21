@@ -1,7 +1,0 @@
-{% if content %}
-<nav class="header__nav nav">
-	<div class="container">
-  		{{ content }}
-  	</div>
-</nav>
-{% endif %} 

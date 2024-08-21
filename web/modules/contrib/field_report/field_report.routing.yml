@@ -1,9 +1,0 @@
-field_report.fields_report:
-  path: '/admin/reports/fields/field-report'
-  defaults:
-    _controller: '\Drupal\field_report\Controller\FieldReportController::getEntityBundles'
-    _title: 'Field Report'
-  requirements:
-    _permission: 'administer field_report'
-  options:
-    _admin_route: TRUE

@@ -1,0 +1,25 @@
+uuid: 2123b0f4-0027-49b6-b6a2-ee3ad43ad6ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+label: 'Front Page Expose Search'
+name: front_page_expose_search
+group: Display
+description: 'On the front page, override the page template with page--front.html.twig'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: e8a9aa7e-9a37-48be-8be0-311aea689113
+    context_mapping: {  }
+    pages: '<front>'
+reactions:
+  page_template_suggestions:
+    id: page_template_suggestions
+    suggestions: page__front
+    saved: false
+weight: 0

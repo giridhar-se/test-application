@@ -1,0 +1,51 @@
+uuid: e2ed4e6a-daf2-4d3f-95cb-90de7c501c55
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.fgsc_species
+  module:
+    - system
+    - views
+label: 'Fungal Genetics Home'
+name: fungal_genetics_home
+group: Display
+description: 'Set twig page template for fungal genetics home page'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: bffe4036-0183-4292-b332-01f312436846
+    context_mapping: {  }
+    pages: "/item/fungal-genetics-collection\r\n/item/fgsc-deposit-sheets"
+reactions:
+  page_template_suggestions:
+    id: page_template_suggestions
+    suggestions: page__node__fungal
+    saved: false
+  blocks:
+    id: blocks
+    uuid: 855faaa3-b3b0-4fc9-9c5c-a3da29358bc5
+    blocks:
+      e0a9148e-b9bd-4aae-9490-9f12f64fcb61:
+        uuid: e0a9148e-b9bd-4aae-9490-9f12f64fcb61
+        id: 'views_block:fgsc_species-block_1'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: sub_content
+        weight: '0'
+        custom_id: views_block_fgsc_species_block_1
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: fungal_genetics_home
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: none
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

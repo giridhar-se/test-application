@@ -1,0 +1,64 @@
+uuid: e2aed195-6035-4eee-8ca4-36b4b68f0ce3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.fgsc_deposits
+  module:
+    - islandora
+    - views
+label: 'FGSC Species Context'
+name: fgsc_species_context
+group: Display
+description: 'Sets the appropriate blocks when viewing a species'
+requireAllConditions: false
+disabled: false
+conditions:
+  node_has_parent:
+    id: node_has_parent
+    negate: false
+    uuid: 0c40340b-8eb4-4451-b20b-c3d08aa02087
+    context_mapping:
+      node: '@node.node_route_context:node'
+    parent_nid: 111
+    parent_reference_field: field_member_of
+reactions:
+  blocks:
+    id: blocks
+    uuid: 93f58a8f-19bd-46b2-a8a3-82d02a2954dc
+    blocks:
+      86e17fbd-2470-440a-82dd-5a55353ae538:
+        uuid: 86e17fbd-2470-440a-82dd-5a55353ae538
+        id: 'views_block:fgsc_deposits-block_1'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: sub_content
+        weight: '0'
+        custom_id: views_block_fgsc_deposits_block_1
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: fgsc_species_context
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: none
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+  regions:
+    id: regions
+    uuid: 99ba2fa8-68dc-4d80-b8c5-f3a0d8655e6c
+    regions:
+      claro: {  }
+      olivero: {  }
+      bootstrap_barrio: {  }
+      bootstrap_barrio_subtheme: {  }
+      kstate_theme:
+        - content
+    saved: false
+  page_template_suggestions:
+    id: page_template_suggestions
+    suggestions: page__node__fungal
+    saved: false
+weight: 0

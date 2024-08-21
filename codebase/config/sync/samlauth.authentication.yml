@@ -1,0 +1,68 @@
+_core:
+  default_config_hash: oDGEkhP0h5rXXqlDplxeBDre0goLigOJupHKMDMwcqM
+login_menu_item_title: 'SSO Login'
+logout_menu_item_title: Logout
+login_redirect_url: ''
+logout_redirect_url: ''
+error_redirect_url: ''
+error_throw: false
+local_login_saml_error: false
+logout_different_user: false
+drupal_login_roles:
+  authenticated: '0'
+  content_editor: '0'
+  administrator: '0'
+  fedoraadmin: '0'
+sp_entity_id: 'https://dev-web.ksulib.net/Shibboleth.sso/Login'
+sp_name_id_format: ''
+sp_x509_certificate: 'file:/var/saml/saml-x509'
+sp_new_certificate: ''
+sp_private_key: 'file:/var/saml/saml-pvt-key'
+metadata_valid_secs: 60
+metadata_cache_http: false
+idp_entity_id: 'https://signin.k-state.edu/idp/shibboleth'
+idp_single_sign_on_service: 'https://signin.k-state.edu/idp/profile/SAML2/Redirect/SSO'
+idp_single_log_out_service: 'https://signin.k-state.edu/idp/profile/Logout'
+idp_change_password_service: ''
+idp_certs:
+  - 'file:/var/saml/idp-x509'
+idp_cert_encryption: ''
+unique_id_attribute: uid
+map_users: false
+map_users_name: true
+map_users_mail: false
+map_users_roles:
+  content_editor: content_editor
+  administrator: administrator
+  fedoraadmin: fedoraadmin
+create_users: true
+sync_name: false
+sync_mail: true
+user_name_attribute: uid
+user_mail_attribute: mail
+request_set_name_id_policy: false
+strict: true
+security_metadata_sign: false
+security_authn_requests_sign: true
+security_logout_requests_sign: true
+security_logout_responses_sign: true
+security_nameid_encrypt: false
+security_signature_algorithm: ''
+security_encryption_algorithm: ''
+security_messages_sign: true
+security_assertions_signed: false
+security_assertions_encrypt: false
+security_nameid_encrypted: false
+security_want_name_id: false
+security_request_authn_context: true
+security_lowercase_url_encoding: false
+security_logout_reuse_sigs: false
+security_allow_repeat_attribute_name: false
+debug_display_error_details: true
+debug_log_in: false
+debug_log_saml_in: true
+debug_log_saml_out: true
+debug_phpsaml: false
+use_proxy_headers: false
+use_base_url: false
+bypass_relay_state_check: false

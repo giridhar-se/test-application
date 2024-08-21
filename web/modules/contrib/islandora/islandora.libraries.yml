@@ -1,5 +1,0 @@
-islandora:
-  version: VERSION
-  css:
-    theme:
-      css/islandora.css: {}

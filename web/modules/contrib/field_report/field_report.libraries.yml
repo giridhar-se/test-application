@@ -1,5 +1,0 @@
-field-report:
-  version: 1.x
-  css:
-    theme:
-      css/field_report.admin.css: {}

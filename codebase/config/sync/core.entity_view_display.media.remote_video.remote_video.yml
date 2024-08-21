@@ -1,0 +1,43 @@
+uuid: 885ba39a-48db-4981-b3f0-41a370fcc5fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.remote_video
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_media_of
+    - media.type.remote_video
+  module:
+    - layout_builder
+    - media
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: zQoBQ0BtnMM_rlDdgftyu6eI4AVs9mo5K8xq7NFO2Zc
+id: media.remote_video.remote_video
+targetEntityType: media
+bundle: remote_video
+mode: remote_video
+content:
+  field_media_oembed_video:
+    type: oembed
+    label: hidden
+    settings:
+      max_width: 800
+      max_height: 600
+      loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_of: true
+  langcode: true
+  name: true
+  pdfjs_media_evas_entity_view_2: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,30 @@
+uuid: ec04673e-a23a-4bb1-b701-511aab5cc6f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.global_member_of
+  module:
+    - facets
+    - islandora
+  theme:
+    - kstate_theme
+id: kstate_theme_globalmemberof
+theme: kstate_theme
+region: sidebar_second
+weight: -4
+provider: null
+plugin: 'facet_block:global_member_of'
+settings:
+  id: 'facet_block:global_member_of'
+  label: Collections
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: kstate_theme_globalmemberof
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

@@ -1,0 +1,43 @@
+// fgsc homepage
+
+#fgsc {
+    max-width: 90vw;
+    margin: auto;
+    h1 {
+        font-size: 32px;
+    }
+
+    .view-header {
+
+        p {
+            margin-bottom: 0.25rem;
+        }
+    }
+
+    .view-content {
+
+        #fgsc-species, #fgsc-strains {
+
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            gap: 1rem;
+
+            label {
+                margin-bottom: 0;
+                color: $ksu-purple;
+            }
+
+            .select2-container {
+                width: min(400px, 100%) !important;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        #fgsc-species, #fgsc-strains {
+            flex-direction: column;
+        }
+    }
+}
+

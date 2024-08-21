@@ -1,0 +1,16 @@
+body, html {
+    font-family: 'Myriad Pro', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, div, header, footer, nav, section, article, aside, main, address, blockquote, pre, code, ul, ol, li, dl, dt, dd, table, th, td, input, textarea, button, label {
+    font-family: 'Myriad Pro', sans-serif;
+}
+
+@import 'ksul-custom/custom.scss';
+@import 'pages/_front-page.scss';
+@import 'layouts/layouts.scss';
+@import 'components/components.scss';
+@import 'views/views.scss';
+@import 'utils/utils.scss';

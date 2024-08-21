@@ -1,0 +1,11 @@
+uuid: 830def46-9cc5-430c-ae49-f19f56f7e97f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.fgsc_deposit_record_view
+label: 'FGSC Deposit Record View'
+description: ''
+targetEntityType: node
+cache: true

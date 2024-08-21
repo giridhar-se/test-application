@@ -1,0 +1,46 @@
+.view-taxonomy-term {
+    display: flex;
+    flex-direction: column;
+
+    .view-header {
+        text-transform: capitalize;
+    }
+
+    .view-content {
+
+        .item-list-flex {
+            
+            .node__content {
+                display: flex;
+                flex-direction: row;
+
+                .node__details {
+                    max-width: 70%;
+                    margin-right: 2rem;
+                }
+            }
+        }
+    }
+    @media (max-width:500px) {
+
+        .view-content {
+            padding: 0 1rem;
+
+            .item-list-flex {
+                
+                .node__content {
+                    flex-direction: column-reverse;
+
+                    .node__details {
+                        max-width: 100%;
+                        margin: 0;
+                    }
+
+                    .field--name-field-media-image {
+                        margin: 10px 5rem;
+                    }
+                }
+            }
+        }
+    }
+}

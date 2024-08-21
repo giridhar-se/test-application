@@ -1,0 +1,30 @@
+uuid: cd111478-8760-47f4-a728-fe080fcc4b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.resource_type
+  module:
+    - facets
+    - islandora
+  theme:
+    - kstate_theme
+id: kstate_theme_resourcetype
+theme: kstate_theme
+region: sidebar_second
+weight: -10
+provider: null
+plugin: 'facet_block:resource_type'
+settings:
+  id: 'facet_block:resource_type'
+  label: 'Resource Type'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: kstate_theme_resourcetype
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

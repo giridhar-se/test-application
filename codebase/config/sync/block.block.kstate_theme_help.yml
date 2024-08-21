@@ -1,0 +1,38 @@
+uuid: 6d8570fd-ef2d-4ef6-9f5e-e0f9b44e7ab6
+langcode: en
+status: true
+dependencies:
+  module:
+    - context
+    - help
+    - islandora
+  theme:
+    - kstate_theme
+id: kstate_theme_help
+theme: kstate_theme
+region: highlighted
+weight: -9
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility:
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

@@ -1,0 +1,30 @@
+uuid: 8d11201a-b25f-4e23-88d4-a74b57cdb2e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.topics
+  module:
+    - facets
+    - islandora
+  theme:
+    - kstate_theme
+id: kstate_theme_topics
+theme: kstate_theme
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'facet_block:topics'
+settings:
+  id: 'facet_block:topics'
+  label: Topic
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: kstate_theme_topics
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

@@ -1,0 +1,36 @@
+#header {
+    .header__row, .header__nav {
+        padding: 0.5rem 5rem;
+
+        .main-nav {
+            flex-grow: 1;
+        }
+
+        .secondary-menu {
+            margin-left: auto;
+            min-width: 125px;
+        }
+    }
+
+}
+
+@media (max-width: 500px) {
+    #header {
+
+        .header__row {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .header__nav {
+            padding: 5px 1rem;   
+            
+            .secondary-menu {
+                
+                .nav {
+                    padding: 5px;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Book Viewer</title>
+    <link rel="stylesheet" href="ksul-viewer.css">
+    <script src="/core/assets/vendor/jquery/jquery.min.js?v3.7.1"></script>
+</head>
+
+<body>
+    <div id="pdf-controls">
+        <button id="first-page">First Page</button>
+        <button id="prev-page">Prev</button>
+        <span id="page-num">Page </span> of
+        <span id="page-count"></span>
+        <button id="next-page">Next</button>
+        <button id="last-page">Last Page</button>
+    </div>
+
+    <div id="loading-indicator" style="display: none;">
+        <div>Loading PDF: <span id="loading-percentage">0%</span></div>
+        <progress id="pdf-load-progress" value="0" max="100"></progress>
+    </div>
+
+    <!-- Flipbook container -->
+    <div id="flipbook" class="spread"></div>
+
+    <script src="/libraries/pdf.js/build/pdf.js"></script>
+    <script src="../turn.js/turn.min.js"></script>
+    <script src="ksul-viewer.js"></script>
+</body>
+
+</html>

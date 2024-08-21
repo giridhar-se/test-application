@@ -1,0 +1,30 @@
+uuid: 937a9e60-2e83-43db-b42d-700a914d0486
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.creator
+  module:
+    - facets
+    - islandora
+  theme:
+    - kstate_theme
+id: kstate_theme_creator
+theme: kstate_theme
+region: sidebar_second
+weight: -5
+provider: null
+plugin: 'facet_block:creator'
+settings:
+  id: 'facet_block:creator'
+  label: Creator
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: kstate_theme_creator
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

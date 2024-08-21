@@ -1,0 +1,9 @@
+uuid: e59efa67-1b12-4db0-a5f6-8474cbd57abf
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media Type'
+vid: ksul_media_type
+description: 'KSUL Digital record media type'
+weight: 0
+new_revision: false

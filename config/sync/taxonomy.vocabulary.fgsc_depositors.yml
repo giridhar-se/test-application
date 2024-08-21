@@ -1,8 +1,0 @@
-uuid: 27453fc2-2612-44f3-87cd-57024fb9f3f8
-langcode: en
-status: true
-dependencies: {  }
-name: 'FGSC Depositors'
-vid: fgsc_depositors
-description: 'Depositor list for Fungal Genetics'
-weight: 0

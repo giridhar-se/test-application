@@ -1,0 +1,9 @@
+uuid: e13ff6d1-beaf-48cf-b8e0-79752a5e9bdc
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__fgsc_solr_search_content__page_1
+name: 'search_api:views_page__fgsc_solr_search_content__page_1'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

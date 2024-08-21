@@ -1,0 +1,80 @@
+uuid: a936e30e-a520-47c8-a872-ee479fda3493
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.reposito
+  module:
+    - islandora
+    - views
+_core:
+  default_config_hash: vH6Z5udf5Ab9cLW3Zl2-6VCbT0hagmZfalNjb654KVs
+label: Collection
+name: collection
+group: Display
+description: 'If a Collection or Compound, display a block of children'
+requireAllConditions: false
+disabled: false
+conditions:
+  node_has_term:
+    id: node_has_term
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    uri: 'http://purl.org/dc/dcmitype/Collection,http://vocab.getty.edu/aat/300242735'
+    logic: or
+reactions:
+  blocks:
+    id: blocks
+    blocks:
+      a3c72cc0-9833-4925-97db-b08e0a5199d4:
+        uuid: a3c72cc0-9833-4925-97db-b08e0a5199d4
+        id: 'views_block:reposito-reposito_children'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: sub_content
+        weight: '0'
+        custom_id: views_block_reposito_reposito_children
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: collection
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: '5'
+        third_party_settings: {  }
+      48426a34-b096-488c-8a40-4570ed0b5e9d:
+        uuid: 48426a34-b096-488c-8a40-4570ed0b5e9d
+        id: 'views_exposed_filter_block:reposito-reposito_children'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: primary_menu
+        weight: '0'
+        custom_id: views_exposed_filter_block_reposito_reposito_children
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: collection
+        context_mapping: {  }
+        views_label: ''
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+  regions:
+    id: regions
+    uuid: af126c95-473d-4f1a-8c10-51762260f368
+    regions:
+      claro: {  }
+      olivero: {  }
+      bootstrap_barrio: {  }
+      bootstrap_barrio_subtheme: {  }
+      kstate_theme:
+        - sidebar_second
+    saved: false
+  view_mode_alter:
+    id: view_mode_alter
+    saved: false
+    mode: node.collection
+weight: -9

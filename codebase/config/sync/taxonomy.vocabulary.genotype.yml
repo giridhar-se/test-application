@@ -1,0 +1,9 @@
+uuid: 43a210d8-2b25-4f94-8bc7-a5abd142dfef
+langcode: en
+status: true
+dependencies: {  }
+name: Genotype
+vid: genotype
+description: 'Fungal Genetics Genotype'
+weight: 0
+new_revision: false

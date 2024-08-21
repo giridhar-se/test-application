@@ -1,0 +1,56 @@
+uuid: 37010b32-0fba-4ea2-b51c-de04a87fdeed
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.fgsc_solr_search_content
+  module:
+    - islandora
+    - system
+    - views
+label: 'FGSC Content'
+name: fgsc_content
+group: Display
+description: 'Display appropriate global blocks for fgsc content'
+requireAllConditions: false
+disabled: false
+conditions:
+  node_has_ancestor:
+    id: node_has_ancestor
+    negate: 0
+    ancestor_nids:
+      - '111'
+    parent_reference_field: field_member_of
+    uuid: 5186c5fe-eff1-4b68-b99d-ce3a6c46b166
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    negate: false
+    uuid: d80258c1-69f0-4955-bf41-52341f618654
+    context_mapping: {  }
+    pages: "/item/fungal-genetics-collection\r\n/item/fgsc-deposit-sheets"
+reactions:
+  blocks:
+    id: blocks
+    uuid: eebad17a-c9ee-4724-9715-fd7b71ad67a0
+    blocks:
+      d5c46cc1-c307-44c0-9eb3-ecaf0282d444:
+        uuid: d5c46cc1-c307-44c0-9eb3-ecaf0282d444
+        id: 'views_exposed_filter_block:fgsc_solr_search_content-page_1'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: highlighted
+        weight: '0'
+        custom_id: views_exposed_filter_block_fgsc_solr_search_content_page_1
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: fgsc_content
+        context_mapping: {  }
+        views_label: ''
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

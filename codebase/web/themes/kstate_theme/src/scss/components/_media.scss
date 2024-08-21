@@ -1,0 +1,14 @@
+// Full size media
+.media-full-height {
+    .field__item {
+        max-height: 850px;
+    }
+}
+
+@media (max-width: 500px) {
+    .media-full-height {
+        .field__item {
+            max-height: 500px;
+        }
+    }
+}

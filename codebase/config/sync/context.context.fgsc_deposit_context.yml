@@ -1,0 +1,75 @@
+uuid: 40471763-f4b1-4513-9432-fc179264338e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.fgsc_deposit
+  module:
+    - system
+    - views
+label: 'FGSC Deposit Context'
+name: fgsc_deposit_context
+group: Display
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 0db5a1e6-1afa-4b5b-ae08-89996eac4d8b
+    context_mapping: {  }
+    pages: "/item/*/fgsc-*\r\n"
+reactions:
+  blocks:
+    id: blocks
+    uuid: 3ed7b23c-eb71-4ce9-838a-687fa9e48aac
+    blocks:
+      e1d2221f-0136-44f9-b8b8-61975dae6bce:
+        uuid: e1d2221f-0136-44f9-b8b8-61975dae6bce
+        id: 'views_block:fgsc_deposit-fgsc_deposit_metadata'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: sub_content
+        weight: '1'
+        custom_id: views_block_fgsc_deposit_fgsc_deposit_metadata
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: fgsc_deposit_context
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: none
+        third_party_settings: {  }
+      1f839a35-3144-4c66-b01e-642015c76b67:
+        uuid: 1f839a35-3144-4c66-b01e-642015c76b67
+        id: 'views_block:fgsc_deposit-block_1'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: sub_content
+        weight: '0'
+        custom_id: views_block_fgsc_deposit_block_1
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: fgsc_deposit_context
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: none
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+  regions:
+    id: regions
+    uuid: 415e99fd-54f3-4b73-8ecb-87d5bac615fc
+    regions:
+      claro: {  }
+      olivero: {  }
+      bootstrap_barrio: {  }
+      bootstrap_barrio_subtheme: {  }
+      kstate_theme:
+        - content
+    saved: false
+weight: 0

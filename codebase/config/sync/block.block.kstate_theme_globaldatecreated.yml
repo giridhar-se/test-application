@@ -1,0 +1,30 @@
+uuid: ee20ff43-bf4b-4009-89ca-96b751d8678d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.global_date_created
+  module:
+    - facets
+    - islandora
+  theme:
+    - kstate_theme
+id: kstate_theme_globaldatecreated
+theme: kstate_theme
+region: sidebar_second
+weight: -9
+provider: null
+plugin: 'facet_block:global_date_created'
+settings:
+  id: 'facet_block:global_date_created'
+  label: 'Date Created'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: kstate_theme_globaldatecreated
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

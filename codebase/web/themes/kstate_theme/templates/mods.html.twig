@@ -1,0 +1,129 @@
+{# Identifier URL #}
+<identifier type="uri">{{ elements.location_url }}</identifier>
+
+{# Record Title #}
+<titleInfo>
+  {% if elements.full_title %}
+  <title lang="eng">{{ elements.full_title }}</title>
+  {% else %}
+  <title lang="eng">{{ elements.title }}</title>
+  {% endif %} 
+</titleInfo>
+
+{# Creator(s)/Linked Agent(s) #}
+{% for role_name_info in elements.linked_agent |split ('|') %}
+  {% set role_name = role_name_info|split(':') %}
+  {% set name_type_info = elements.linked_agent_vocabulary|split(',') %}
+
+  {% set name_type_info_x = name_type_info[loop.index0]|replace({"Person":"person", "Corporate Body":"corporate", "Family":"family"})|raw %}
+  {% if 'Publisher' not in role_name[0] %}
+  <name type="{{ name_type_info_x }}">
+      <role>
+        <roleTerm type="text">{{ role_name[0] }}</roleTerm>
+      </role>
+      <namePart>{{ role_name[1] }}</namePart>
+  </name>
+  {% endif %}
+{% endfor %}
+
+{# Type of Resource #}
+<typeOfResource>{{ elements.typeofresource }}</typeOfResource>
+
+{# Genre #}
+<genre>{{ elements.genre }}</genre>
+
+{# Abstract #}
+<abstract>{{ elements.description }}</abstract>
+
+{# Publication Info/Origin Info #}
+<originInfo>
+  {% if elements.place_published %}
+  <place>
+    <placeTerm type="text">{{ elements.place_published }}</placeTerm>
+  </place>
+  {% endif %}
+  {% for role_name_info in elements.linked_agent |split ('|') %}
+     {% set role_name = role_name_info|split(':') %}
+     {% if 'Publisher' in role_name[0] %}
+        <publisher>{{ role_name[1] }}</publisher>
+      {% endif %}
+  {% endfor %}
+  {% if elements.datecreated_rad14b5 %}
+  <dateCreated keyDate="yes">{{ elements.datecreated_rad14b5 }}</dateCreated>
+  {% endif %}
+  {% if elements.dateisssued %}
+  <dateIssued keyDate="yes">{{ elements.dateisssued }}</dateIssued>
+  {% endif %}
+</originInfo>
+
+{# Part/Journal Issue and Volume #}
+{% if elements.journal_volume %}
+<part>
+   <detail>
+      <title>Journal Volume</title>
+      <number>{{ elements.journal_volume }}</number>
+    </detail>
+</part>
+{% endif %}
+{% if elements.journal_issue %}
+<part>
+   <detail>
+      <title>Journal Issue</title>
+      <number>{{ elements.journal_issue }}</number>
+    </detail>
+</part>
+{% endif %}
+
+{# Language #}
+<language>
+  {% if elements.recordinfo_cataloguing_language_iso6392b is not empty %}
+    <languageTerm authority="iso639-2b" type="code">{{ elements.recordinfo_cataloguing_language_iso6392b }}</languageTerm>
+  {% else %}
+    {# Assume language of cataloguing is eng #}
+    <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+  {% endif %}
+</language>
+
+{# Physical Description #}
+<physicalDescription>
+  <internetMediaType>{{ elements.mediatype }}</internetMediaType>
+</physicalDescription>
+
+{# Abstract/Description #}
+{% if elements.description %}
+  <abstract>{{ elements.description }}</abstract>
+{% endif %}
+
+{# Subjects #}
+{% for topic in elements.subject_topic |split('|') %}
+  <subject authority="local">
+    <topic>{{ topic|trim }}</topic>
+  </subject>
+{% endfor %}
+{% for geographic in elements.subject_geographic |split ('|') %}
+  <subject authority="local">
+    <geographic>{{ geographic|trim }}</geographic>
+  </subject>
+{% endfor %}
+
+{# Access Condition #}
+{% if elements.accesscondition_restrictionandaccess is not empty %}
+  <accessCondition type="restriction and access">{{ elements.accesscondition_restrictionandaccess }}</accessCondition>
+{% elseif elements.accesscondition_useandreproduction is not empty %}
+<accessCondition type="use and reproduction">{{ elements.accesscondition_useandreproduction }}</accessCondition>
+{% endif %}
+
+{# Related Item(s) #}
+{% if elements.member_of_link is not empty %}
+  <relatedItem type="host">
+    <title>{{ elements.member_of_title }}</title>
+    <identifier type="uri">{{ elements.member_of_link }}</identifier>
+  </relatedItem>
+{% endif %}
+{% if elements.related_to_ext %}
+  {% set related = elements.related_to_ext|split('|') %}
+  <relatedItem type="otherVersion">
+    <title>{{ related[0] }}</title>
+    <identifier type="uri">{{ related[1] }}</identifier>
+  </relatedItem>
+{% endif %}

@@ -1,0 +1,29 @@
+uuid: 9b2c42ab-5d58-4744-bc1b-f95bba2ef371
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+    - media
+label: 'Content is Video'
+name: content_is_video
+group: Display
+description: 'If content contains video as main media, display video content view mode'
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:media':
+    id: 'entity_bundle:media'
+    negate: false
+    uuid: 9ae9c2ff-71e5-4bd1-846d-67529d179d6a
+    context_mapping:
+      media: '@islandora.media_route_context_provider:media'
+    bundles:
+      remote_video: remote_video
+      video: video
+reactions:
+  view_mode_alter:
+    id: view_mode_alter
+    saved: false
+    mode: node.video_content
+weight: 0

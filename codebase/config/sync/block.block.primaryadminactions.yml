@@ -1,0 +1,37 @@
+uuid: 6adf159a-1c23-4fed-9ddd-2c3717599a06
+langcode: en
+status: true
+dependencies:
+  module:
+    - context
+    - islandora
+  theme:
+    - kstate_theme
+id: primaryadminactions
+theme: kstate_theme
+region: highlighted
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility:
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

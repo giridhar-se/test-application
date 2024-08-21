@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-y: hidden;
+}
+
+#flipbook {
+    width: 100%;
+    height: 850px; /* Default height, will be adjusted by JS */
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+    transform-origin: left center;
+    overflow: hidden;
+}
+
+.page.left {
+    box-shadow: inset -10px 0 15px -10px rgba(0, 0, 0, 0.5);
+}
+
+.page.right {
+    box-shadow: inset 10px 0 15px -10px rgba(0, 0, 0, 0.5);
+}
+
+canvas {
+    width: 100%;
+    height: 90%;  /* Adjust height to fit the page */
+    display: block;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+/* Navigation Controls Styling */
+#pdf-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+#pdf-controls button,
+#pdf-controls input[type="number"] {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #512888;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+#pdf-controls button:hover,
+#pdf-controls input[type="number"]:hover {
+    background-color: #3e2067;
+}
+
+#pdf-controls input[type="number"] {
+    width: 60px;
+    text-align: center;
+    max-width: 80px;
+}
+
+#pdf-controls button:focus,
+#pdf-controls input[type="number"]:focus {
+    box-shadow: 0 0 3px 2px rgba(81, 40, 136, 0.7);
+}
+
+/* Loading Indicator Styling */
+#loading-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    accent-color: #512888;
+}
+
+/* Responsive Design for Tablets and Smaller Devices */
+@media (max-width: 1024px) {
+    #flipbook {
+        width: 100%;
+        height: 70vh;
+        max-width: none;
+    }
+
+    #pdf-controls button,
+    #pdf-controls input[type="number"] {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 768px) {
+    #flipbook {
+        height: 60vh;
+    }
+
+    #pdf-controls button,
+    #pdf-controls input[type="number"] {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    #pdf-controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Responsive Design for Very Small Screens */
+@media (max-width: 480px) {
+    #flipbook {
+        height: 50vh;
+    }
+
+    #pdf-controls {
+        flex-direction: column;
+    }
+
+    #pdf-controls button,
+    #pdf-controls input[type="number"] {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,38 @@
+uuid: 51b41e9c-178c-4f58-a270-638cc2ee0e8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+    - node
+    - system
+  theme:
+    - kstate_theme
+id: kstate_theme_pagetitle
+theme: kstate_theme
+region: content
+weight: -11
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/item/*'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      islandora_object: islandora_object

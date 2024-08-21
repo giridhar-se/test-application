@@ -1,0 +1,619 @@
+body, html {
+  font-family: "Myriad Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, div, header, footer, nav, section, article, aside, main, address, blockquote, pre, code, ul, ol, li, dl, dt, dd, table, th, td, input, textarea, button, label {
+  font-family: "Myriad Pro", sans-serif;
+}
+
+.ksul p {
+  font-size: 16px;
+}
+
+#fgsc {
+  max-width: 90vw;
+  margin: auto;
+}
+#fgsc h1 {
+  font-size: 32px;
+}
+#fgsc .view-header p {
+  margin-bottom: 0.25rem;
+}
+#fgsc .view-content #fgsc-species, #fgsc .view-content #fgsc-strains {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 1rem;
+}
+#fgsc .view-content #fgsc-species label, #fgsc .view-content #fgsc-strains label {
+  margin-bottom: 0;
+  color: #512888;
+}
+#fgsc .view-content #fgsc-species .select2-container, #fgsc .view-content #fgsc-strains .select2-container {
+  width: min(400px, 100%) !important;
+}
+@media (max-width: 500px) {
+  #fgsc #fgsc-species, #fgsc #fgsc-strains {
+    flex-direction: column;
+  }
+}
+
+.homepage-content .view-header p {
+  font-weight: 400;
+  font-size: 16pt;
+}
+.homepage-content .view-header h2 {
+  font-size: 2.25rem;
+  font-weight: 900;
+}
+.homepage-content h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.homepage-content .views-view-responsive-grid__item {
+  padding: 0.25rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.homepage-content .views-view-responsive-grid__item .views-field-did-image a {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.homepage-content .views-view-responsive-grid__item .views-field-did-image a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 250px;
+  padding: 0;
+}
+.homepage-content .views-view-responsive-grid__item .views-field-title {
+  color: #512888;
+  font-weight: 700;
+}
+.homepage-content .views-view-responsive-grid__item .views-field-title h3 {
+  margin-bottom: 0;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  line-height: 1.15;
+}
+.homepage-content .views-view-responsive-grid__item .views-field-title a {
+  font-size: 16pt;
+}
+
+#header .header__row, #header .header__nav {
+  padding: 0.5rem 5rem;
+}
+#header .header__row .main-nav, #header .header__nav .main-nav {
+  flex-grow: 1;
+}
+#header .header__row .secondary-menu, #header .header__nav .secondary-menu {
+  margin-left: auto;
+  min-width: 125px;
+}
+
+@media (max-width: 500px) {
+  #header .header__row {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  #header .header__nav {
+    padding: 5px 1rem;
+  }
+  #header .header__nav .secondary-menu .nav {
+    padding: 5px;
+    padding-right: 0;
+  }
+}
+.featured-top {
+  position: relative;
+  background-color: #512888;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  min-height: 35vh;
+  max-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.featured-top .region-featured-top {
+  margin: auto;
+  width: 75%;
+  display: flex;
+}
+
+.highlighted {
+  max-height: 80px;
+  height: unset;
+  margin: 0;
+}
+
+.ksul .sidebar-first, .ksul .sidebar-second {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+.ksul .center-content {
+  flex: 1;
+}
+.ksul .center-content .main-content {
+  padding: 0 1rem;
+}
+
+@media (max-width: 500px) {
+  .sidebar-second {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%; /* Adjust width as needed */
+    max-width: 300px; /* Set max width for the sidebar */
+    height: 100%;
+    z-index: 1050; /* Ensure it's above other content */
+    background-color: #f8f9fa; /* Optional: Background color */
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2); /* Optional: Shadow for depth */
+    padding: 1rem;
+    overflow-y: auto; /* Enable scrolling if content is too tall */
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: transform 0.3s ease; /* Smooth slide-in effect */
+  }
+  .collapse.show.sidebar-second {
+    transform: translateX(0); /* Slide in when the collapse is triggered */
+  }
+  .container {
+    position: relative; /* Ensure the container is the positioned ancestor */
+  }
+  .toggle-sidebar {
+    position: fixed; /* Stick the button to the viewport */
+    right: 1rem; /* Adjust the right distance */
+    z-index: 1060; /* Ensure it sits above the sidebar and other elements */
+    background-color: lightgray;
+    color: #512888;
+    border: none;
+  }
+  .toggle-sidebar:focus {
+    color: lightgray;
+    background-color: #512888;
+  }
+}
+.toggle-sidebar {
+  bottom: 1rem; /* Position it 1rem from the top */
+  right: 1rem; /* Position it 1rem from the right */
+  z-index: 1060; /* Ensure it sits above other elements */
+}
+
+@media (min-width: 501px) {
+  .sidebar-second.collapse:not(.show) {
+    display: inherit;
+  }
+}
+footer .footer__media__icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.ksul .breadcrumbs {
+  max-width: min(90vw, 1400px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.ksul .breadcrumbs .breadcrumb-item {
+  font-size: 16px;
+}
+.ksul .breadcrumbs .breadcrumb-item::before {
+  color: #aa9f9f;
+}
+
+.block-page-title-block {
+  margin: 0;
+}
+
+#ksul-global-search {
+  background-image: url("/themes/kstate_theme/img/dark-purple-background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+#ksul-global-search .hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#ksul-global-search .search-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 750px;
+  width: 100%;
+}
+#ksul-global-search .search-box h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+#ksul-global-search .search-box form {
+  margin-bottom: 1rem;
+}
+#ksul-global-search .search-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ksul-global-search .search-input input[type=text] {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+}
+#ksul-global-search .search-input button {
+  background-color: #512888;
+  /* Match header purple color */
+  border: none;
+  padding: 0 20px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  outline: none;
+}
+#ksul-global-search .search-input button:hover {
+  background-color: #3e2070;
+  /* Darker shade of purple on hover */
+}
+
+.view-solr-search-content,
+.view-id-reposito {
+  display: flex;
+  flex-direction: column;
+  max-width: 95%;
+  margin: 0.5rem auto;
+}
+.view-solr-search-content .view-list .views-row,
+.view-id-reposito .view-list .views-row {
+  margin: 1rem auto;
+}
+.view-solr-search-content .view-list .node--field_model-collection .node__details .field--name-title h4,
+.view-id-reposito .view-list .node--field_model-collection .node__details .field--name-title h4 {
+  font-size: 24px;
+}
+.view-solr-search-content .view-list .node__content, .view-solr-search-content .view-list .views-row,
+.view-id-reposito .view-list .node__content,
+.view-id-reposito .view-list .views-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.view-solr-search-content .view-list .node__content .node__details, .view-solr-search-content .view-list .views-row .node__details,
+.view-id-reposito .view-list .node__content .node__details,
+.view-id-reposito .view-list .views-row .node__details {
+  flex: 0 0 75%;
+  max-width: 75%;
+  box-sizing: border-box;
+}
+.view-solr-search-content .view-list .node__content .views-field-title, .view-solr-search-content .view-list .views-row .views-field-title,
+.view-id-reposito .view-list .node__content .views-field-title,
+.view-id-reposito .view-list .views-row .views-field-title {
+  flex: 100%;
+  font-size: 18px;
+  color: #512888;
+}
+.view-solr-search-content .view-list .node__content .views-field-field-description, .view-solr-search-content .view-list .views-row .views-field-field-description,
+.view-id-reposito .view-list .node__content .views-field-field-description,
+.view-id-reposito .view-list .views-row .views-field-field-description {
+  flex: 75%;
+  max-width: 75%;
+  margin-right: 1rem;
+}
+.view-solr-search-content .view-list .node__content .views-field-did-image, .view-solr-search-content .view-list .views-row .views-field-did-image,
+.view-id-reposito .view-list .node__content .views-field-did-image,
+.view-id-reposito .view-list .views-row .views-field-did-image {
+  flex: 5%;
+  text-align: center;
+}
+.view-solr-search-content .view-list .node__content .view-display-media, .view-solr-search-content .view-list .views-row .view-display-media,
+.view-id-reposito .view-list .node__content .view-display-media,
+.view-id-reposito .view-list .views-row .view-display-media {
+  flex: 0 0 25%;
+  max-width: 25%;
+  box-sizing: border-box;
+}
+.view-solr-search-content .view-list .node__content .view-display-media .field--name-field-media-image, .view-solr-search-content .view-list .views-row .view-display-media .field--name-field-media-image,
+.view-id-reposito .view-list .node__content .view-display-media .field--name-field-media-image,
+.view-id-reposito .view-list .views-row .view-display-media .field--name-field-media-image {
+  margin: 0;
+  padding: 0 2rem;
+}
+.view-solr-search-content .view-list .repository-item-children,
+.view-id-reposito .view-list .repository-item-children {
+  margin: 0.5rem auto;
+  flex: 1 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.view-solr-search-content .view-list .repository-item-children .view-list .node__details h4,
+.view-id-reposito .view-list .repository-item-children .view-list .node__details h4 {
+  font-size: 18px;
+}
+
+@media (max-width: 500px) {
+  .container .container {
+    max-width: unset;
+  }
+  .view-id-reposito .view-list .views-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .view-id-reposito .view-list .views-row .views-field-title {
+    flex: 100%;
+    order: 2;
+  }
+  .view-id-reposito .view-list .views-row .views-field-field-description {
+    flex: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    order: 3;
+  }
+  .view-id-reposito .view-list .views-row .views-field-did-image {
+    flex: 100%;
+    text-align: center;
+    order: 1;
+  }
+  .view-list .node--view-mode-search-index .node__content, .view-list .node--view-mode-teaser .node__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .view-list .node--view-mode-search-index .node__content .node__details, .view-list .node--view-mode-teaser .node__content .node__details {
+    order: 2;
+    max-width: 100%;
+  }
+  .view-list .node--view-mode-search-index .node__content .view-eva, .view-list .node--view-mode-teaser .node__content .view-eva {
+    order: 1;
+    margin: 10px auto;
+    max-width: 75%;
+  }
+  .view-list .node--view-mode-search-index .node__content .repository-item-children, .view-list .node--view-mode-teaser .node__content .repository-item-children {
+    order: 3;
+    margin: 0;
+  }
+  .view-list .view-solr-search-content {
+    max-width: 100%;
+    align-items: center;
+    margin: 0.5rem 0;
+  }
+}
+#views-exposed-form-solr-search-content-page-3 {
+  margin-bottom: 0;
+}
+#views-exposed-form-solr-search-content-page-3 .form-row {
+  display: flex;
+  justify-content: center;
+  margin: 0 10rem;
+}
+#views-exposed-form-solr-search-content-page-3 .form-row div {
+  display: flex;
+  gap: 5px;
+  margin: 0.5rem;
+  align-items: center;
+}
+#views-exposed-form-solr-search-content-page-3 .form-row div label {
+  margin-bottom: 0;
+}
+#views-exposed-form-solr-search-content-page-3 .form-row .form-item-search-api-fulltext {
+  order: 1;
+  flex-basis: 65%;
+  margin: 0;
+  padding-right: 0;
+  padding-left: 0;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+#views-exposed-form-solr-search-content-page-3 .form-row .form-item-search-api-fulltext input {
+  border: 2px solid gray;
+  border-radius: 0;
+  width: 100%;
+}
+#views-exposed-form-solr-search-content-page-3 .form-row .form-item-items-per-page {
+  order: 3;
+}
+#views-exposed-form-solr-search-content-page-3 .form-row .form-item-sort-bef-combine {
+  order: 4;
+}
+#views-exposed-form-solr-search-content-page-3 .form-row .form-submit {
+  order: 2;
+  flex-basis: 10%;
+  border-radius: 0;
+  margin-left: -2px;
+  border: none;
+}
+#views-exposed-form-solr-search-content-page-3 .form-row #edit-items-per-page--3 > ul {
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+}
+#views-exposed-form-solr-search-content-page-3 .form-row #edit-items-per-page--3 > ul li {
+  border: solid #000;
+  border-width: thin;
+  width: 35px;
+  height: 25px;
+  text-align: center;
+}
+#views-exposed-form-solr-search-content-page-3 .form-row #edit-items-per-page--3 > ul li .bef-link--selected {
+  background: #a7a7a7;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 500px) {
+  #views-exposed-form-solr-search-content-page-3 .form-row {
+    margin: 0;
+  }
+}
+#block-views-exposed-filter-block-reposito-reposito-children {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#block-views-exposed-filter-block-reposito-reposito-children form {
+  margin: 0;
+}
+#block-views-exposed-filter-block-reposito-reposito-children .form-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  max-width: min(450px, 80vw);
+  margin: auto;
+}
+#block-views-exposed-filter-block-reposito-reposito-children .form-row .form-item-combine {
+  padding: 0;
+  margin: 0;
+}
+#block-views-exposed-filter-block-reposito-reposito-children .form-row .form-item-combine label {
+  display: none;
+}
+#block-views-exposed-filter-block-reposito-reposito-children .form-row .form-item-combine #edit-combine {
+  border: 1px solid black;
+}
+#block-views-exposed-filter-block-reposito-reposito-children .form-row #edit-submit-reposito {
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  line-height: 24px;
+  height: 24px;
+  width: 24px;
+  padding: 0;
+  margin-left: -24px;
+  background: transparent;
+}
+#block-views-exposed-filter-block-reposito-reposito-children .form-row #edit-submit-reposito .svg-inline--fa {
+  color: #512888;
+}
+
+@media (max-width: 500px) {
+  #views-exposed-form-reposito-reposito-children .form-row #edit-submit-reposito {
+    margin-top: 0;
+  }
+}
+@media (min-width: 900px) {
+  #block-views-exposed-filter-block-reposito-reposito-children {
+    max-width: 75%;
+  }
+}
+#block-views-exposed-filter-block-fgsc-solr-search-content-page-1 {
+  max-width: 65%;
+  margin: auto;
+}
+#block-views-exposed-filter-block-fgsc-solr-search-content-page-1 .form-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#block-views-exposed-filter-block-fgsc-solr-search-content-page-1 .form-item-search-text {
+  margin-bottom: 0;
+}
+#block-views-exposed-filter-block-fgsc-solr-search-content-page-1 .form-item-search-text #edit-search-text {
+  border-radius: 0;
+  padding: 0 12px;
+  box-shadow: none;
+}
+#block-views-exposed-filter-block-fgsc-solr-search-content-page-1 #edit-submit-fgsc-solr-search-content {
+  border-radius: 0;
+}
+
+@media (max-width: 500px) {
+  #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 {
+    max-width: 100%;
+  }
+  #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 .form-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 .form-item-search-text {
+    margin-bottom: 0;
+  }
+  #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 .form-item-search-text #edit-search-text {
+    border-radius: 0;
+    padding: 0 12px;
+    box-shadow: none;
+  }
+  #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 #edit-submit-fgsc-solr-search-content {
+    border-radius: 0;
+  }
+}
+.media-full-height .field__item {
+  max-height: 850px;
+}
+
+@media (max-width: 500px) {
+  .media-full-height .field__item {
+    max-height: 500px;
+  }
+}
+.view-taxonomy-term {
+  display: flex;
+  flex-direction: column;
+}
+.view-taxonomy-term .view-header {
+  text-transform: capitalize;
+}
+.view-taxonomy-term .view-content .item-list-flex .node__content {
+  display: flex;
+  flex-direction: row;
+}
+.view-taxonomy-term .view-content .item-list-flex .node__content .node__details {
+  max-width: 70%;
+  margin-right: 2rem;
+}
+@media (max-width: 500px) {
+  .view-taxonomy-term .view-content {
+    padding: 0 1rem;
+  }
+  .view-taxonomy-term .view-content .item-list-flex .node__content {
+    flex-direction: column-reverse;
+  }
+  .view-taxonomy-term .view-content .item-list-flex .node__content .node__details {
+    max-width: 100%;
+    margin: 0;
+  }
+  .view-taxonomy-term .view-content .item-list-flex .node__content .field--name-field-media-image {
+    margin: 10px 5rem;
+  }
+}
+
+.container {
+  max-width: min(85vw, 1400px);
+}
+
+@media (min-width: 75rem) {
+  .container {
+    max-width: min(85vw, 1400px);
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    margin: 0;
+    max-width: unset;
+    padding: 0 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

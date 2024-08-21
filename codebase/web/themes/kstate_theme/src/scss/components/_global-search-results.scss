@@ -1,0 +1,153 @@
+.view-solr-search-content,
+.view-id-reposito {
+    display: flex;
+    flex-direction: column;
+    max-width: 95%;
+    margin: 0.5rem auto;
+
+    .view-list {
+
+        .views-row {
+            margin: 1rem auto;
+        }
+
+        .node--field_model-collection {
+
+            .node__details {
+
+                .field--name-title {
+                    h4 {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        .node__content, .views-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .node__details {
+                flex: 0 0 75%;
+                max-width: 75%;
+                box-sizing: border-box;
+            }
+
+            .views-field-title {
+                flex: 100%;
+                font-size: 18px;
+                color: $ksu-purple;
+            }
+
+            .views-field-field-description {
+                flex: 75%;
+                max-width: 75%;
+                margin-right: 1rem;
+            }
+
+            .views-field-did-image {
+                flex: 5%;
+                text-align: center;
+            }
+
+            .view-display-media {
+                flex: 0 0 25%;
+                max-width: 25%;
+                box-sizing: border-box;
+
+                .field--name-field-media-image {
+                    margin: 0;
+                    padding: 0 2rem;
+                }
+            }
+        }
+
+        .repository-item-children {
+            margin: 0.5rem auto;
+            flex: 1 0 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            .view-list {
+                
+                .node__details {
+
+                    h4 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 500px) {
+    
+    .container {
+        .container {
+            max-width: unset;
+        }
+    }
+    .view-id-reposito {
+        .view-list {
+            .views-row {
+                flex-direction: column;
+                gap: 0.5rem;
+    
+                .views-field-title {
+                    flex: 100%;
+                    order: 2;
+                }
+    
+                .views-field-field-description {
+                    flex: 100%;
+                    max-width: 100%;
+                    margin-right: 0;
+                    order: 3;
+                }
+    
+                .views-field-did-image {
+                    flex: 100%;
+                    text-align: center;
+                    order: 1;
+                }
+            }
+        }
+    }
+    .view-list {
+
+
+        .node--view-mode-search-index, .node--view-mode-teaser {
+
+            .node__content {
+                display: flex;
+                flex-direction: column;
+
+                .node__details {
+                    order: 2;
+                    max-width: 100%;
+                }
+
+                .view-eva {
+                    order: 1;
+                    margin: 10px auto;
+                    max-width: 75%;
+                }
+
+                .repository-item-children {
+                    order: 3;
+                    margin: 0;
+                }
+            }
+
+        }
+
+        .view-solr-search-content {
+            max-width: 100%;
+            align-items: center;
+            margin: 0.5rem 0;
+        }
+    }
+}

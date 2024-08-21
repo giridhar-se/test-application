@@ -1,0 +1,17 @@
+.container {
+    max-width: min(85vw, 1400px);
+}
+
+@media (min-width: 75rem) {
+    .container {
+        max-width: min(85vw, 1400px);
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        margin: 0;
+        max-width: unset;
+        padding: 0 1.5rem;
+    }
+}

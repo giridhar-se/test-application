@@ -1,0 +1,30 @@
+uuid: 42c9fff6-9e51-4a6f-a864-b4a6f40ee99e
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.global_genre
+  module:
+    - facets
+    - islandora
+  theme:
+    - kstate_theme
+id: kstate_theme_globalgenre
+theme: kstate_theme
+region: sidebar_second
+weight: -6
+provider: null
+plugin: 'facet_block:global_genre'
+settings:
+  id: 'facet_block:global_genre'
+  label: Genre
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: kstate_theme_globalgenre
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
