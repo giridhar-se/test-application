@@ -527,7 +527,7 @@ footer .footer__media__icons {
 }
 #block-kstate-theme-search {
   width: fit-content;
-  margin: 0.25rem 0;
+  margin: 0.25rem auto;
   align-content: center;
 }
 #block-kstate-theme-search form {
