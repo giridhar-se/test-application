@@ -1,4 +1,5 @@
-#block-views-exposed-filter-block-reposito-reposito-children {
+// Global header search
+#block-kstate-theme-exposed-form-reposito-children {
     margin: 0;
     display: flex;
     justify-content: center;
@@ -7,6 +8,7 @@
     form {
         margin: 0;
     }
+
     .form-row {
         display: flex;
         flex-direction: row;
@@ -61,5 +63,35 @@
 @media (min-width: 900px) {
     #block-views-exposed-filter-block-reposito-reposito-children {
         max-width: 75%;
+    }
+}
+
+// Within collection search
+#block-kstate-theme-search {
+    width: fit-content;
+    margin: 0.25rem 0;
+    align-content: center;
+
+    form {
+        display: flex;
+        flex-direction: row;
+        max-width: min(450px, 75%);
+        margin: 0 auto;
+
+        #edit-submit {
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            line-height: 24px;
+            height: 38px;
+            width: 38px;
+            padding: 0;
+            margin-left: -38px;
+            background: transparent;
+
+            .svg-inline--fa {
+                color: $ksu-purple;
+            }
+        }
     }
 }

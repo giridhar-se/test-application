@@ -2,6 +2,15 @@
     .header__row, .header__nav {
         padding: 0.5rem 5rem;
 
+        #block-mainnavigation {
+            align-items: center;
+            flex-grow: 1;
+
+            &:has(+.search-form) {
+                flex-grow: 0;
+            }
+        }
+
         .main-nav {
             flex-grow: 1;
         }

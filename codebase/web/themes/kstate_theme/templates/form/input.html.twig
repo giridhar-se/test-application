@@ -11,7 +11,7 @@
  */
 #}
 
-{% if "edit-submit-reposito" in attributes %}
+{% if "edit-submit-reposito" in attributes or "edit-submit" in attributes %}
     <button{{ attributes.addClass("form-control").removeClass("form-text") }} ><i class="fa fa-search"></i></button>
     {{ children }}
 {% else %}

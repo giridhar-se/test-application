@@ -87,6 +87,13 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, header, footer, nav, section, article, 
 #header .header__row, #header .header__nav {
   padding: 0.5rem 5rem;
 }
+#header .header__row #block-mainnavigation, #header .header__nav #block-mainnavigation {
+  align-items: center;
+  flex-grow: 1;
+}
+#header .header__row #block-mainnavigation:has(+ .search-form), #header .header__nav #block-mainnavigation:has(+ .search-form) {
+  flex-grow: 0;
+}
 #header .header__row .main-nav, #header .header__nav .main-nav {
   flex-grow: 1;
 }
@@ -299,6 +306,7 @@ footer .footer__media__icons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 0;
 }
 .view-solr-search-content .view-list .node__content .node__details, .view-solr-search-content .view-list .views-row .node__details,
 .view-id-reposito .view-list .node__content .node__details,
@@ -398,24 +406,24 @@ footer .footer__media__icons {
     margin: 0.5rem 0;
   }
 }
-#views-exposed-form-solr-search-content-page-3 {
-  margin-bottom: 0;
+#views-exposed-form-solr-search-content-page-3, #block-kstate-theme-exposedformsolr-search-contentpage-3 {
+  margin: 0;
 }
-#views-exposed-form-solr-search-content-page-3 .form-row {
+#views-exposed-form-solr-search-content-page-3 .form-row, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row {
   display: flex;
   justify-content: center;
-  margin: 0 10rem;
+  margin: 0;
 }
-#views-exposed-form-solr-search-content-page-3 .form-row div {
+#views-exposed-form-solr-search-content-page-3 .form-row div, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row div {
   display: flex;
   gap: 5px;
   margin: 0.5rem;
   align-items: center;
 }
-#views-exposed-form-solr-search-content-page-3 .form-row div label {
+#views-exposed-form-solr-search-content-page-3 .form-row div label, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row div label {
   margin-bottom: 0;
 }
-#views-exposed-form-solr-search-content-page-3 .form-row .form-item-search-api-fulltext {
+#views-exposed-form-solr-search-content-page-3 .form-row .form-item-search-api-fulltext, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row .form-item-search-api-fulltext {
   order: 1;
   flex-basis: 65%;
   margin: 0;
@@ -423,37 +431,37 @@ footer .footer__media__icons {
   padding-left: 0;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
 }
-#views-exposed-form-solr-search-content-page-3 .form-row .form-item-search-api-fulltext input {
+#views-exposed-form-solr-search-content-page-3 .form-row .form-item-search-api-fulltext input, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row .form-item-search-api-fulltext input {
   border: 2px solid gray;
   border-radius: 0;
   width: 100%;
 }
-#views-exposed-form-solr-search-content-page-3 .form-row .form-item-items-per-page {
+#views-exposed-form-solr-search-content-page-3 .form-row .form-item-items-per-page, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row .form-item-items-per-page {
   order: 3;
 }
-#views-exposed-form-solr-search-content-page-3 .form-row .form-item-sort-bef-combine {
+#views-exposed-form-solr-search-content-page-3 .form-row .form-item-sort-bef-combine, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row .form-item-sort-bef-combine {
   order: 4;
 }
-#views-exposed-form-solr-search-content-page-3 .form-row .form-submit {
+#views-exposed-form-solr-search-content-page-3 .form-row .form-submit, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row .form-submit {
   order: 2;
   flex-basis: 10%;
   border-radius: 0;
   margin-left: -2px;
   border: none;
 }
-#views-exposed-form-solr-search-content-page-3 .form-row #edit-items-per-page--3 > ul {
+#views-exposed-form-solr-search-content-page-3 .form-row #edit-items-per-page--3 > ul, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row #edit-items-per-page--3 > ul {
   display: flex;
   gap: 10px;
   margin: 0 auto;
 }
-#views-exposed-form-solr-search-content-page-3 .form-row #edit-items-per-page--3 > ul li {
+#views-exposed-form-solr-search-content-page-3 .form-row #edit-items-per-page--3 > ul li, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row #edit-items-per-page--3 > ul li {
   border: solid #000;
   border-width: thin;
   width: 35px;
   height: 25px;
   text-align: center;
 }
-#views-exposed-form-solr-search-content-page-3 .form-row #edit-items-per-page--3 > ul li .bef-link--selected {
+#views-exposed-form-solr-search-content-page-3 .form-row #edit-items-per-page--3 > ul li .bef-link--selected, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row #edit-items-per-page--3 > ul li .bef-link--selected {
   background: #a7a7a7;
   width: 100%;
   height: 100%;
@@ -465,16 +473,16 @@ footer .footer__media__icons {
     margin: 0;
   }
 }
-#block-views-exposed-filter-block-reposito-reposito-children {
+#block-kstate-theme-exposed-form-reposito-children {
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#block-views-exposed-filter-block-reposito-reposito-children form {
+#block-kstate-theme-exposed-form-reposito-children form {
   margin: 0;
 }
-#block-views-exposed-filter-block-reposito-reposito-children .form-row {
+#block-kstate-theme-exposed-form-reposito-children .form-row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -482,17 +490,17 @@ footer .footer__media__icons {
   max-width: min(450px, 80vw);
   margin: auto;
 }
-#block-views-exposed-filter-block-reposito-reposito-children .form-row .form-item-combine {
+#block-kstate-theme-exposed-form-reposito-children .form-row .form-item-combine {
   padding: 0;
   margin: 0;
 }
-#block-views-exposed-filter-block-reposito-reposito-children .form-row .form-item-combine label {
+#block-kstate-theme-exposed-form-reposito-children .form-row .form-item-combine label {
   display: none;
 }
-#block-views-exposed-filter-block-reposito-reposito-children .form-row .form-item-combine #edit-combine {
+#block-kstate-theme-exposed-form-reposito-children .form-row .form-item-combine #edit-combine {
   border: 1px solid black;
 }
-#block-views-exposed-filter-block-reposito-reposito-children .form-row #edit-submit-reposito {
+#block-kstate-theme-exposed-form-reposito-children .form-row #edit-submit-reposito {
   border-radius: 0;
   border: none;
   box-shadow: none;
@@ -503,7 +511,7 @@ footer .footer__media__icons {
   margin-left: -24px;
   background: transparent;
 }
-#block-views-exposed-filter-block-reposito-reposito-children .form-row #edit-submit-reposito .svg-inline--fa {
+#block-kstate-theme-exposed-form-reposito-children .form-row #edit-submit-reposito .svg-inline--fa {
   color: #512888;
 }
 
@@ -517,6 +525,32 @@ footer .footer__media__icons {
     max-width: 75%;
   }
 }
+#block-kstate-theme-search {
+  width: fit-content;
+  margin: 0.25rem 0;
+  align-content: center;
+}
+#block-kstate-theme-search form {
+  display: flex;
+  flex-direction: row;
+  max-width: min(450px, 75%);
+  margin: 0 auto;
+}
+#block-kstate-theme-search form #edit-submit {
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  line-height: 24px;
+  height: 38px;
+  width: 38px;
+  padding: 0;
+  margin-left: -38px;
+  background: transparent;
+}
+#block-kstate-theme-search form #edit-submit .svg-inline--fa {
+  color: #512888;
+}
+
 #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 {
   max-width: 65%;
   margin: auto;
