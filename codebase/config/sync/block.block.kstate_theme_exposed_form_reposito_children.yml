@@ -1,35 +1,39 @@
-uuid: 0b011704-0c5e-4ecb-9b48-876a88e901ad
+uuid: f2fa80a3-aac3-488a-82fa-00e62e193197
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.solr_search_content
+    - views.view.reposito
   module:
     - context
     - islandora
+    - system
     - views
   theme:
     - kstate_theme
-id: kstate_theme_exposedformsolr_search_contentpage_3
+id: kstate_theme_exposed_form_reposito_children
 theme: kstate_theme
 region: content
-weight: -10
+weight: -8
 provider: null
-plugin: 'views_exposed_filter_block:solr_search_content-page_3'
+plugin: 'views_exposed_filter_block:reposito-reposito_children'
 settings:
-  id: 'views_exposed_filter_block:solr_search_content-page_3'
+  id: 'views_exposed_filter_block:reposito-reposito_children'
   label: ''
   label_display: '0'
   provider: views
   views_label: ''
 visibility:
-  view_inclusion:
-    id: view_inclusion
+  context:
+    id: context
     negate: false
-    view_inclusion:
-      view-solr_search_content-page_3: view-solr_search_content-page_3
+    values: collection
   media_source_mimetype:
     id: media_source_mimetype
     negate: false
     context_mapping: {  }
     mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/item/*'

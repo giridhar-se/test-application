@@ -11,7 +11,7 @@ dependencies:
 id: kstate_theme_help
 theme: kstate_theme
 region: highlighted
-weight: -9
+weight: -11
 provider: null
 plugin: help_block
 settings:

@@ -1,0 +1,36 @@
+uuid: 873272af-f29c-4b3c-883f-a547de08ae1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - advanced_search
+    - islandora
+    - system
+  theme:
+    - kstate_theme
+id: kstate_theme_search
+theme: kstate_theme
+region: primary_menu
+weight: -11
+provider: null
+plugin: search_block
+settings:
+  id: search_block
+  label: 'Global Search'
+  label_display: '0'
+  provider: advanced_search
+  block_id: kstate_theme_search
+  search_view_machine_name: view.solr_search_content.page_3
+  search_textfield_label: ''
+  search_placeholder: 'Search across digital collections'
+  search_submit_label: Search
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/item/fungal-genetics-collection\r\n/item/fungal-genetics-collection/*\r\n/item/*/fgsc-*\r\n/user*"

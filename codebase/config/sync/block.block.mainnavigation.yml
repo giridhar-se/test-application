@@ -13,7 +13,7 @@ dependencies:
 id: mainnavigation
 theme: kstate_theme
 region: primary_menu
-weight: -11
+weight: -12
 provider: null
 plugin: 'system_menu_block:main'
 settings:
