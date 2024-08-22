@@ -99,7 +99,6 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, header, footer, nav, section, article, 
 }
 #header .header__row .secondary-menu, #header .header__nav .secondary-menu {
   margin-left: auto;
-  min-width: 125px;
 }
 
 @media (max-width: 500px) {
@@ -109,6 +108,12 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, header, footer, nav, section, article, 
   }
   #header .header__nav {
     padding: 5px 1rem;
+  }
+  #header .header__nav .container {
+    flex-wrap: wrap;
+  }
+  #header .header__nav .container #block-mainnavigation {
+    max-width: 50%;
   }
   #header .header__nav .secondary-menu .nav {
     padding: 5px;
@@ -551,6 +556,14 @@ footer .footer__media__icons {
   color: #512888;
 }
 
+@media (max-width: 500px) {
+  #block-kstate-theme-search {
+    order: 3;
+  }
+  #block-kstate-theme-search form {
+    max-width: 100%;
+  }
+}
 #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 {
   max-width: 65%;
   margin: auto;

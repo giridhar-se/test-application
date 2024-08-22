@@ -17,7 +17,6 @@
 
         .secondary-menu {
             margin-left: auto;
-            min-width: 125px;
         }
     }
 
@@ -31,10 +30,18 @@
             padding-right: 1rem;
         }
         .header__nav {
-            padding: 5px 1rem;   
+            padding: 5px 1rem; 
+            
+            .container {
+                flex-wrap: wrap;
+
+                #block-mainnavigation {
+                    max-width: 50%;
+                }
+            }
             
             .secondary-menu {
-                
+
                 .nav {
                     padding: 5px;
                     padding-right: 0;

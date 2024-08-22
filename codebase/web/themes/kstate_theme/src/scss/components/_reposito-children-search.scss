@@ -95,3 +95,14 @@
         }
     }
 }
+
+@media (max-width: 500px) {
+    
+    #block-kstate-theme-search {
+        order: 3;
+
+        form {
+            max-width: 100%;
+        }
+    }
+}
