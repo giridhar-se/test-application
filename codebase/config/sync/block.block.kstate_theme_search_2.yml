@@ -1,0 +1,36 @@
+uuid: 558d38ee-eb78-4d36-804f-5634172955bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - advanced_search
+    - islandora
+    - system
+  theme:
+    - kstate_theme
+id: kstate_theme_search_2
+theme: kstate_theme
+region: featured_top
+weight: -11
+provider: null
+plugin: search_block
+settings:
+  id: search_block
+  label: 'Front Page Search'
+  label_display: '0'
+  provider: advanced_search
+  block_id: kstate_theme_search_2
+  search_view_machine_name: view.solr_search_content.page_3
+  search_textfield_label: ''
+  search_placeholder: ''
+  search_submit_label: Search
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

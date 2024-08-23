@@ -10,7 +10,7 @@ dependencies:
 id: kstate_theme_messages
 theme: kstate_theme
 region: highlighted
-weight: -10
+weight: -9
 provider: null
 plugin: system_messages_block
 settings:

@@ -10,7 +10,7 @@ dependencies:
 id: tabs
 theme: kstate_theme
 region: highlighted
-weight: -12
+weight: -11
 provider: null
 plugin: local_tasks_block
 settings:

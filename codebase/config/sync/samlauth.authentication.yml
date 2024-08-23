@@ -2,17 +2,16 @@ _core:
   default_config_hash: oDGEkhP0h5rXXqlDplxeBDre0goLigOJupHKMDMwcqM
 login_menu_item_title: 'SSO Login'
 logout_menu_item_title: Logout
+login_link_title: ''
+login_auto_redirect: false
 login_redirect_url: ''
 logout_redirect_url: ''
 error_redirect_url: ''
 error_throw: false
+login_error_keep_session: false
 local_login_saml_error: false
 logout_different_user: false
-drupal_login_roles:
-  authenticated: '0'
-  content_editor: '0'
-  administrator: '0'
-  fedoraadmin: '0'
+drupal_login_roles: {  }
 sp_entity_id: 'https://dev-web.ksulib.net/Shibboleth.sso/Login'
 sp_name_id_format: ''
 sp_x509_certificate: 'file:/var/saml/saml-x509'
@@ -29,8 +28,8 @@ idp_certs:
 idp_cert_encryption: ''
 unique_id_attribute: uid
 map_users: false
-map_users_name: true
-map_users_mail: false
+map_users_name: false
+map_users_mail: true
 map_users_roles:
   content_editor: content_editor
   administrator: administrator

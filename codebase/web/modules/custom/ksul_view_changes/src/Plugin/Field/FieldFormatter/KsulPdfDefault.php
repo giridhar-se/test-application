@@ -178,8 +178,8 @@ class KsulPdfDefault extends FormatterBase {
     }
     // Is this a "paged content" model node?
     if (isset($term_id) && $term_id == 49) {
-        $viewer_path = 'themes/kstate_theme/pdf-viewer/sawyer-build/ksul-book-view.html';
-        // $viewer_path = 'themes/kstate_theme/pdf-viewer/flipbook-test/web/viewer.html';
+        // $viewer_path = 'themes/kstate_theme/pdf-viewer/sawyer-build/ksul-book-view.html';
+        $viewer_path = 'themes/kstate_theme/pdf-viewer/page-spread/viewer.html';
     } else {
       $viewer_path = base_path() . 'libraries/pdf.js/web/viewer.html';
     }

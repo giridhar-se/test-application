@@ -93,42 +93,17 @@
 </header>
 <div id="page-wrapper">
   <div id="page">
-    {# FEATURE_TOP AREA STARTS #}
-    {% if page.featured_top %}
-      {% block featured %}
-        <div class="featured-top">
-          <div class="featured-top-background">
-          <div class="featured-top__inner section {{ container }} clearfix" role="complementary">
-            {{ page.featured_top }}
-          </div>
-          </div>
-        </div>
-      {% endblock %}
-    {% endif %}
-    {# FEATURE_TOP AREA ENDS #}
     {% block content %}
       <main class="ksul">
-      <div id="ksul-global-search">
-        <div class="hero-section">
+        <div id="ksul-global-search">
+          <div class="hero-section">
             <div class="search-box">
-                <h1>Search K-State Libraries Digital Collections</h1>
-                <form action="/solr-search/content" method="get" id="views-exposed-form-solr-search-content-page-3" accept-charset="UTF-8">
-                  <div class="search-input">
-                      <input 
-                      data-drupal-selector="edit-search-api-fulltext"
-                      value=""
-                      name="search_api_fulltext"
-                      size="30" 
-                      maxlength="128"
-                      type="text" placeholder="">
-                      <button data-drupal-selector="edit-submit-solr-search-content"
-                      value="Search" 
-                      type="submit">SEARCH</button>
-                  </div>
-                </form>
+              <h1>Search K-State Libraries Digital Collections</h1>
+                {{ page.featured_top }}
               </div>
             </div>
           </div>
+        </div>
 
         <div class="container">
         {# Breadcrumbs #}

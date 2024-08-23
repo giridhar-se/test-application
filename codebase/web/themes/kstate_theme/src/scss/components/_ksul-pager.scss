@@ -1,0 +1,16 @@
+.ksul-pager {
+    margin: 1rem auto;
+    li.pager__item {
+        padding: 0.5rem 0.75rem;
+        border: 1px solid gray;
+        margin: 0;
+    }
+
+    li.pager__item--active {
+        background: $ksu-purple;
+        
+        a.pager__link {
+            color: white;
+        }
+    }
+}

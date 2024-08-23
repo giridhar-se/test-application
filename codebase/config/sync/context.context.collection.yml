@@ -28,7 +28,7 @@ conditions:
     negate: true
     uuid: d07b4c32-10b0-4700-a224-993e3a7079f8
     context_mapping: {  }
-    pages: "/item/fungal-genetics-collection\r\n/item/fungal-genetics-collection/*"
+    pages: "/item/fungal-genetics-collection\r\n/item/fungal-genetics-collection/*\r\n/item/fgsc-deposit-sheets\r\n/item/fgsc-deposit-sheets/*"
 reactions:
   blocks:
     id: blocks
