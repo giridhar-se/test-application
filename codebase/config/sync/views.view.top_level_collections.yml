@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.max_325x325
+    - image.style.media_library
   module:
     - dgi_image_discovery
     - media
@@ -211,24 +211,10 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: mini
+        type: some
         options:
           offset: 0
-          pagination_heading_level: h4
-          items_per_page: 25
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
+          items_per_page: 6
       exposed_form:
         type: basic
         options:
@@ -410,6 +396,9 @@ display:
           admin_label: 'field_model: Taxonomy term'
           plugin_id: standard
           required: true
+      use_more: false
+      use_more_always: true
+      use_more_text: more
       header:
         area:
           id: area
@@ -431,7 +420,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -474,7 +462,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -605,7 +592,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: max_325x325
+            image_style: media_library
             image_link: content
             image_loading:
               attribute: lazy
@@ -869,7 +856,7 @@ display:
         options:
           grouping: {  }
           columns: 3
-          cell_min_width: 300
+          cell_min_width: 200
           grid_gutter: 10
           alignment: horizontal
       row:
@@ -921,7 +908,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
