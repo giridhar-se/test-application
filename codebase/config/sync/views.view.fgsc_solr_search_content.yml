@@ -1858,8 +1858,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: "{% if field_model == 'Page' %}\r\n    {% if field_resource_type == 'Text' %}\r\n        <a href=\"/deposit/{{ title__value }}\">{{ title__value|replace({'FGSC' : ''}) }}</a>\r\n    {% else %}\r\n        <a href=\"{{ search_api_url }}\">{{ title__value }}</a>\r\n    {% endif %}    \r\n{% else %}\r\n    <a href=\"{{ search_api_url }}\">{{ title__value }}</a>\r\n{% endif %}"
+            alter_text: true
+            text: "<a href=\"{{ search_api_url }}\">{{ title__value|replace({'FGSC' : ''}) }}</a>"
             make_link: false
             path: ''
             absolute: false
@@ -1989,7 +1989,20 @@ display:
             value: "<strong>\r\n Sorry we could not find any results, please adjust your search.\r\n</strong>"
             format: basic_html
           tokenize: false
-      sorts: {  }
+      sorts:
+        nid:
+          id: nid
+          table: search_api_index_default_solr_index
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       filters:
         type:
           id: type
