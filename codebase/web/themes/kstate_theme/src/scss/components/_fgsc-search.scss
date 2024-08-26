@@ -12,14 +12,14 @@
     .form-item-search-text {
         margin-bottom: 0;
 
-        #edit-search-text {
+        #edit-search-text,#edit-search-text--2 {
             border-radius: 0;
             padding: 0 12px;
             box-shadow: none;
         }
     }
 
-    #edit-submit-fgsc-solr-search-content {
+    #edit-submit-fgsc-solr-search-content,#edit-submit-fgsc-solr-search-content--2 {
         border-radius: 0;
     }
 }
@@ -37,14 +37,14 @@
         .form-item-search-text {
             margin-bottom: 0;
 
-            #edit-search-text {
+            #edit-search-text,#edit-search-text--2 {
                 border-radius: 0;
                 padding: 0 12px;
                 box-shadow: none;
             }
         }
 
-        #edit-submit-fgsc-solr-search-content {
+        #edit-submit-fgsc-solr-search-content,#edit-submit-fgsc-solr-search-content--2 {
             border-radius: 0;
         }
     }

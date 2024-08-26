@@ -10,6 +10,10 @@
 
         .views-row {
             margin: 1rem auto;
+
+            article {
+                width: 100%;
+            }
         }
 
         .node--field_model-collection {
