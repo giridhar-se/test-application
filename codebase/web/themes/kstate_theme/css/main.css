@@ -494,6 +494,9 @@ footer .footer__media__icons {
   height: 100%;
   display: block;
 }
+#views-exposed-form-solr-search-content-page-3 .form-row #edit-submit-solr-search-content--2, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row #edit-submit-solr-search-content--2 {
+  display: none;
+}
 
 @media (max-width: 500px) {
   #views-exposed-form-solr-search-content-page-3 .form-row {

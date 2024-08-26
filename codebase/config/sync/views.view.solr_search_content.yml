@@ -2794,6 +2794,7 @@ display:
         empty: false
         cache: false
         query: false
+        use_ajax: false
         pager: false
         use_more: true
         use_more_always: true
@@ -2807,6 +2808,7 @@ display:
         filter_groups: false
         header: false
         footer: false
+      use_ajax: true
       display_description: ''
       header:
         result:
