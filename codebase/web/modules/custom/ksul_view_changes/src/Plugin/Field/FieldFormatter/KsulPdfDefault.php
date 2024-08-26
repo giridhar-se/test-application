@@ -155,7 +155,7 @@ class KsulPdfDefault extends FormatterBase {
     $node_doc = $items->getEntity();
     $node_doc_title = $node_doc->label();
     $node_doc_id = $node_doc->id();
-    \Drupal::logger('ksul_pdf_override')->notice('Node Doc title: ' . $node_doc_title . ', Node Doc ID: ' . $node_doc_id);
+    // \Drupal::logger('ksul_pdf_override')->notice('Node Doc title: ' . $node_doc_title . ', Node Doc ID: ' . $node_doc_id);
 
     $parent_node = $node_doc->get('field_media_of')->target_id;
     
@@ -171,7 +171,7 @@ class KsulPdfDefault extends FormatterBase {
             $term_id = $field_model->id(); // Get the ID of the taxonomy term
 
             // Log or use the term data
-            \Drupal::logger('ksul_pdf_override')->notice('Term Name: ' . $term_name . ', Term ID: ' . $term_id);
+            // \Drupal::logger('ksul_pdf_override')->notice('Term Name: ' . $term_name . ', Term ID: ' . $term_id);
         } else {
             \Drupal::logger('ksul_pdf_override')->notice('No term associated with field_model.');
         }
