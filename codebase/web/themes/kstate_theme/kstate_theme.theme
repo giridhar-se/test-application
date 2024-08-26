@@ -192,7 +192,7 @@ function kstate_theme_suggestions_links_alter(array &$suggestions, array $variab
  */
 function kstate_theme_preprocess_node(&$variables) {
   // Log basic entry into the function
-  \Drupal::logger('kstate_theme')->notice('Entered preprocess function.');
+  // \Drupal::logger('kstate_theme')->notice('Entered preprocess function.');
 
   // Check if the node exists and the view mode is correct
   if ($variables['view_mode'] == 'search_index' && isset($variables['node'])) {
