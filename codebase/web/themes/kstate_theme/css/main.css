@@ -19,8 +19,13 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, header, footer, nav, section, article, 
 #fgsc h1 {
   font-size: 32px;
 }
+#fgsc .content .fgsc-species-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 #fgsc .view-header p {
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 #fgsc .view-content #fgsc-species, #fgsc .view-content #fgsc-strains {
   display: flex;
@@ -34,6 +39,9 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, header, footer, nav, section, article, 
 }
 #fgsc .view-content #fgsc-species .select2-container, #fgsc .view-content #fgsc-strains .select2-container {
   width: min(400px, 100%) !important;
+}
+#fgsc aside {
+  margin-top: 2rem;
 }
 @media (max-width: 500px) {
   #fgsc #fgsc-species, #fgsc #fgsc-strains {
