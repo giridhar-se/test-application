@@ -19,10 +19,38 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, header, footer, nav, section, article, 
 #fgsc h1 {
   font-size: 32px;
 }
+#fgsc #block-views-block-species-block-1 {
+  margin: 0;
+}
 #fgsc .content .fgsc-species-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+#fgsc .fgsc-deposit-strains {
+  margin: 1rem 0;
+}
+#fgsc .fgsc-deposit-strains .species-reset {
+  display: flex;
+  font-weight: 400;
+}
+#fgsc .fgsc-deposit-strains .species-reset .label {
+  font-weight: 700;
+  text-align: start;
+  width: 105px;
+}
+#fgsc .fgsc-deposit-strains .species-reset .species-name {
+  padding-left: 1rem;
+  text-align: center;
+}
+#fgsc .fgsc-deposit-strains .species-reset .species-name::first-letter {
+  text-transform: capitalize;
+}
+#fgsc .fgsc-deposit-strains .species-reset .species-name .reset-link {
+  text-transform: lowercase;
+}
+#fgsc .view-header {
+  margin: 1rem 0;
 }
 #fgsc .view-header p {
   margin-bottom: 1rem;
@@ -35,13 +63,14 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, header, footer, nav, section, article, 
 }
 #fgsc .view-content #fgsc-species label, #fgsc .view-content #fgsc-strains label {
   margin-bottom: 0;
-  color: #512888;
+  width: 105px;
+  text-align: start;
 }
 #fgsc .view-content #fgsc-species .select2-container, #fgsc .view-content #fgsc-strains .select2-container {
-  width: min(400px, 100%) !important;
+  width: min(475px, 100%) !important;
 }
 #fgsc aside {
-  margin-top: 2rem;
+  margin-top: 3.5rem;
 }
 @media (max-width: 500px) {
   #fgsc #fgsc-species, #fgsc #fgsc-strains {
@@ -237,6 +266,7 @@ footer .footer__media__icons {
   max-width: min(90vw, 1400px);
   margin-left: auto;
   margin-right: auto;
+  padding: 0 0.625rem;
 }
 .ksul .breadcrumbs .breadcrumb-item {
   font-size: 16px;
@@ -710,7 +740,7 @@ footer .footer__media__icons {
   .container {
     margin: 0;
     max-width: unset;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
   }
 }
 
