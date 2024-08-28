@@ -552,6 +552,7 @@ display:
         filters: false
         filter_groups: false
         header: false
+        footer: false
       header:
         area:
           id: area
@@ -563,9 +564,10 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: ''
+            value: "<div class=\"species-reset\">\r\n        <span class=\"label\">Species:</span>\r\n   <div id=\"selected-species\">\r\n        <span class=\"species-name\">{{ arguments.field_ksul_fgsc_species_value|capitalize }}\r\n              <a class=\"reset-link\" href=\"/item/fungal-genetics-collection\"><i class=\"fas fa-edit\"></i></a>\r\n       </span> \r\n        \r\n   </div>   \r\n</div>"
             format: full_html
           tokenize: true
+      footer: {  }
       display_extenders:
         matomo:
           enabled: false

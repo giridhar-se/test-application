@@ -7,14 +7,45 @@
         font-size: 32px;
     }
 
+    #block-views-block-species-block-1 {
+        margin: 0;
+    }
+
     .content .fgsc-species-list {
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
 
-    .view-header {
+    .fgsc-deposit-strains {
+        margin: 1rem 0;
+        .species-reset {
+            display: flex;
+            font-weight: 400;
 
+            .label {
+                font-weight: 700;
+                text-align: start;
+                width: 105px;
+            }
+
+            .species-name {
+                padding-left: 1rem;
+                text-align: center;
+                
+                &::first-letter {
+                    text-transform: capitalize;
+                }
+
+                .reset-link {
+                    text-transform: lowercase;
+                }
+            }
+        }
+    }
+
+    .view-header {
+        margin: 1rem 0;
         p {
             margin-bottom: 1rem;
         }
@@ -31,17 +62,18 @@
 
             label {
                 margin-bottom: 0;
-                color: $ksu-purple;
+                width: 105px;
+                text-align: start;
             }
 
             .select2-container {
-                width: min(400px, 100%) !important;
+                width: min(475px, 100%) !important;
             }
         }
     }
 
     aside {
-        margin-top: 2rem;
+        margin-top: 3.5rem;
     }
 
     @media (max-width: 500px) {

@@ -69,17 +69,19 @@
 #}
 <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
   <div class="header__row header__row-topnav">
+		<div class="container">
 			<a href="https://www.k-state.edu" class="header__row-topnav_link" target="_blank">Kansas State University</a>
+		</div>
 	</div>
   <div class="header__row header__row-sign">
-    <div class="header__row-sign_logo logo">
+    <div class="container"><div class="header__row-sign_logo logo">
         <a href="https://lib.k-state.edu" class="logo__link" title="Libraries Home" itemprop="url" rel="home"><div class="logo__img">
             <img src="/themes/kstate_theme/ksulogo.svg" alt="K-state logo">
           </div><div class="logo__seporator"></div><div class="logo__text">Libraries</div></a>
-      </div>
+      </div></div>
   </div>
 	<nav class="header__nav nav">
-		<div class="d-flex flex-row main-nav">
+		<div class="container d-flex flex-row">
 			{% if page.primary_menu %}
         {{ page.primary_menu }}
       {% endif %}
