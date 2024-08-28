@@ -10,7 +10,6 @@ dependencies:
     - contact
     - filter
     - fontawesome
-    - matomo
     - media
     - rest
     - system
@@ -25,7 +24,6 @@ permissions:
   - 'access content'
   - 'access fontawesome additional settings'
   - 'access site-wide contact form'
-  - 'opt-in or out of matomo tracking'
   - 'post comments'
   - 'restful get oai_pmh'
   - 'skip comment approval'
