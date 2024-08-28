@@ -15,17 +15,8 @@
 {% if breadcrumb %}
   <nav role="navigation" aria-label="breadcrumb" style="{{breadcrumb_divider}}">
     <ol class="breadcrumb">
-    {# Add Libraries as root breadcrumb #}
-    <li class="breadcrumb-item">
-      <a href="https://lib.k-state.edu" target="_blank">Libraries</a>
-    </li>
     {% for item in breadcrumb %}
-      {# Replace the default "Home" for the first crumb #}
-      {% if item.text == "Home" %}
-        {% set title = "K-State Digital Collections" %}
-      {% else %}
-        {% set title = item.text %}
-      {% endif %}
+      {% set title = item.text %}
       {# On each iteration, reset the truncated_text to the current crumb/item respecting the max length variable #}
       {% set truncated_text = (title|length > max_length) ? title|slice(0, max_length) ~ '...' : title %}
       {# If this is the last breadcrumb, it's the active item and doesnt need a link #}
