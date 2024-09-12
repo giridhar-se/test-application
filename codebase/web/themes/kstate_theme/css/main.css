@@ -99,6 +99,7 @@ main.ksul {
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  align-content: end;
 }
 .homepage-content .views-view-responsive-grid__item .views-field-did-image {
   text-align: center;
