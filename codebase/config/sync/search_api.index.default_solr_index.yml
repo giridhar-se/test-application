@@ -451,6 +451,7 @@ field_settings:
     label: 'Rendered item'
     property_path: rendered_item
     type: text
+    boost: 5.0
     configuration:
       roles:
         - anonymous

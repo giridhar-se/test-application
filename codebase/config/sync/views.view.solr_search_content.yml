@@ -2561,6 +2561,19 @@ display:
             label: Title
             field_identifier: title
           exposed: true
+        field_member_of:
+          id: field_member_of
+          table: search_api_index_default_solr_index
+          field: field_member_of
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
         field_edtf_date_created:
           id: field_edtf_date_created
           table: search_api_index_default_solr_index
