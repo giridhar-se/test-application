@@ -5,7 +5,6 @@ dependencies:
   module:
     - islandora
     - node
-    - system
   theme:
     - kstate_theme
 id: kstate_theme_pagetitle
@@ -25,10 +24,6 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
-  request_path:
-    id: request_path
-    negate: false
-    pages: '/item/*'
   'entity_bundle:node':
     id: 'entity_bundle:node'
     negate: false
