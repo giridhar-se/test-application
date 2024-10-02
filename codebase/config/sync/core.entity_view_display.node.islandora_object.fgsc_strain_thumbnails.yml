@@ -90,7 +90,7 @@ content:
     type: media_thumbnail
     label: hidden
     settings:
-      image_link: content
+      image_link: ''
       image_style: medium
       image_loading:
         attribute: lazy
@@ -115,6 +115,7 @@ hidden:
   display_media_entity_view_2: true
   display_media_entity_view_3: true
   display_media_entity_view_4: true
+  display_media_eva_remote_video: true
   display_media_service_file: true
   display_media_thumbnail: true
   fgsc_deposit_entity_view_1: true
@@ -194,6 +195,7 @@ hidden:
   pdfjs_media_evas_entity_view_2: true
   pdfjs_media_evas_service_file: true
   permalink_uri: true
+  reposito_entity_view_1: true
   search_api_excerpt: true
   search_within_this_collection_link_entity_view_1: true
   title: true
