@@ -48,7 +48,7 @@ reactions:
         context_id: collection
         context_mapping: {  }
         views_label: ''
-        items_per_page: '5'
+        items_per_page: none
         third_party_settings: {  }
     include_default_blocks: 1
     saved: false
