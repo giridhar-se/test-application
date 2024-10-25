@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - advanced_search
+    - context
     - islandora
     - system
   theme:
@@ -34,3 +35,7 @@ visibility:
     id: request_path
     negate: true
     pages: "<front>\r\n/item/fungal-genetics-collection\r\n/item/fungal-genetics-collection/*\r\n/item/*/fgsc-*\r\n/user*\r\n/solr-search/fgsc-content*"
+  request_path_exclusion:
+    id: request_path_exclusion
+    negate: true
+    pages: "/item/fgsc-deposit-sheets/*\r\n/item/fungal-genetics-collection/*"
