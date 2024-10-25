@@ -1,8 +1,8 @@
 _core:
   default_config_hash: hD192EM3YHRK7DBqgjo8zatxctUHJEljO5PQwrpfgvY
-login_link_enabled: true
-login_link_label: 'SSO Login'
-login_success_message: ''
+login_link_enabled: false
+login_link_label: 'CAS Login'
+login_success_message: 'You have logged in using CAS'
 server:
   version: '3.0'
   protocol: https
@@ -26,7 +26,7 @@ forced_login:
     negate: false
     pages: ''
 user_accounts:
-  prevent_normal_login: false
+  prevent_normal_login: true
   auto_register: false
   auto_register_follow_registration_policy: false
   email_assignment_strategy: 0

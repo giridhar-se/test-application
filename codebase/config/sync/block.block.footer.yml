@@ -13,7 +13,7 @@ dependencies:
 id: footer
 theme: kstate_theme
 region: footer_second
-weight: 0
+weight: -11
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

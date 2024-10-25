@@ -12,7 +12,7 @@ dependencies:
 id: kstate_theme_useraccountmenu
 theme: kstate_theme
 region: secondary_menu
-weight: 0
+weight: -11
 provider: null
 plugin: 'system_menu_block:account'
 settings:
