@@ -1,0 +1,5 @@
+services:
+  ksul_view_changes.route_subscriber:
+    class: Drupal\ksul_view_changes\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
