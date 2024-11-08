@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.taxonomy_collection
   module:
     - node
     - taxonomy
@@ -228,7 +228,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: taxonomy_collection
       query:
         type: views_query
         options:
@@ -341,8 +341,14 @@ display:
             offset_label: Offset
       query:
         type: views_query
-        options: {  }
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: true
+          replica: false
+          query_tags: {  }
       defaults:
+        query: false
         use_ajax: false
         pager: false
         header: false

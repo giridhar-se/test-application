@@ -1,0 +1,11 @@
+uuid: cc49fa08-e017-4d0d-be1b-aaae8f86492c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.taxonomy_collection
+label: 'Taxonomy Collection'
+description: 'Used to wrap related content to a parent taxonomy term in views.'
+targetEntityType: node
+cache: true

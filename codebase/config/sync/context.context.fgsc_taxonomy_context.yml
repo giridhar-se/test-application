@@ -1,0 +1,50 @@
+uuid: 1010ec28-e1ab-4e0b-aa92-ea3871cf36f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - taxonomy
+label: 'FGSC Taxonomy Context'
+name: fgsc_taxonomy_context
+group: Display
+description: 'Display appropriate blocks for FGSC taxonomy term view'
+requireAllConditions: true
+disabled: false
+conditions:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 43f8880d-f339-4cc4-a56a-475724cc85ff
+    context_mapping:
+      taxonomy_term: '@islandora.taxonomy_term_route_context_provider:taxonomy_term'
+    bundles:
+      fgsc_depositors: fgsc_depositors
+      genotype: genotype
+reactions:
+  page_template_suggestions:
+    id: page_template_suggestions
+    suggestions: page__fgsc__taxonomy
+    saved: false
+  blocks:
+    id: blocks
+    uuid: f71e8fa2-4d98-46a9-b15d-c4a15bfc55b6
+    blocks:
+      232c4734-43e7-465e-b288-bbb7d64928f3:
+        uuid: 232c4734-43e7-465e-b288-bbb7d64928f3
+        id: system_main_block
+        label: 'Main page content'
+        provider: system
+        label_display: '0'
+        region: sub_content
+        weight: '0'
+        custom_id: system_main_block
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: fgsc_taxonomy_context
+        context_mapping: {  }
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0
