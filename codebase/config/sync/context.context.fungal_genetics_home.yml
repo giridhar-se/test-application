@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - views.view.fgsc_depositor_taxonomy
     - views.view.fgsc_genotype_list
     - views.view.fgsc_species
   module:
@@ -63,15 +64,31 @@ reactions:
         context_mapping: {  }
         views_label: ''
         third_party_settings: {  }
-      35daf828-dbdf-4737-8166-f9a7559733a1:
-        uuid: 35daf828-dbdf-4737-8166-f9a7559733a1
-        id: 'views_exposed_filter_block:fgsc_genotype_list-block_2'
+      bdbe005f-8abc-4888-a25e-86caee84fcf6:
+        uuid: bdbe005f-8abc-4888-a25e-86caee84fcf6
+        id: 'views_exposed_filter_block:fgsc_species-block_1'
         label: ''
         provider: views
         label_display: '0'
         region: sub_content
         weight: '0'
-        custom_id: views_exposed_filter_block_fgsc_genotype_list_block_2
+        custom_id: views_exposed_filter_block_fgsc_species_block_1
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: fungal_genetics_home
+        context_mapping: {  }
+        views_label: ''
+        third_party_settings: {  }
+      dc405b81-c368-493a-95a6-3da2bc89a645:
+        uuid: dc405b81-c368-493a-95a6-3da2bc89a645
+        id: 'views_exposed_filter_block:fgsc_depositor_taxonomy-block_1'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: sub_content
+        weight: '0'
+        custom_id: views_exposed_filter_block_fgsc_depositor_taxonomy_block_1
         theme: kstate_theme
         css_class: ''
         unique: 0
