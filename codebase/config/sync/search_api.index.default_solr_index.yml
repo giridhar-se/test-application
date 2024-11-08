@@ -398,7 +398,8 @@ field_settings:
     label: 'Member of » Content » Title'
     datasource_id: 'entity:node'
     property_path: 'field_member_of:entity:title'
-    type: string
+    type: text
+    boost: 3.0
     dependencies:
       config:
         - field.storage.node.field_member_of
@@ -565,7 +566,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: title
     type: text
-    boost: 8.0
+    boost: 5.0
     dependencies:
       module:
         - node
@@ -583,6 +584,7 @@ field_settings:
     label: Title
     property_path: aggregated_field
     type: text
+    boost: 5.0
     configuration:
       type: union
       fields:

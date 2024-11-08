@@ -1990,15 +1990,15 @@ display:
             format: basic_html
           tokenize: false
       sorts:
-        nid:
-          id: nid
+        search_api_relevance:
+          id: search_api_relevance
           table: search_api_index_default_solr_index
-          field: nid
+          field: search_api_relevance
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: search_api
-          order: ASC
+          order: DESC
           expose:
             label: ''
             field_identifier: ''

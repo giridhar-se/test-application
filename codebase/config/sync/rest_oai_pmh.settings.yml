@@ -3,12 +3,11 @@ _core:
 rest_oai_pmh:
   entity_type: node
 view_displays:
-  'oai_pmh:all_repository_items': 'oai_pmh:all_repository_items'
   'oai_pmh:collection_sets': 'oai_pmh:collection_sets'
-  'oai_pmh:collectionless_set': 'oai_pmh:collectionless_set'
+  'oai_pmh:fgsc_collection': 'oai_pmh:fgsc_collection'
 support_sets: 1
 mapping_source: rdf
-repository_name: 'Test Digital'
+repository_name: 'K-State Digital Collections'
 repository_email: libadm@k-state.edu
 expiration: '3600'
 metadata_map_plugins:
@@ -23,5 +22,5 @@ metadata_map_plugins:
     value: ''
 cache_technique: liberal_cache
 mods_view:
-  view_machine_name: oai_pmh_item_data
+  view_machine_name: custom_oai_pmh_item_data_view
   view_display_name: page_1
