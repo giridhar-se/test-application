@@ -147,6 +147,7 @@ main.ksul {
 }
 #header .header__row #block-mainnavigation:has(+ .search-form), #header .header__nav #block-mainnavigation:has(+ .search-form) {
   flex-grow: 0;
+  width: 25%;
 }
 #header .header__row .main-nav, #header .header__nav .main-nav {
   flex-grow: 1;
@@ -167,7 +168,8 @@ main.ksul {
     flex-wrap: wrap;
   }
   #header .header__nav .container #block-mainnavigation {
-    max-width: 50%;
+    width: 100%;
+    margin: 0.25rem 0;
   }
   #header .header__nav .secondary-menu .nav {
     padding: 5px;
@@ -596,7 +598,7 @@ footer .footer__media__icons {
 }
 #block-kstate-theme-search {
   width: fit-content;
-  margin: 0.25rem auto;
+  margin: 0.25rem 4vw;
   align-content: center;
 }
 #block-kstate-theme-search form {

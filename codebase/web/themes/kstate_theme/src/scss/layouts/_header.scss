@@ -8,6 +8,7 @@
 
             &:has(+.search-form) {
                 flex-grow: 0;
+                width: 25%;
             }
         }
 
@@ -36,7 +37,8 @@
                 flex-wrap: wrap;
 
                 #block-mainnavigation {
-                    max-width: 50%;
+                    width: 100%;
+                    margin: 0.25rem 0;
                 }
             }
             
