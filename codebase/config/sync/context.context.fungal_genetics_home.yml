@@ -31,23 +31,6 @@ reactions:
     id: blocks
     uuid: 855faaa3-b3b0-4fc9-9c5c-a3da29358bc5
     blocks:
-      e0a9148e-b9bd-4aae-9490-9f12f64fcb61:
-        uuid: e0a9148e-b9bd-4aae-9490-9f12f64fcb61
-        id: 'views_block:fgsc_species-block_1'
-        label: ''
-        provider: views
-        label_display: '0'
-        region: sub_content
-        weight: '0'
-        custom_id: views_block_fgsc_species_block_1
-        theme: kstate_theme
-        css_class: ''
-        unique: 0
-        context_id: fungal_genetics_home
-        context_mapping: {  }
-        views_label: ''
-        items_per_page: none
-        third_party_settings: {  }
       9bfd92f2-0645-4a42-99ec-e40cf8d7bd9e:
         uuid: 9bfd92f2-0645-4a42-99ec-e40cf8d7bd9e
         id: 'views_exposed_filter_block:fgsc_genotype_list-block_1'
