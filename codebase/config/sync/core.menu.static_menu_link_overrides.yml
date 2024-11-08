@@ -23,6 +23,5 @@ definitions:
     weight: -42
     menu_name: footer-navigation
     parent: ''
-    weight: 10
     expanded: false
     enabled: true
