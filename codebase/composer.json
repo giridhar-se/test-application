@@ -36,6 +36,7 @@
         "drupal/advanced_search": "^2.0.0@beta",
         "drupal/better_exposed_filters": "^6.0",
         "drupal/bibcite": "^3.0@beta",
+        "drupal/bootstrap_barrio": "^5.5",
         "drupal/cas": "^2.3",
         "drupal/citation_select": "^2.0@beta",
         "drupal/coi": "^4.0",
