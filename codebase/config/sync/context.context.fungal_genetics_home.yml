@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - views.view.fgsc_genotype_list
     - views.view.fgsc_species
   module:
     - system
@@ -11,7 +12,7 @@ label: 'Fungal Genetics Home'
 name: fungal_genetics_home
 group: Display
 description: 'Set twig page template for fungal genetics home page'
-requireAllConditions: false
+requireAllConditions: true
 disabled: false
 conditions:
   request_path:
@@ -19,7 +20,7 @@ conditions:
     negate: false
     uuid: bffe4036-0183-4292-b332-01f312436846
     context_mapping: {  }
-    pages: "/item/fungal-genetics-collection\r\n/item/fgsc-deposit-sheets"
+    pages: "/item/fungal-genetics-collection\r\n"
 reactions:
   page_template_suggestions:
     id: page_template_suggestions
@@ -46,6 +47,38 @@ reactions:
         views_label: ''
         items_per_page: none
         third_party_settings: {  }
-    include_default_blocks: 0
+      9bfd92f2-0645-4a42-99ec-e40cf8d7bd9e:
+        uuid: 9bfd92f2-0645-4a42-99ec-e40cf8d7bd9e
+        id: 'views_exposed_filter_block:fgsc_genotype_list-block_1'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: sub_content
+        weight: '0'
+        custom_id: views_exposed_filter_block_fgsc_genotype_list_block_1
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: fungal_genetics_home
+        context_mapping: {  }
+        views_label: ''
+        third_party_settings: {  }
+      35daf828-dbdf-4737-8166-f9a7559733a1:
+        uuid: 35daf828-dbdf-4737-8166-f9a7559733a1
+        id: 'views_exposed_filter_block:fgsc_genotype_list-block_2'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: sub_content
+        weight: '0'
+        custom_id: views_exposed_filter_block_fgsc_genotype_list_block_2
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: fungal_genetics_home
+        context_mapping: {  }
+        views_label: ''
+        third_party_settings: {  }
+    include_default_blocks: 1
     saved: false
 weight: 0

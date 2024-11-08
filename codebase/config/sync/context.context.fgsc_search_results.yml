@@ -1,0 +1,46 @@
+uuid: 176156ad-90f1-4741-8a08-b0911a1a0132
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.fgsc_solr_search_content
+  module:
+    - system
+    - views
+label: 'FGSC Search Results'
+name: fgsc_search_results
+group: Display
+description: 'Sets appropriate fgsc blocks for solr-search/fgsc-content '
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 77d75dd5-66b1-40ef-8e3b-4490ba130abb
+    context_mapping: {  }
+    pages: /solr-search/fgsc-content
+reactions:
+  blocks:
+    id: blocks
+    uuid: aa2f921c-a7f0-4662-a7a3-6715cd795ffa
+    blocks:
+      85a2fb46-2bc6-4663-952c-5533430bb12d:
+        uuid: 85a2fb46-2bc6-4663-952c-5533430bb12d
+        id: 'views_exposed_filter_block:fgsc_solr_search_content-page_1'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: content
+        weight: '-10'
+        custom_id: views_exposed_filter_block_fgsc_solr_search_content_page_1
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: fgsc_search_results
+        context_mapping: {  }
+        views_label: ''
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0

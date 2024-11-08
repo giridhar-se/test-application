@@ -59,6 +59,21 @@ reactions:
         views_label: ''
         items_per_page: none
         third_party_settings: {  }
+      d6e6e198-5bde-4422-a8bd-8a4d8e8d59b4:
+        uuid: d6e6e198-5bde-4422-a8bd-8a4d8e8d59b4
+        id: page_title_block
+        label: 'Page title'
+        provider: core
+        label_display: '0'
+        region: sub_content
+        weight: '-1'
+        custom_id: page_title_block
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: fgsc_deposit_context
+        context_mapping: {  }
+        third_party_settings: {  }
     include_default_blocks: 1
     saved: false
   regions:

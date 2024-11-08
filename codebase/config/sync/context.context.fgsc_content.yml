@@ -29,7 +29,7 @@ conditions:
     negate: false
     uuid: d80258c1-69f0-4955-bf41-52341f618654
     context_mapping: {  }
-    pages: "/item/fungal-genetics-collection\r\n/item/fungal-genetics-collection/*\r\n/item/fgsc-deposit-sheets\r\n/solr-search/fgsc-content\r\n"
+    pages: "/item/fungal-genetics-collection\r\n/item/fungal-genetics-collection/*\r\n/item/fgsc-deposit-sheets\r\n\r\n"
 reactions:
   blocks:
     id: blocks
@@ -41,8 +41,8 @@ reactions:
         label: ''
         provider: views
         label_display: '0'
-        region: breadcrumb
-        weight: '0'
+        region: sub_content
+        weight: '-10'
         custom_id: views_exposed_filter_block_fgsc_solr_search_content_page_1
         theme: kstate_theme
         css_class: ''

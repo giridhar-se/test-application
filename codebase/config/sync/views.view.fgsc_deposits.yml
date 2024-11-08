@@ -130,20 +130,7 @@ display:
       cache:
         type: tag
         options: {  }
-      empty:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: true
-          content:
-            value: '<p>We could not find any results for strain <strong>{{ title }}</strong> with a species of <strong>{{ arguments.field_ksul_fgsc_species_value }}</strong> that has been published.'
-            format: basic_html
-          tokenize: true
+      empty: {  }
       sorts:
         nid:
           id: nid
@@ -358,7 +345,7 @@ display:
         type: some
         options:
           offset: 1
-          items_per_page: 2000
+          items_per_page: 3000
       arguments:
         field_ksul_fgsc_species_value:
           id: field_ksul_fgsc_species_value

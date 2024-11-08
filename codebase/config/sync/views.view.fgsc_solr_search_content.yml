@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_genotype
     - field.storage.node.field_model
     - field.storage.node.field_resource_type
     - search_api.index.default_solr_index
@@ -610,15 +611,11 @@ display:
                 collapsible: false
                 collapsible_label: 'Sort options'
                 is_secondary: false
-            pager:
-              plugin_id: bef_links
-              advanced:
-                is_secondary: false
             filter:
               search_api_fulltext:
                 plugin_id: default
                 advanced:
-                  placeholder_text: ''
+                  placeholder_text: 'Find Genotype'
                   rewrite:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
@@ -1454,7 +1451,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
-      title: 'FGSC Search Content'
+      title: 'Fungal Genetics Stock Center Search Results'
       fields:
         field_model:
           id: field_model
@@ -2091,9 +2088,17 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: sloppy_terms
+          parse_mode: fuzzy_terms
           min_length: null
-          fields: {  }
+          fields:
+            - abstract_description_fulltext
+            - description
+            - field_corp_alt_name
+            - field_geo_alt_name
+            - member_of_title
+            - name
+            - subject_aggregated_fulltext
+            - title_aggregated_fulltext
         field_fgsc_member:
           id: field_fgsc_member
           table: search_api_index_default_solr_index
