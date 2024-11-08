@@ -1,0 +1,33 @@
+uuid: d48b8877-f334-4583-9c1e-b122325bdd28
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.genotype
+  module:
+    - manage_display
+    - text
+id: taxonomy_term.genotype.default
+targetEntityType: taxonomy_term
+bundle: genotype
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  name:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: false
+      tag: h3
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

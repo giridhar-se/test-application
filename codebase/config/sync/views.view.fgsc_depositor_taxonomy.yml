@@ -169,7 +169,7 @@ display:
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: string
-          operator: contains
+          operator: allwords
           value: ''
           group: 1
           exposed: true

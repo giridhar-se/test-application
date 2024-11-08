@@ -8,9 +8,9 @@ definitions:
     expanded: false
     enabled: true
   user__logout:
-    weight: -43
     menu_name: footer-navigation
     parent: ''
+    weight: -43
     expanded: false
     enabled: true
   samlauth__saml_controller_logout__logout:
@@ -20,8 +20,8 @@ definitions:
     expanded: false
     enabled: false
   user__page:
-    weight: -42
     menu_name: footer-navigation
     parent: ''
+    weight: -42
     expanded: false
     enabled: true
