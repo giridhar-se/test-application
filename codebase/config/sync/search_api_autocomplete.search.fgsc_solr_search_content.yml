@@ -1,0 +1,29 @@
+uuid: 8f124004-4f5b-425d-9092-972747043691
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.default_solr_index
+    - views.view.fgsc_solr_search_content
+  module:
+    - views
+    - search_api_autocomplete
+id: fgsc_solr_search_content
+label: 'FGSC Solr search content'
+index_id: default_solr_index
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:fgsc_solr_search_content':
+    displays:
+      default: true
+      selected: {  }
+options: {  }

@@ -1,0 +1,29 @@
+uuid: 25ba054e-f43d-4ff6-b47d-01ef83a2fd24
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.default_solr_index
+    - views.view.solr_search_content
+  module:
+    - views
+    - search_api_autocomplete
+id: solr_search_content
+label: 'Solr search content'
+index_id: default_solr_index
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:solr_search_content':
+    displays:
+      default: true
+      selected: {  }
+options: {  }
