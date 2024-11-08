@@ -141,10 +141,11 @@
                 {% endif %}
                 {# Main Content #}
                 {# Fungal Genetics custom page #}
+                {% set site_base_url = url("<front>") %}
                 <div class="main-content">
                   <div id="fgsc">
                     <h1>Fungal Genetics Stock Center</h1>
-                    <a href="https://dev.islandora.local">Back to search</a>
+                    <a href="{{ site_base_url }}item/fungal-genetics-collection">Back to search</a>
 
                     {{ page.sub_content }}
 
