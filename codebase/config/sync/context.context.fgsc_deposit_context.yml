@@ -11,7 +11,7 @@ label: 'FGSC Deposit Context'
 name: fgsc_deposit_context
 group: Display
 description: ''
-requireAllConditions: false
+requireAllConditions: true
 disabled: false
 conditions:
   request_path:
@@ -20,6 +20,12 @@ conditions:
     uuid: 0db5a1e6-1afa-4b5b-ae08-89996eac4d8b
     context_mapping: {  }
     pages: "/item/*/fgsc-*\r\n"
+  request_path_exclusion:
+    id: request_path_exclusion
+    negate: true
+    uuid: 7c1a27b7-385c-4c4f-96e8-5318bfa9a1ae
+    context_mapping: {  }
+    pages: '/item/*/fgsc-documents'
 reactions:
   blocks:
     id: blocks
@@ -80,11 +86,11 @@ reactions:
     id: regions
     uuid: 415e99fd-54f3-4b73-8ecb-87d5bac615fc
     regions:
-      claro: {  }
-      olivero: {  }
-      bootstrap_barrio: {  }
-      bootstrap_barrio_subtheme: {  }
       kstate_theme:
         - content
+      bootstrap_barrio: {  }
+      bootstrap_barrio_subtheme: {  }
+      claro: {  }
+      olivero: {  }
     saved: false
 weight: 0

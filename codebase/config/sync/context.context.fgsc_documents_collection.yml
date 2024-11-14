@@ -1,0 +1,47 @@
+uuid: 5522c273-74bf-4ad1-86ba-a4e6140f5583
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+    - system
+label: 'FGSC Documents Collection'
+name: fgsc_documents_collection
+group: Display
+description: 'Display correct view mode for the odd fgsc documents collection'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 87cf66c2-3e90-4e8f-a339-f4653945370a
+    context_mapping: {  }
+    pages: /item/fgsc-deposit-sheets/fgsc-documents
+reactions:
+  view_mode_alter:
+    id: view_mode_alter
+    saved: false
+    mode: node.collection
+  blocks:
+    id: blocks
+    uuid: e8d7a856-b0d7-44d5-8e55-bbdfef95f5e4
+    blocks:
+      9a2973b9-78e1-42f0-8399-02acae10f25c:
+        uuid: 9a2973b9-78e1-42f0-8399-02acae10f25c
+        id: system_main_block
+        label: 'Main page content'
+        provider: system
+        label_display: '0'
+        region: content
+        weight: '0'
+        custom_id: system_main_block
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: fgsc_documents_collection
+        context_mapping: {  }
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

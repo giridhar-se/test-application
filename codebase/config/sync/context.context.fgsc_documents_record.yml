@@ -1,0 +1,38 @@
+uuid: 38406388-9f3b-4e8a-b262-a28da56bfa1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+label: 'FGSC Documents Record'
+name: fgsc_documents_record
+group: Display
+description: 'Displays the records under the fgsc-documents collection within fgsc'
+requireAllConditions: false
+disabled: false
+conditions:
+  node_has_parent:
+    id: node_has_parent
+    negate: false
+    uuid: 16d692a1-26b5-43f9-b66f-02e111fca23b
+    context_mapping:
+      node: '@node.node_route_context:node'
+    parent_nid: 1153
+    parent_reference_field: field_member_of
+reactions:
+  regions:
+    id: regions
+    uuid: 673f7776-f2d8-48bc-be7f-75c4f1890814
+    regions:
+      kstate_theme:
+        - sub_content
+      bootstrap_barrio: {  }
+      bootstrap_barrio_subtheme: {  }
+      claro: {  }
+      olivero: {  }
+    saved: false
+  view_mode_alter:
+    id: view_mode_alter
+    saved: false
+    mode: node.full
+weight: 0
