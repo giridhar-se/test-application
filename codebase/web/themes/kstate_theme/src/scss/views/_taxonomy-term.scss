@@ -15,8 +15,12 @@
                 flex-direction: row;
 
                 .node__details {
-                    max-width: 70%;
-                    margin-right: 2rem;
+                    width: 75%;
+                }
+                .view-eva {
+                    width: 25%;
+                    text-align: center;
+                    margin: 1rem;
                 }
             }
         }

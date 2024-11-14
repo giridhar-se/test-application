@@ -67,14 +67,18 @@ dependencies:
     - field.field.node.islandora_object.field_weight
     - node.type.islandora_object
   module:
+    - controlled_access_terms
     - field_group
     - manage_display
-    - search_api_solr
+    - text
 third_party_settings:
   field_group:
     group_child_details:
       children:
         - title
+        - field_ksul_fgsc_species
+        - field_genotype
+        - field_fgsc_depositor
         - field_description
       label: 'Child Details'
       parent_name: ''
@@ -106,12 +110,33 @@ content:
     weight: 1
     region: content
   field_description:
-    type: solr_highlighted_text_default
+    type: text_default
     label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_fgsc_depositor:
+    type: typed_relation_default
+    label: inline
     settings:
-      prefix: '<strong>'
-      suffix: '</strong>'
-      strict: false
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_genotype:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_ksul_fgsc_species:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 4
     region: content
@@ -159,19 +184,16 @@ hidden:
   field_edtf_date_created: true
   field_edtf_date_issued: true
   field_extent: true
-  field_fgsc_depositor: true
   field_fgsc_distributor: true
   field_fgsc_member: true
   field_frequency: true
   field_full_title: true
   field_gemini_uri: true
-  field_genotype: true
   field_genre: true
   field_geographic_subject: true
   field_identifier: true
   field_isbn: true
   field_ksul_citation: true
-  field_ksul_fgsc_species: true
   field_ksul_handle_identifier: true
   field_ksul_journal_issue: true
   field_ksul_journal_volume: true

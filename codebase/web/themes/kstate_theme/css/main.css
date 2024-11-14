@@ -731,8 +731,12 @@ footer .footer__media__icons {
   flex-direction: row;
 }
 .view-taxonomy-term .view-content .item-list-flex .node__content .node__details {
-  max-width: 70%;
-  margin-right: 2rem;
+  width: 75%;
+}
+.view-taxonomy-term .view-content .item-list-flex .node__content .view-eva {
+  width: 25%;
+  text-align: center;
+  margin: 1rem;
 }
 @media (max-width: 500px) {
   .view-taxonomy-term .view-content {
