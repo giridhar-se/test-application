@@ -50,12 +50,12 @@ reactions:
     id: regions
     uuid: 99ba2fa8-68dc-4d80-b8c5-f3a0d8655e6c
     regions:
-      claro: {  }
-      olivero: {  }
-      bootstrap_barrio: {  }
-      bootstrap_barrio_subtheme: {  }
       kstate_theme:
         - content
+      bootstrap_barrio: {  }
+      bootstrap_barrio_subtheme: {  }
+      claro: {  }
+      olivero: {  }
     saved: false
   page_template_suggestions:
     id: page_template_suggestions
