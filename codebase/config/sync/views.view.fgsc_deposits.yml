@@ -342,10 +342,27 @@ display:
     position: 1
     display_options:
       pager:
-        type: some
+        type: full
         options:
           offset: 1
-          items_per_page: 3000
+          pagination_heading_level: h4
+          items_per_page: 500
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next >'
+            previous: '< Prev'
+            first: '<<'
+            last: '>>'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 3
       arguments:
         field_ksul_fgsc_species_value:
           id: field_ksul_fgsc_species_value
@@ -534,12 +551,14 @@ display:
         groups:
           1: AND
       defaults:
+        use_ajax: false
         pager: false
         arguments: false
         filters: false
         filter_groups: false
         header: false
         footer: false
+      use_ajax: false
       header:
         area:
           id: area
@@ -574,6 +593,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
