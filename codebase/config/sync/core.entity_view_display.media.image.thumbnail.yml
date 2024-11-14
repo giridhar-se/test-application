@@ -12,7 +12,7 @@ dependencies:
     - field.field.media.image.field_mime_type
     - field.field.media.image.field_original_name
     - field.field.media.image.field_width
-    - image.style.medium
+    - image.style.document_page
     - media.type.image
   module:
     - image
@@ -27,8 +27,8 @@ content:
     type: image
     label: hidden
     settings:
-      image_link: ''
-      image_style: medium
+      image_link: content
+      image_style: document_page
       image_loading:
         attribute: lazy
     third_party_settings: {  }
