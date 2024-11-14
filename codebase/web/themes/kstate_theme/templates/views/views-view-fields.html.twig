@@ -32,7 +32,7 @@
  */
 #}
 {% for field in fields -%}
-  {% if field.content matches '/href="[^"]*fgsc[^"]*-[0-9]+"/' %}
+  {% if field.content matches '/href="[^"]*fgsc-[a-zA-Z0-9]+-[0-9]"/' %}
     {# dont display the content because it contains a link to a serial node i.e., url alias = */fgsc-a4-0   The "-0" breaks stuff #}
   {% else %}
     {{ field.separator }}
