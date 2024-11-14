@@ -354,8 +354,8 @@ display:
       css_class: eva-repository-item-children
       display_description: ''
       use_more: true
-      use_more_always: false
-      use_more_text: 'See more items'
+      use_more_always: true
+      use_more_text: 'See all items'
       link_display: custom_url
       link_url: "/item/{{ arguments.field_member_of_target_id|replace({' ':'-'}) }}"
       header:
