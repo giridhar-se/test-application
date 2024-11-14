@@ -122,7 +122,7 @@ default_options:
   crossOriginPolicy: false
   ajaxWithCredentials: false
   tileSize: 256
-iiif_server: 'https://dev.islandora.local/cantaloupe/iiif/2'
+iiif_server: 'https://test-digital.ksulib.net/cantaloupe/iiif/2'
 manifest_view: iiif_manifest
 viewer_options:
   fit_to_aspect_ratio: 0

@@ -2,11 +2,10 @@ uuid: 66e22d20-c039-4d35-920b-632fa8815ee6
 langcode: en
 status: true
 dependencies:
-  config:
-    - views.view.media_display_blocks
   module:
     - islandora
-    - views
+    - islandora_mirador
+    - openseadragon
 label: 'OpenSeadragon - Single-page item'
 name: openseadragon_single_page_
 group: Display
@@ -20,29 +19,48 @@ conditions:
     uuid: 736da07f-f22c-4128-be42-f424bd03a4e1
     context_mapping:
       node: '@node.node_route_context:node'
-    uri: 'http://openseadragon.github.io'
+    uri: 'https://schema.org/Book'
     logic: and
 reactions:
+  view_mode_alter:
+    id: view_mode_alter
+    saved: false
+    mode: node.paged
   blocks:
     id: blocks
-    uuid: 3621ea31-c78a-4b28-91fc-5a269060e536
+    uuid: 0b7333ef-6872-40a5-872f-85659e1fbbc2
     blocks:
-      0f25f3b0-308e-4aac-ab47-172956207f37:
-        uuid: 0f25f3b0-308e-4aac-ab47-172956207f37
-        id: 'views_block:media_display_blocks-openseadragon'
-        label: ''
-        provider: views
-        label_display: '0'
-        region: content_above
-        weight: '0'
-        custom_id: views_block_media_display_blocks_openseadragon
-        theme: olivero
+      8ef0a5b0-a51a-414c-83e0-2cfbd9259389:
+        uuid: 8ef0a5b0-a51a-414c-83e0-2cfbd9259389
+        id: openseadragon_block
+        label: Openseadragon
+        provider: openseadragon
+        label_display: visible
+        region: content
+        weight: '-9'
+        custom_id: openseadragon_block
+        theme: kstate_theme
         css_class: ''
         unique: 0
         context_id: openseadragon_single_page_
         context_mapping: {  }
-        views_label: ''
-        items_per_page: none
+        iiif_manifest_url: '/node/[node:nid]/book-manifest'
+        third_party_settings: {  }
+      29fb6999-7919-41a2-a968-bb302fa6a24f:
+        uuid: 29fb6999-7919-41a2-a968-bb302fa6a24f
+        id: mirador_block
+        label: Mirador
+        provider: islandora_mirador
+        label_display: visible
+        region: content
+        weight: '-9'
+        custom_id: mirador_block
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: openseadragon_single_page_
+        context_mapping: {  }
+        iiif_manifest_url: '/node/[node:nid]/book-manifest'
         third_party_settings: {  }
     include_default_blocks: 1
     saved: false
