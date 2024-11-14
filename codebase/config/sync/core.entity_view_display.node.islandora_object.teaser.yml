@@ -100,7 +100,7 @@ targetEntityType: node
 bundle: islandora_object
 mode: teaser
 content:
-  display_media_thumbnail:
+  display_media_entity_view_3:
     settings: {  }
     third_party_settings: {  }
     weight: 1
@@ -136,11 +136,11 @@ hidden:
   did_image: true
   display_media_entity_view_1: true
   display_media_entity_view_2: true
-  display_media_entity_view_3: true
   display_media_entity_view_4: true
   display_media_eva_remote_video: true
   display_media_original_download: true
   display_media_service_file: true
+  display_media_thumbnail: true
   fgsc_deposit_entity_view_1: true
   field_abstract: true
   field_alt_title: true

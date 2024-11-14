@@ -73,12 +73,11 @@ dependencies:
 third_party_settings:
   field_group:
     group_download_options:
-      children:
-        - display_media_entity_view_2
+      children: {  }
       label: 'Download Options'
       parent_name: ''
-      region: content
-      weight: 2
+      region: hidden
+      weight: 83
       format_type: details
       format_settings:
         classes: media-download
@@ -99,7 +98,7 @@ third_party_settings:
       label: 'Default Object Detail'
       parent_name: ''
       region: content
-      weight: 3
+      weight: 1
       format_type: tabs
       format_settings:
         classes: ''
@@ -112,7 +111,6 @@ third_party_settings:
         - field_resource_type
         - field_linked_agent
         - field_alt_title
-        - field_fgsc_depositor
       label: 'Item Description'
       parent_name: group_default_object_detail
       region: content
@@ -134,21 +132,6 @@ targetEntityType: node
 bundle: islandora_object
 mode: paged
 content:
-  content_eva_entity_view_1:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  display_media_entity_view_2:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  display_media_entity_view_4:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
   display_media_original_download:
     settings: {  }
     third_party_settings: {  }
@@ -161,14 +144,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 8
-    region: content
-  field_fgsc_depositor:
-    type: typed_relation_default
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 9
     region: content
   field_linked_agent:
     type: typed_relation_default
@@ -189,7 +164,7 @@ content:
   permalink_uri:
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 2
     region: content
   show_title:
     settings: {  }
@@ -206,10 +181,14 @@ content:
     region: content
 hidden:
   addtoany: true
+  content_eva_entity_view_1: true
   created: true
   did_image: true
   display_media_entity_view_1: true
+  display_media_entity_view_2: true
   display_media_entity_view_3: true
+  display_media_entity_view_4: true
+  display_media_eva_remote_video: true
   display_media_service_file: true
   display_media_thumbnail: true
   fgsc_deposit_entity_view_1: true
@@ -230,6 +209,7 @@ hidden:
   field_edtf_date_created: true
   field_edtf_date_issued: true
   field_extent: true
+  field_fgsc_depositor: true
   field_fgsc_distributor: true
   field_fgsc_member: true
   field_frequency: true
@@ -284,6 +264,7 @@ hidden:
   pdfjs_media_evas_entity_view_1: true
   pdfjs_media_evas_entity_view_2: true
   pdfjs_media_evas_service_file: true
+  reposito_entity_view_1: true
   search_api_excerpt: true
   search_within_this_collection_link_entity_view_1: true
   uid: true

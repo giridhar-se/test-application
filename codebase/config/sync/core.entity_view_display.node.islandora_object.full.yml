@@ -83,7 +83,7 @@ third_party_settings:
       label: 'Object Details'
       parent_name: ''
       region: content
-      weight: 2
+      weight: 1
       format_type: tabs
       format_settings:
         classes: ''
@@ -133,7 +133,7 @@ third_party_settings:
       label: 'Download Options'
       parent_name: ''
       region: content
-      weight: 1
+      weight: 2
       format_type: html_element
       format_settings:
         classes: 'media-download position-relative'
@@ -153,11 +153,6 @@ targetEntityType: node
 bundle: islandora_object
 mode: full
 content:
-  content_eva_entity_view_1:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
   display_media_entity_view_2:
     settings: {  }
     third_party_settings: {  }
@@ -319,11 +314,6 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
-  object_navigation:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
-    region: content
   permalink_uri:
     settings: {  }
     third_party_settings: {  }
@@ -336,6 +326,7 @@ content:
     region: content
 hidden:
   addtoany: true
+  content_eva_entity_view_1: true
   created: true
   did_image: true
   display_media_entity_view_1: true
@@ -393,6 +384,7 @@ hidden:
   links: true
   metadata: true
   metadata_pages: true
+  object_navigation: true
   openseadragon: true
   openseadragon_media_evas_entity_view_1: true
   openseadragon_media_evas_entity_view_2: true
