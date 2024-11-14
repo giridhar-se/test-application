@@ -2,7 +2,6 @@
 #block-kstate-theme-exposed-form-reposito-children {
     margin: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
 
     form {
@@ -104,5 +103,11 @@
         form {
             max-width: 100%;
         }
+    }
+}
+
+.view.view-reposito.view-id-reposito{
+    .view-content {
+        margin: 1rem 0;
     }
 }

@@ -8,7 +8,7 @@ dependencies:
     - field.storage.node.field_genre
     - field.storage.node.field_linked_agent
     - field.storage.node.field_subject
-    - image.style.medium
+    - image.style.document_page
     - node.type.islandora_object
   module:
     - better_exposed_filters
@@ -115,11 +115,11 @@ display:
             items_per_page: false
             items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: true
+            items_per_page_options_all: false
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 5
+          quantity: 3
       exposed_form:
         type: basic
         options:
@@ -507,7 +507,7 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: span
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
@@ -580,7 +580,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: medium
+            image_style: document_page
             image_link: content
             image_loading:
               attribute: lazy
@@ -891,14 +891,16 @@ display:
       style:
         type: default
         options:
-          row_class: ''
+          grouping: {  }
+          row_class: repository-child-record
           default_row_class: true
-          uses_fields: false
       row:
         type: fields
         options:
           default_field_elements: true
-          inline: {  }
+          inline:
+            title: title
+            did_image: did_image
           separator: ''
           hide_empty: false
       defaults:

@@ -2454,10 +2454,10 @@ display:
           total_pages: null
           id: 1
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
-            first: '« First'
-            last: 'Last »'
+            next: Next>
+            previous: '<Prev'
+            first: '<<First'
+            last: Last>>
           expose:
             items_per_page: true
             items_per_page_label: 'Results Per Page:'
@@ -2466,7 +2466,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 5
+          quantity: 3
       exposed_form:
         type: bef
         options:
@@ -2474,7 +2474,7 @@ display:
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort:'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
           text_input_required: 'Select any filter and click on Apply to see results'
@@ -2493,7 +2493,7 @@ display:
             sort:
               plugin_id: default
               advanced:
-                combine: true
+                combine: false
                 combine_rewrite: "Title Asc|A-Z\r\nTitle Desc|Z-A"
                 reset: false
                 reset_label: ''
@@ -2560,7 +2560,7 @@ display:
           expose:
             label: Title
             field_identifier: title
-          exposed: true
+          exposed: false
         field_edtf_date_created:
           id: field_edtf_date_created
           table: search_api_index_default_solr_index
@@ -2573,7 +2573,7 @@ display:
           expose:
             label: 'Date Created'
             field_identifier: field_edtf_date_created
-          exposed: true
+          exposed: false
       filters:
         type:
           id: type
@@ -2750,7 +2750,7 @@ display:
       style:
         type: default
         options:
-          row_class: ''
+          row_class: main-search-result-row
           default_row_class: true
           uses_fields: false
       row:
@@ -2851,8 +2851,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_description'
