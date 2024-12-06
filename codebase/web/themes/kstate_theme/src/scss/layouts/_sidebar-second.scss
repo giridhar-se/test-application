@@ -1,3 +1,5 @@
+@use "../ksul-custom/variables";
+
 @media (max-width: 500px) {
     .sidebar-second {
       position: fixed;
@@ -28,12 +30,12 @@
     right: 1rem;     /* Adjust the right distance */
     z-index: 1060;   /* Ensure it sits above the sidebar and other elements */
     background-color: lightgray;
-    color: $ksu-purple;
+    color: variables.$ksu-purple;
     border: none;
 
       &:focus {
         color: lightgray;
-        background-color: $ksu-purple;
+        background-color: variables.$ksu-purple;
       }
     }
 }

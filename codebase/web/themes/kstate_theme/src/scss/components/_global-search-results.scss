@@ -1,3 +1,5 @@
+@use "../ksul-custom/variables";
+
 .view-solr-search-content,
 .view-id-reposito {
     display: flex;
@@ -45,7 +47,7 @@
             .views-field-title {
                 grid-column: 1;
                 font-size: 18px;
-                color: $ksu-purple;
+                color: variables.$ksu-purple;
                 margin-bottom: 0.5rem;
             }
 

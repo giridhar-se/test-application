@@ -1,3 +1,4 @@
+@use "sass:meta";
 body, html {
     font-family: 'Myriad Pro', sans-serif;
     font-weight: 400;
@@ -8,9 +9,9 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, header, footer, nav, section, article, 
     font-family: 'Myriad Pro', sans-serif;
 }
 
-@import 'ksul-custom/custom.scss';
-@import 'pages/_front-page.scss';
-@import 'layouts/layouts.scss';
-@import 'components/components.scss';
-@import 'views/views.scss';
-@import 'utils/utils.scss';
+@include meta.load-css('ksul-custom/custom.scss');
+@include meta.load-css('pages/_front-page.scss');
+@include meta.load-css('layouts/layouts.scss');
+@include meta.load-css('components/components.scss');
+@include meta.load-css('views/views.scss');
+@include meta.load-css('utils/utils.scss');

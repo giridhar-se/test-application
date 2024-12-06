@@ -1,3 +1,5 @@
+@use "../ksul-custom/variables";
+
 // Global header search
 #block-kstate-theme-exposed-form-reposito-children {
     margin: 0;
@@ -41,7 +43,7 @@
             background: transparent;
 
             .svg-inline--fa {
-                color: $ksu-purple;
+                color: variables.$ksu-purple;
             }
         }
     }
@@ -89,7 +91,7 @@
             background: transparent;
 
             .svg-inline--fa {
-                color: $ksu-purple;
+                color: variables.$ksu-purple;
             }
         }
     }
