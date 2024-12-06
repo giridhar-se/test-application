@@ -2052,17 +2052,17 @@
         },
         {
             "name": "drupal/bootstrap_barrio",
-            "version": "5.5.17",
+            "version": "5.5.19",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_barrio.git",
-                "reference": "5.5.17"
+                "reference": "5.5.19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-5.5.17.zip",
-                "reference": "5.5.17",
-                "shasum": "2f24a1caee5cd9041c49c607c2cde0a7d48083ae"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-5.5.19.zip",
+                "reference": "5.5.19",
+                "shasum": "636a96b4d9b1e8b055ec8925ff8b133e1cf11019"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11.0",
@@ -2071,8 +2071,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "5.5.17",
-                    "datestamp": "1725856215",
+                    "version": "5.5.19",
+                    "datestamp": "1733499138",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4295,17 +4295,17 @@
         },
         {
             "name": "drupal/islandora",
-            "version": "2.13.1",
+            "version": "2.13.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/islandora.git",
-                "reference": "2.13.1"
+                "reference": "2.13.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/islandora-2.13.1.zip",
-                "reference": "2.13.1",
-                "shasum": "d98e9384fb9dd4f20ca9f4e61bdf6c7124e447af"
+                "url": "https://ftp.drupal.org/files/projects/islandora-2.13.2.zip",
+                "reference": "2.13.2",
+                "shasum": "9b6f85e7703c264b0eed65bf1d9645d30219aa52"
             },
             "require": {
                 "drupal/action": "*",
@@ -4344,8 +4344,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.13.1",
-                    "datestamp": "1730125687",
+                    "version": "2.13.2",
+                    "datestamp": "1733489863",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4386,7 +4386,7 @@
                     "homepage": "https://www.drupal.org/user/173761"
                 },
                 {
-                    "name": "Natkeeran",
+                    "name": "natkeeran",
                     "homepage": "https://www.drupal.org/user/1016288"
                 },
                 {
@@ -4423,7 +4423,7 @@
         },
         {
             "name": "drupal/islandora_iiif",
-            "version": "2.13.1",
+            "version": "2.13.2",
             "require": {
                 "drupal/core": "^9 || ^10",
                 "drupal/islandora": "^2"
@@ -4431,8 +4431,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "2.13.1",
-                    "datestamp": "1730125687",
+                    "version": "2.13.2",
+                    "datestamp": "1733489863",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4469,7 +4469,7 @@
                     "homepage": "https://www.drupal.org/user/173761"
                 },
                 {
-                    "name": "Natkeeran",
+                    "name": "natkeeran",
                     "homepage": "https://www.drupal.org/user/1016288"
                 },
                 {
