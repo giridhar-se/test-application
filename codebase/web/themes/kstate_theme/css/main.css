@@ -16,68 +16,83 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, header, footer, nav, section, article, 
   max-width: 90vw;
   margin: auto;
 }
+
 #fgsc h1 {
   font-size: 32px;
 }
+
 #fgsc #block-views-block-species-block-1 {
   margin: 0;
 }
+
 #fgsc .content .fgsc-species-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+
 #fgsc .fgsc-deposit-strains {
   margin: 1rem 0;
 }
+
 #fgsc .fgsc-deposit-strains .species-reset {
   display: flex;
   font-weight: 400;
 }
+
 #fgsc .fgsc-deposit-strains .species-reset .label {
   font-weight: 700;
   text-align: start;
   width: 105px;
 }
+
 #fgsc .fgsc-deposit-strains .species-reset .species-name {
   padding-left: 1rem;
   text-align: center;
 }
+
 #fgsc .fgsc-deposit-strains .species-reset .species-name::first-letter {
   text-transform: capitalize;
 }
+
 #fgsc .fgsc-deposit-strains .species-reset .species-name .reset-link {
   text-transform: lowercase;
 }
+
 #fgsc .view-header {
   margin: 1rem 0;
 }
+
 #fgsc .view-header p {
   margin-bottom: 1rem;
 }
+
 #fgsc .view-content #fgsc-species, #fgsc .view-content #fgsc-strains {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   gap: 1rem;
 }
+
 #fgsc .view-content #fgsc-species label, #fgsc .view-content #fgsc-strains label {
   margin-bottom: 0;
   width: 105px;
   text-align: start;
 }
+
 #fgsc .view-content #fgsc-species .select2-container, #fgsc .view-content #fgsc-strains .select2-container {
   width: min(475px, 100%) !important;
 }
+
 #fgsc aside {
   margin-top: 3.5rem;
 }
+
 @media (max-width: 500px) {
   #fgsc #fgsc-species, #fgsc #fgsc-strains {
     flex-direction: column;
   }
 }
-
 main.ksul {
   margin-bottom: 1rem;
 }
@@ -86,14 +101,17 @@ main.ksul {
   font-weight: 400;
   font-size: 16pt;
 }
+
 .homepage-content .view-header h2 {
   font-size: 2.25rem;
   font-weight: bold;
 }
+
 .homepage-content h3 {
   font-size: 1.5rem;
   font-weight: 900;
 }
+
 .homepage-content .views-view-responsive-grid__item {
   padding: 0.25rem;
   border: 1px solid #ccc;
@@ -101,28 +119,34 @@ main.ksul {
   border-radius: 8px;
   align-content: end;
 }
+
 .homepage-content .views-view-responsive-grid__item .views-field-did-image {
   text-align: center;
 }
+
 .homepage-content .views-view-responsive-grid__item .views-field-did-image a {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
+
 .homepage-content .views-view-responsive-grid__item .views-field-did-image a img {
   object-fit: cover;
   max-height: 250px;
   padding: 0;
 }
+
 .homepage-content .views-view-responsive-grid__item .views-field-title {
   color: #512888;
   font-weight: 700;
 }
+
 .homepage-content .views-view-responsive-grid__item .views-field-title h3 {
   margin-bottom: 0;
   padding: 0.5rem 0 0.5rem 0.5rem;
   line-height: 1.15;
 }
+
 .homepage-content .views-view-responsive-grid__item .views-field-title a {
   font-size: 16pt;
 }
@@ -130,10 +154,12 @@ main.ksul {
 #ksul-global-search #block-kstate-theme-search-2 {
   margin: 0;
 }
+
 #ksul-global-search #block-kstate-theme-search-2 form {
   display: flex;
   flex-direction: row;
 }
+
 #ksul-global-search #block-kstate-theme-search-2 form #edit-submit {
   border-radius: 0;
 }
@@ -141,17 +167,21 @@ main.ksul {
 #header .header__row, #header .header__nav {
   padding: 0.5rem 5rem;
 }
+
 #header .header__row #block-mainnavigation, #header .header__nav #block-mainnavigation {
   align-items: center;
   flex-grow: 1;
 }
+
 #header .header__row #block-mainnavigation:has(+ .search-form), #header .header__nav #block-mainnavigation:has(+ .search-form) {
   flex-grow: 0;
   width: 25%;
 }
+
 #header .header__row .main-nav, #header .header__nav .main-nav {
   flex-grow: 1;
 }
+
 #header .header__row .secondary-menu, #header .header__nav .secondary-menu {
   margin-left: auto;
 }
@@ -190,6 +220,7 @@ main.ksul {
   flex-direction: column;
   justify-content: center;
 }
+
 .featured-top .region-featured-top {
   margin: auto;
   width: 75%;
@@ -206,10 +237,12 @@ main.ksul {
   flex: 0 0 auto;
   white-space: nowrap;
 }
+
 .ksul .center-content {
   flex: 1;
   max-width: 100%;
 }
+
 .ksul .center-content .main-content {
   padding: 0 1rem;
   margin: 1rem 0;
@@ -272,9 +305,11 @@ footer .footer__media__icons {
   margin-right: auto;
   padding: 0 0.625rem;
 }
+
 .ksul .breadcrumbs .breadcrumb-item {
   font-size: 16px;
 }
+
 .ksul .breadcrumbs .breadcrumb-item::before {
   color: #aa9f9f;
 }
@@ -296,12 +331,14 @@ footer .footer__media__icons {
   box-sizing: border-box;
   z-index: 1000;
 }
+
 #ksul-global-search .hero-section {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
+
 #ksul-global-search .search-box {
   background-color: rgba(0, 0, 0, 0.6);
   /* Semi-transparent background */
@@ -311,20 +348,24 @@ footer .footer__media__icons {
   max-width: 750px;
   width: 100%;
 }
+
 #ksul-global-search .search-box h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: bold;
   color: #fff;
 }
+
 #ksul-global-search .search-box form {
   margin-bottom: 1rem;
 }
+
 #ksul-global-search .search-input {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 #ksul-global-search .search-input input[type=text] {
   width: 70%;
   padding: 10px;
@@ -333,6 +374,7 @@ footer .footer__media__icons {
   border-radius: 3px 0 0 3px;
   outline: none;
 }
+
 #ksul-global-search .search-input button {
   background-color: #512888;
   /* Match header purple color */
@@ -344,6 +386,7 @@ footer .footer__media__icons {
   border-radius: 0 3px 3px 0;
   outline: none;
 }
+
 #ksul-global-search .search-input button:hover {
   background-color: #3e2070;
   /* Darker shade of purple on hover */
@@ -357,22 +400,27 @@ footer .footer__media__icons {
   margin: 0;
   gap: 0;
 }
+
 .view-solr-search-content .view-list .views-row,
 .view-id-reposito .view-list .views-row {
   margin: 1rem auto;
 }
+
 .view-solr-search-content .view-list .views-row article,
 .view-id-reposito .view-list .views-row article {
   width: 100%;
 }
+
 .view-solr-search-content .view-list .node--field_model-collection .node__details .field--name-title h4,
 .view-id-reposito .view-list .node--field_model-collection .node__details .field--name-title h4 {
   font-size: 24px;
 }
+
 .view-solr-search-content .view-list .repository-child-record,
 .view-id-reposito .view-list .repository-child-record {
   grid-template-rows: 1fr 3fr;
 }
+
 .view-solr-search-content .view-list .node__content, .view-solr-search-content .view-list .views-row,
 .view-id-reposito .view-list .node__content,
 .view-id-reposito .view-list .views-row {
@@ -381,12 +429,14 @@ footer .footer__media__icons {
   margin-top: 0;
   align-items: start; /* Align items to the top by default */
 }
+
 .view-solr-search-content .view-list .node__content .node__details, .view-solr-search-content .view-list .views-row .node__details,
 .view-id-reposito .view-list .node__content .node__details,
 .view-id-reposito .view-list .views-row .node__details {
   flex: 0 0 75%;
   box-sizing: border-box;
 }
+
 .view-solr-search-content .view-list .node__content .views-field-title, .view-solr-search-content .view-list .views-row .views-field-title,
 .view-id-reposito .view-list .node__content .views-field-title,
 .view-id-reposito .view-list .views-row .views-field-title {
@@ -395,11 +445,13 @@ footer .footer__media__icons {
   color: #512888;
   margin-bottom: 0.5rem;
 }
+
 .view-solr-search-content .view-list .node__content .views-field-field-description, .view-solr-search-content .view-list .views-row .views-field-field-description,
 .view-id-reposito .view-list .node__content .views-field-field-description,
 .view-id-reposito .view-list .views-row .views-field-field-description {
   grid-column: 1;
 }
+
 .view-solr-search-content .view-list .node__content .views-field-did-image, .view-solr-search-content .view-list .views-row .views-field-did-image,
 .view-id-reposito .view-list .node__content .views-field-did-image,
 .view-id-reposito .view-list .views-row .views-field-did-image {
@@ -409,22 +461,26 @@ footer .footer__media__icons {
   align-self: stretch;
   margin-left: 1rem;
 }
+
 .view-solr-search-content .view-list .node__content .view-display-media, .view-solr-search-content .view-list .views-row .view-display-media,
 .view-id-reposito .view-list .node__content .view-display-media,
 .view-id-reposito .view-list .views-row .view-display-media {
   flex: 0 0 25%;
   box-sizing: border-box;
 }
+
 .view-solr-search-content .view-list .node__content .view-display-media .field--name-field-media-image, .view-solr-search-content .view-list .views-row .view-display-media .field--name-field-media-image,
 .view-id-reposito .view-list .node__content .view-display-media .field--name-field-media-image,
 .view-id-reposito .view-list .views-row .view-display-media .field--name-field-media-image {
   margin: 0;
   padding: 0 2rem;
 }
+
 .view-solr-search-content .view-list .main-search-result-row .repository-item-children,
 .view-id-reposito .view-list .main-search-result-row .repository-item-children {
   grid-column: 1/3;
 }
+
 .view-solr-search-content .view-list .repository-item-children,
 .view-id-reposito .view-list .repository-item-children {
   margin: 0.5rem auto;
@@ -432,6 +488,7 @@ footer .footer__media__icons {
   max-width: 100%;
   box-sizing: border-box;
 }
+
 .view-solr-search-content .view-list .repository-item-children .view-list .node__details h4,
 .view-id-reposito .view-list .repository-item-children .view-list .node__details h4 {
   font-size: 18px;
@@ -487,20 +544,24 @@ footer .footer__media__icons {
 #views-exposed-form-solr-search-content-page-3, #block-kstate-theme-exposedformsolr-search-contentpage-3 {
   margin: 0;
 }
+
 #views-exposed-form-solr-search-content-page-3 .form-row, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row {
   display: flex;
   justify-content: center;
   margin: 0;
 }
+
 #views-exposed-form-solr-search-content-page-3 .form-row div, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row div {
   display: flex;
   gap: 5px;
   margin: 0.5rem;
   align-items: center;
 }
+
 #views-exposed-form-solr-search-content-page-3 .form-row div label, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row div label {
   margin-bottom: 0;
 }
+
 #views-exposed-form-solr-search-content-page-3 .form-row .form-item-search-api-fulltext, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row .form-item-search-api-fulltext {
   order: 1;
   flex-basis: 65%;
@@ -509,17 +570,21 @@ footer .footer__media__icons {
   padding-left: 0;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
 }
+
 #views-exposed-form-solr-search-content-page-3 .form-row .form-item-search-api-fulltext input, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row .form-item-search-api-fulltext input {
   border: 2px solid gray;
   border-radius: 0;
   width: 100%;
 }
+
 #views-exposed-form-solr-search-content-page-3 .form-row .form-item-items-per-page, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row .form-item-items-per-page {
   order: 3;
 }
+
 #views-exposed-form-solr-search-content-page-3 .form-row .form-item-sort-bef-combine, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row .form-item-sort-bef-combine {
   order: 4;
 }
+
 #views-exposed-form-solr-search-content-page-3 .form-row .form-submit, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row .form-submit {
   order: 2;
   flex-basis: 10%;
@@ -527,11 +592,13 @@ footer .footer__media__icons {
   margin-left: -2px;
   border: none;
 }
+
 #views-exposed-form-solr-search-content-page-3 .form-row #edit-items-per-page--3 > ul, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row #edit-items-per-page--3 > ul {
   display: flex;
   gap: 10px;
   margin: 0 auto;
 }
+
 #views-exposed-form-solr-search-content-page-3 .form-row #edit-items-per-page--3 > ul li, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row #edit-items-per-page--3 > ul li {
   border: solid #000;
   border-width: thin;
@@ -539,12 +606,14 @@ footer .footer__media__icons {
   height: 25px;
   text-align: center;
 }
+
 #views-exposed-form-solr-search-content-page-3 .form-row #edit-items-per-page--3 > ul li .bef-link--selected, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row #edit-items-per-page--3 > ul li .bef-link--selected {
   background: #a7a7a7;
   width: 100%;
   height: 100%;
   display: block;
 }
+
 #views-exposed-form-solr-search-content-page-3 .form-row #edit-submit-solr-search-content--2, #block-kstate-theme-exposedformsolr-search-contentpage-3 .form-row #edit-submit-solr-search-content--2 {
   display: none;
 }
@@ -559,9 +628,11 @@ footer .footer__media__icons {
   display: flex;
   align-items: center;
 }
+
 #block-kstate-theme-exposed-form-reposito-children form {
   margin: 0;
 }
+
 #block-kstate-theme-exposed-form-reposito-children .form-row {
   display: flex;
   flex-direction: row;
@@ -570,16 +641,20 @@ footer .footer__media__icons {
   max-width: min(450px, 80vw);
   margin: auto;
 }
+
 #block-kstate-theme-exposed-form-reposito-children .form-row .form-item-combine {
   padding: 0;
   margin: 0;
 }
+
 #block-kstate-theme-exposed-form-reposito-children .form-row .form-item-combine label {
   display: none;
 }
+
 #block-kstate-theme-exposed-form-reposito-children .form-row .form-item-combine #edit-combine {
   border: 1px solid black;
 }
+
 #block-kstate-theme-exposed-form-reposito-children .form-row #edit-submit-reposito {
   border-radius: 0;
   border: none;
@@ -591,6 +666,7 @@ footer .footer__media__icons {
   margin-left: -24px;
   background: transparent;
 }
+
 #block-kstate-theme-exposed-form-reposito-children .form-row #edit-submit-reposito .svg-inline--fa {
   color: #512888;
 }
@@ -610,12 +686,14 @@ footer .footer__media__icons {
   margin: 0.25rem 4vw;
   align-content: center;
 }
+
 #block-kstate-theme-search form {
   display: flex;
   flex-direction: row;
   max-width: min(450px, 75%);
   margin: 0 auto;
 }
+
 #block-kstate-theme-search form #edit-submit {
   border-radius: 0;
   border: none;
@@ -627,6 +705,7 @@ footer .footer__media__icons {
   margin-left: -38px;
   background: transparent;
 }
+
 #block-kstate-theme-search form #edit-submit .svg-inline--fa {
   color: #512888;
 }
@@ -647,19 +726,23 @@ footer .footer__media__icons {
   max-width: 65%;
   margin: auto;
 }
+
 #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 .form-row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
 #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 .form-item-search-text {
   margin-bottom: 0;
 }
+
 #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 .form-item-search-text #edit-search-text, #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 .form-item-search-text #edit-search-text--2 {
   border-radius: 0;
   padding: 0 12px;
   box-shadow: none;
 }
+
 #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 #edit-submit-fgsc-solr-search-content, #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 #edit-submit-fgsc-solr-search-content--2 {
   border-radius: 0;
 }
@@ -697,17 +780,21 @@ footer .footer__media__icons {
 .ksul-pager {
   margin: 1rem auto;
 }
+
 .ksul-pager .pager__items {
   flex-wrap: wrap;
 }
+
 .ksul-pager li.pager__item {
   padding: 0.5rem 0.75rem;
   border: 1px solid gray;
   margin: 0;
 }
+
 .ksul-pager li.pager__item--active {
   background: #512888;
 }
+
 .ksul-pager li.pager__item--active a.pager__link {
   color: white;
 }
@@ -715,6 +802,7 @@ footer .footer__media__icons {
 .view-id-reposito .ksul-pager {
   margin: 0;
 }
+
 .view-id-reposito .ksul-pager .pager {
   justify-content: start;
 }
@@ -723,21 +811,26 @@ footer .footer__media__icons {
   display: flex;
   flex-direction: column;
 }
+
 .view-taxonomy-term .view-header {
   text-transform: capitalize;
 }
+
 .view-taxonomy-term .view-content .item-list-flex .node__content {
   display: flex;
   flex-direction: row;
 }
+
 .view-taxonomy-term .view-content .item-list-flex .node__content .node__details {
   width: 75%;
 }
+
 .view-taxonomy-term .view-content .item-list-flex .node__content .view-eva {
   width: 25%;
   text-align: center;
   margin: 1rem;
 }
+
 @media (max-width: 500px) {
   .view-taxonomy-term .view-content {
     padding: 0 1rem;
@@ -753,7 +846,6 @@ footer .footer__media__icons {
     margin: 10px 5rem;
   }
 }
-
 .container {
   max-width: min(85vw, 1400px);
 }
@@ -770,5 +862,3 @@ footer .footer__media__icons {
     padding: 0 1rem;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
