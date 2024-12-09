@@ -2,6 +2,6 @@ _core:
   default_config_hash: RsKIO31yeik-a4E2kCPBe8ZXFnrwVeZRNaIps0KDHC8
 mirador_library_installation_type: remote
 mirador_enabled_plugins:
-  textOverlayPlugin: '0'
   miradorImageToolsPlugin: '0'
-iiif_manifest_url: 'https://test-digital.ksulib.net/node/[node:nid]/book-manifest'
+  textOverlayPlugin: '0'
+iiif_manifest_url: 'https://digital.lib.k-state.edu/node/[node:nid]/book-manifest'

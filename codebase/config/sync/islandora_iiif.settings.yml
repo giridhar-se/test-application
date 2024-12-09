@@ -1,5 +1,5 @@
 _core:
   default_config_hash: NCzOnzkSw_H5SbPJb-EOzzJby1pQ8JI6IzZJckM7WOU
-iiif_server: 'https://test-digital.ksulib.net/cantaloupe/iiif/2'
+iiif_server: 'https://digital.lib.k-state.edu/cantaloupe/iiif/2'
 use_relative_paths: false
 show_title: node
