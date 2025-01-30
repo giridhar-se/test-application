@@ -28,6 +28,10 @@ See https://github.com/adobe-type-tools/cmap-resources
     <title>PDF.js viewer</title>
 
     <link rel="stylesheet" href="/libraries/pdf.js/web/viewer.css">
+    <script src="pdf.js"></script>
+    <!-- <script src="/libraries/pdf.js/web/viewer.js.map"></script> -->
+    
+    <script src="viewer.js"></script>
 
 <!-- This snippet is used in production (included from viewer.html) -->
 <link rel="resource" type="application/l10n" href="/libraries/pdf.js/web/locale/locale.properties">
@@ -451,8 +455,21 @@ See https://github.com/adobe-type-tools/cmap-resources
 
     <input type="file" id="fileInput" class="hidden">
 
-    <script src="/libraries/pdf.js/build/pdf.js"></script>
-
-    <script src="viewer.js"></script>
+    <script>
+      // Check when the window.PDFViewerApplication.pdfViewer is ready
+      window.PDFViewerApplication.initializedPromise.then(function() {
+        viewer = window.PDFViewerApplication.pdfViewer;
+        console.log("Viewer Data:", viewer);
+        if(viewer._spreadMode == 1) {
+          console.log("Spread Mode:", viewer._spreadMode);
+        } else {
+          console.log("Current Spread Mode:", viewer._spreadMode);
+          // Set spreadMode to 2
+          viewer.spreadMode = 1;
+          console.log("Spread Mode:", viewer._spreadMode);
+          viewer.scrollMode = 3;
+        }
+      })    
+    </script>
   </body>
 </html>

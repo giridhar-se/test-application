@@ -176,8 +176,8 @@ class KsulPdfDefault extends FormatterBase {
             \Drupal::logger('ksul_pdf_override')->notice('No term associated with field_model.');
         }
     }
-    // Is this a "paged content" model node?
-    if (isset($term_id) && $term_id == 49) {
+    // Is this a "Publication Issue (51)" model node?
+    if (isset($term_id) && $term_id == 51) {
         // $viewer_path = 'themes/kstate_theme/pdf-viewer/sawyer-build/ksul-book-view.html';
         $viewer_path = 'themes/kstate_theme/pdf-viewer/page-spread/viewer.html';
     } else {
