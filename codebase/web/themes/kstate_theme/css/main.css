@@ -107,6 +107,12 @@ main.ksul {
   font-weight: bold;
 }
 
+.homepage-content .view-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .homepage-content h3 {
   font-size: 1.5rem;
   font-weight: 900;
@@ -149,6 +155,10 @@ main.ksul {
 
 .homepage-content .views-view-responsive-grid__item .views-field-title a {
   font-size: 16pt;
+}
+
+.homepage-content .ksul-pager:not(.pager-bottom) {
+  display: none;
 }
 
 #ksul-global-search #block-kstate-theme-search-2 {
@@ -861,4 +871,11 @@ footer .footer__media__icons {
     max-width: unset;
     padding: 0 1rem;
   }
+}
+.ksul .node--view-mode-collection .field--name-did-image {
+  display: flex;
+}
+
+.ksul .node--view-mode-collection .field--name-did-image img {
+  margin: auto;
 }

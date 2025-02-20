@@ -16,6 +16,12 @@ main.ksul {
         }
     }
 
+    .view-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
     h3 {
         font-size: 1.5rem;
         font-weight: 900;
@@ -55,6 +61,10 @@ main.ksul {
             }
         }
     }
+    .ksul-pager:not(.pager-bottom) {
+        display: none;
+    }
+    
 }
 
 #ksul-global-search {

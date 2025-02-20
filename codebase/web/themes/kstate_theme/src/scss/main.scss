@@ -15,3 +15,4 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, header, footer, nav, section, article, 
 @include meta.load-css('components/components.scss');
 @include meta.load-css('views/views.scss');
 @include meta.load-css('utils/utils.scss');
+@include meta.load-css('display_modes/_view-mode-collection.scss');
