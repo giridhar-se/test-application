@@ -65,10 +65,12 @@ dependencies:
     - field.field.node.islandora_object.field_temporal_subject
     - field.field.node.islandora_object.field_viewer_override
     - field.field.node.islandora_object.field_weight
+    - image.style.max_325x325
     - node.type.islandora_object
   module:
     - layout_builder
     - manage_display
+    - media
     - text
 third_party_settings:
   layout_builder:
@@ -81,6 +83,17 @@ targetEntityType: node
 bundle: islandora_object
 mode: collection
 content:
+  did_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: max_325x325
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
   display_media_original_download:
     settings: {  }
     third_party_settings: {  }
@@ -91,7 +104,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   reposito_entity_view_1_form:
     settings: {  }
@@ -116,7 +129,6 @@ hidden:
   addtoany: true
   content_eva_entity_view_1: true
   created: true
-  did_image: true
   display_media_entity_view_1: true
   display_media_entity_view_2: true
   display_media_entity_view_3: true
