@@ -1,7 +1,7 @@
 @use "../ksul-custom/variables";
 
 // Global header search
-#block-kstate-theme-exposed-form-reposito-children {
+#block-solr-search-contentsolr-collection-members-block-search, #block-kstate-theme-search {
     margin: 0;
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
         max-width: min(450px, 80vw);
         margin: auto;
 
-        .form-item-combine {
+        .form-item-search-text {
             padding: 0;
             margin: 0;
 
@@ -26,12 +26,12 @@
                 display: none;
             }
 
-            #edit-combine {
+            #edit-search-text {
                 border: 1px solid black;
             }
         }
 
-        #edit-submit-reposito {
+        #edit-submit-solr-search-content {
             border-radius: 0;
             border: none;
             box-shadow: none;
@@ -50,11 +50,11 @@
 }
 
 @media (max-width: 500px) {
-    #views-exposed-form-reposito-reposito-children {
+    #block-solr-search-contentsolr-collection-members-block-search {
 
         .form-row {
 
-            #edit-submit-reposito {
+            #edit-submit-solr-search-content {
                 margin-top: 0;
             }
         }
@@ -62,21 +62,19 @@
 }
 
 @media (min-width: 900px) {
-    #block-views-exposed-filter-block-reposito-reposito-children {
+    #block-solr-search-contentsolr-collection-members-block-search {
         max-width: 75%;
     }
 }
 
 // Within collection search
-#block-kstate-theme-search {
-    width: fit-content;
-    margin: 0.25rem 4vw;
+#block-solr-search-contentsolr-collection-members-block-search, #block-kstate-theme-search {
+    
     align-content: center;
 
     form {
         display: flex;
         flex-direction: row;
-        max-width: min(450px, 75%);
         margin: 0 auto;
 
         #edit-submit {
@@ -108,8 +106,8 @@
     }
 }
 
-.view.view-reposito.view-id-reposito{
-    .view-content {
-        margin: 1rem 0;
+.main-search-collection-children {
+    .view-title {
+        display: none;
     }
 }

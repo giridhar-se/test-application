@@ -633,17 +633,17 @@ footer .footer__media__icons {
     margin: 0;
   }
 }
-#block-kstate-theme-exposed-form-reposito-children {
+#block-solr-search-contentsolr-collection-members-block-search, #block-kstate-theme-search {
   margin: 0;
   display: flex;
   align-items: center;
 }
 
-#block-kstate-theme-exposed-form-reposito-children form {
+#block-solr-search-contentsolr-collection-members-block-search form, #block-kstate-theme-search form {
   margin: 0;
 }
 
-#block-kstate-theme-exposed-form-reposito-children .form-row {
+#block-solr-search-contentsolr-collection-members-block-search .form-row, #block-kstate-theme-search .form-row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -652,20 +652,20 @@ footer .footer__media__icons {
   margin: auto;
 }
 
-#block-kstate-theme-exposed-form-reposito-children .form-row .form-item-combine {
+#block-solr-search-contentsolr-collection-members-block-search .form-row .form-item-search-text, #block-kstate-theme-search .form-row .form-item-search-text {
   padding: 0;
   margin: 0;
 }
 
-#block-kstate-theme-exposed-form-reposito-children .form-row .form-item-combine label {
+#block-solr-search-contentsolr-collection-members-block-search .form-row .form-item-search-text label, #block-kstate-theme-search .form-row .form-item-search-text label {
   display: none;
 }
 
-#block-kstate-theme-exposed-form-reposito-children .form-row .form-item-combine #edit-combine {
+#block-solr-search-contentsolr-collection-members-block-search .form-row .form-item-search-text #edit-search-text, #block-kstate-theme-search .form-row .form-item-search-text #edit-search-text {
   border: 1px solid black;
 }
 
-#block-kstate-theme-exposed-form-reposito-children .form-row #edit-submit-reposito {
+#block-solr-search-contentsolr-collection-members-block-search .form-row #edit-submit-solr-search-content, #block-kstate-theme-search .form-row #edit-submit-solr-search-content {
   border-radius: 0;
   border: none;
   box-shadow: none;
@@ -677,34 +677,31 @@ footer .footer__media__icons {
   background: transparent;
 }
 
-#block-kstate-theme-exposed-form-reposito-children .form-row #edit-submit-reposito .svg-inline--fa {
+#block-solr-search-contentsolr-collection-members-block-search .form-row #edit-submit-solr-search-content .svg-inline--fa, #block-kstate-theme-search .form-row #edit-submit-solr-search-content .svg-inline--fa {
   color: #512888;
 }
 
 @media (max-width: 500px) {
-  #views-exposed-form-reposito-reposito-children .form-row #edit-submit-reposito {
+  #block-solr-search-contentsolr-collection-members-block-search .form-row #edit-submit-solr-search-content {
     margin-top: 0;
   }
 }
 @media (min-width: 900px) {
-  #block-views-exposed-filter-block-reposito-reposito-children {
+  #block-solr-search-contentsolr-collection-members-block-search {
     max-width: 75%;
   }
 }
-#block-kstate-theme-search {
-  width: fit-content;
-  margin: 0.25rem 4vw;
+#block-solr-search-contentsolr-collection-members-block-search, #block-kstate-theme-search {
   align-content: center;
 }
 
-#block-kstate-theme-search form {
+#block-solr-search-contentsolr-collection-members-block-search form, #block-kstate-theme-search form {
   display: flex;
   flex-direction: row;
-  max-width: min(450px, 75%);
   margin: 0 auto;
 }
 
-#block-kstate-theme-search form #edit-submit {
+#block-solr-search-contentsolr-collection-members-block-search form #edit-submit, #block-kstate-theme-search form #edit-submit {
   border-radius: 0;
   border: none;
   box-shadow: none;
@@ -716,7 +713,7 @@ footer .footer__media__icons {
   background: transparent;
 }
 
-#block-kstate-theme-search form #edit-submit .svg-inline--fa {
+#block-solr-search-contentsolr-collection-members-block-search form #edit-submit .svg-inline--fa, #block-kstate-theme-search form #edit-submit .svg-inline--fa {
   color: #512888;
 }
 
@@ -728,8 +725,8 @@ footer .footer__media__icons {
     max-width: 100%;
   }
 }
-.view.view-reposito.view-id-reposito .view-content {
-  margin: 1rem 0;
+.main-search-collection-children .view-title {
+  display: none;
 }
 
 #block-views-exposed-filter-block-fgsc-solr-search-content-page-1 {
@@ -809,11 +806,11 @@ footer .footer__media__icons {
   color: white;
 }
 
-.view-id-reposito .ksul-pager {
-  margin: 0;
+.ksul-pager {
+  margin: 0.5rem 0;
 }
 
-.view-id-reposito .ksul-pager .pager {
+.ksul-pager .pager {
   justify-content: start;
 }
 
