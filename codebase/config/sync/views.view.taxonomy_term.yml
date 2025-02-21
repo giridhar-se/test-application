@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.taxonomy_collection
-    - core.entity_view_mode.node.teaser
     - field.storage.node.field_description
     - field.storage.node.field_note
     - taxonomy.vocabulary.fgsc_depositors
@@ -665,7 +664,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: taxonomy_collection
       query:
         type: views_query
         options:
