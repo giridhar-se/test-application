@@ -7,7 +7,6 @@ dependencies:
     - views.view.fgsc_solr_search_content
   module:
     - views
-    - search_api_autocomplete
 id: fgsc_solr_search_content
 label: 'FGSC Solr search content'
 index_id: default_solr_index

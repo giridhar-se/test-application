@@ -7,7 +7,6 @@ dependencies:
     - views.view.solr_search_content
   module:
     - views
-    - search_api_autocomplete
 id: solr_search_content
 label: 'Solr search content'
 index_id: default_solr_index

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - views.view.reposito
+    - views.view.solr_search_content
   module:
     - islandora
     - views
@@ -33,17 +33,17 @@ reactions:
   blocks:
     id: blocks
     blocks:
-      a3c72cc0-9833-4925-97db-b08e0a5199d4:
-        uuid: a3c72cc0-9833-4925-97db-b08e0a5199d4
-        id: 'views_block:reposito-reposito_children'
+      e5cbbcde-d6f0-4371-bbb0-3d5760ee59e5:
+        uuid: e5cbbcde-d6f0-4371-bbb0-3d5760ee59e5
+        id: 'views_block:solr_search_content-solr_collection_members_block'
         label: ''
         provider: views
         label_display: '0'
         region: sub_content
         weight: '0'
-        custom_id: views_block_reposito_reposito_children
+        custom_id: views_block_solr_search_content_solr_collection_members_block
         theme: kstate_theme
-        css_class: ''
+        css_class: collection-search-element
         unique: 0
         context_id: collection
         context_mapping: {  }
@@ -56,12 +56,12 @@ reactions:
     id: regions
     uuid: af126c95-473d-4f1a-8c10-51762260f368
     regions:
-      claro: {  }
-      olivero: {  }
-      bootstrap_barrio: {  }
-      bootstrap_barrio_subtheme: {  }
       kstate_theme:
         - sidebar_second
+      bootstrap_barrio: {  }
+      bootstrap_barrio_subtheme: {  }
+      claro: {  }
+      olivero: {  }
     saved: false
   view_mode_alter:
     id: view_mode_alter
