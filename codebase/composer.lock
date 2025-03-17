@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7b4b81e1820d7ab4a4b3f69eaf6fa14",
+    "content-hash": "f07f584af0d44d6a5cb147c34395825c",
     "packages": [
         {
             "name": "adci/full-name-parser",
@@ -1439,6 +1439,108 @@
                 "source": "https://github.com/discoverygarden/dgi_image_discovery/tree/v1.5.0"
             },
             "time": "2025-01-08T16:03:05+00:00"
+        },
+        {
+            "name": "discoverygarden/embargo",
+            "version": "v1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/discoverygarden/embargo.git",
+                "reference": "a481d324be0417a0600b233481c17ae17e3dcc7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/discoverygarden/embargo/zipball/a481d324be0417a0600b233481c17ae17e3dcc7b",
+                "reference": "a481d324be0417a0600b233481c17ae17e3dcc7b",
+                "shasum": ""
+            },
+            "require": {
+                "discoverygarden/islandora_hierarchical_access": "^1",
+                "discoverygarden/update-helper": "^1"
+            },
+            "require-dev": {
+                "discoverygarden/islandora_test_support": "^1"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "A module for managing embargo policies with access restrictions on content",
+            "homepage": "https://github.com/discoverygarden/embargo",
+            "support": {
+                "issues": "https://github.com/discoverygarden/embargo/issues",
+                "source": "https://github.com/discoverygarden/embargo/tree/v1.7.1"
+            },
+            "time": "2024-08-05T15:26:29+00:00"
+        },
+        {
+            "name": "discoverygarden/islandora_hierarchical_access",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/discoverygarden/islandora_hierarchical_access.git",
+                "reference": "402ff5907016f24e3f67ad1b1c8e9b087847be6d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/discoverygarden/islandora_hierarchical_access/zipball/402ff5907016f24e3f67ad1b1c8e9b087847be6d",
+                "reference": "402ff5907016f24e3f67ad1b1c8e9b087847be6d",
+                "shasum": ""
+            },
+            "require": {
+                "islandora/islandora": "^2"
+            },
+            "require-dev": {
+                "drupal/test_support": "^1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^10"
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "support": {
+                "issues": "https://github.com/discoverygarden/islandora_hierarchical_access/issues",
+                "source": "https://github.com/discoverygarden/islandora_hierarchical_access/tree/v1.3.1"
+            },
+            "time": "2024-08-05T11:47:10+00:00"
+        },
+        {
+            "name": "discoverygarden/update-helper",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/discoverygarden/update-helper.git",
+                "reference": "cfb8a8f47b4165e6f347c64e629eb39bfc241d39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/discoverygarden/update-helper/zipball/cfb8a8f47b4165e6f347c64e629eb39bfc241d39",
+                "reference": "cfb8a8f47b4165e6f347c64e629eb39bfc241d39",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Discoverygarden\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "support": {
+                "issues": "https://github.com/discoverygarden/update-helper/issues",
+                "source": "https://github.com/discoverygarden/update-helper/tree/v1.0.1"
+            },
+            "time": "2023-01-16T14:14:08+00:00"
         },
         {
             "name": "doctrine/annotations",
