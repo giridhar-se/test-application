@@ -454,22 +454,6 @@ See https://github.com/adobe-type-tools/cmap-resources
     <div id="printContainer"></div>
 
     <input type="file" id="fileInput" class="hidden">
-
-    <script>
-      // Check when the window.PDFViewerApplication.pdfViewer is ready
-      window.PDFViewerApplication.initializedPromise.then(function() {
-        viewer = window.PDFViewerApplication.pdfViewer;
-        console.log("Viewer Data:", viewer);
-        if(viewer._spreadMode == 1) {
-          console.log("Spread Mode:", viewer._spreadMode);
-        } else {
-          console.log("Current Spread Mode:", viewer._spreadMode);
-          // Set spreadMode to 2
-          viewer.spreadMode = 1;
-          console.log("Spread Mode:", viewer._spreadMode);
-          viewer.scrollMode = 3;
-        }
-      })    
-    </script>
+    
   </body>
 </html>
