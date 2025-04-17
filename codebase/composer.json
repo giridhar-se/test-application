@@ -87,6 +87,7 @@
         "drupal/views_bulk_operations": "^4.2",
         "drupal/views_data_export": "^1.4",
         "drupal/views_field_view": "^1.0@beta",
+        "drupal/views_load_more": "^2.0",
         "drupal/views_merge_rows": "^2.3",
         "drush/drush": "^12",
         "islandora-rdm/islandora_fits": "dev-8.x-1.x as 1.x-dev",
