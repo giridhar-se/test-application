@@ -1,0 +1,11 @@
+uuid: 4cabdc91-ce95-435c-837c-7906915073d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser_no_image
+label: Teaser-No-Image
+description: 'Teaser view without images'
+targetEntityType: node
+cache: true
