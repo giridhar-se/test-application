@@ -3,46 +3,46 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.search_index
     - field.storage.node.field_abstract
     - field.storage.node.field_alt_title
-    - field.storage.node.field_linked_agent
-    - field.storage.node.field_edtf_date_created
-    - field.storage.node.field_edtf_date_issued
-    - field.storage.node.field_member_of
     - field.storage.node.field_dewey_classification
     - field.storage.node.field_edition
+    - field.storage.node.field_edtf_date_created
+    - field.storage.node.field_edtf_date_issued
     - field.storage.node.field_extent
     - field.storage.node.field_fgsc_member
     - field.storage.node.field_full_title
     - field.storage.node.field_genre
+    - field.storage.node.field_geographic_subject
     - field.storage.node.field_identifier
     - field.storage.node.field_isbn
     - field.storage.node.field_lcc_classification
+    - field.storage.node.field_linked_agent
+    - field.storage.node.field_member_of
     - field.storage.node.field_model
     - field.storage.node.field_oclc_number
     - field.storage.node.field_physical_form
     - field.storage.node.field_resource_type
     - field.storage.node.field_rights
-    - field.storage.node.field_subject_general
-    - field.storage.node.field_geographic_subject
-    - field.storage.node.field_subjects_name
-    - field.storage.node.field_temporal_subject
     - field.storage.node.field_subject
+    - field.storage.node.field_subject_general
+    - field.storage.node.field_subjects_name
     - field.storage.node.field_tags
-    - field.storage.taxonomy_term.field_geo_alt_name
-    - field.storage.taxonomy_term.field_corp_alt_name
-    - field.storage.taxonomy_term.field_cat_date_end
+    - field.storage.node.field_temporal_subject
     - field.storage.taxonomy_term.field_cat_date_begin
+    - field.storage.taxonomy_term.field_cat_date_end
+    - field.storage.taxonomy_term.field_corp_alt_name
+    - field.storage.taxonomy_term.field_geo_alt_name
     - search_api.server.default_solr_server
-    - core.entity_view_mode.node.search_index
   module:
-    - search_api_solr
+    - dgi_image_discovery
+    - embargo
     - media
     - node
-    - user
+    - search_api_solr
     - taxonomy
-    - search_api
-    - dgi_image_discovery
+    - user
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -139,6 +139,54 @@ field_settings:
     dependencies:
       module:
         - taxonomy
+  embargo__node:
+    label: null
+    property_path: embargo__node
+    type: integer
+    indexed_locked: true
+    type_locked: true
+  embargo__node__file:
+    label: null
+    property_path: embargo__node__file
+    type: integer
+    indexed_locked: true
+    type_locked: true
+  embargo__node__node:
+    label: null
+    property_path: embargo__node__node
+    type: integer
+    indexed_locked: true
+    type_locked: true
+  embargo_type:
+    label: 'List (integer)'
+    datasource_id: 'entity:embargo'
+    property_path: embargo_type
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - embargo
+  expiration_date:
+    label: Date
+    datasource_id: 'entity:embargo'
+    property_path: expiration_date
+    type: date
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - embargo
+  expiration_type:
+    label: 'List (integer)'
+    datasource_id: 'entity:embargo'
+    property_path: expiration_type
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - embargo
   field_alt_title:
     label: 'Alternative Title'
     datasource_id: 'entity:node'
@@ -366,6 +414,26 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_tags
+  id:
+    label: 'Number (integer)'
+    datasource_id: 'entity:embargo'
+    property_path: id
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - embargo
+  id_1:
+    label: 'Number (integer)'
+    datasource_id: 'entity:embargo'
+    property_path: 'exempt_ips:entity:id'
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - embargo
   linked_agent_name_fulltext:
     label: Names
     datasource_id: 'entity:node'
@@ -431,6 +499,17 @@ field_settings:
     type: integer
     dependencies:
       module:
+        - node
+  nid_1:
+    label: 'Number (integer)'
+    datasource_id: 'entity:embargo'
+    property_path: 'embargoed_node:entity:nid'
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - embargo
         - node
   node_grants:
     label: 'Node access information'
@@ -610,7 +689,19 @@ field_settings:
     dependencies:
       module:
         - node
+  uid_1:
+    label: 'Number (integer)'
+    datasource_id: 'entity:embargo'
+    property_path: 'exempt_users:entity:uid'
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - embargo
+        - user
 datasource_settings:
+  'entity:embargo': {  }
   'entity:media':
     bundles:
       default: false
@@ -652,6 +743,9 @@ processor_settings:
       preprocess_query: -4
   custom_value: {  }
   dgi_image_discovery: {  }
+  embargo_join_processor:
+    weights:
+      preprocess_query: 0
   entity_status:
     weights:
       preprocess_index: -10
@@ -703,6 +797,7 @@ tracker_settings:
     indexing_order: fifo
 options:
   cron_limit: 150
+  delete_on_fail: true
   index_directly: true
   track_changes_in_references: true
 server: default_solr_server
