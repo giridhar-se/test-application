@@ -814,6 +814,11 @@ footer .footer__media__icons {
   justify-content: start;
 }
 
+.field--name-field-subject .field__items {
+  width: max-content;
+  max-width: 100%;
+}
+
 .view-taxonomy-term {
   display: flex;
   flex-direction: column;
