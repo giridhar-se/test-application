@@ -1,9 +1,0 @@
-uuid: b95a872f-e0e8-4968-8106-0a3fcd4abd22
-langcode: en
-status: true
-dependencies: {  }
-id: search_api__views_block__solr_search_content__block_1
-name: 'search_api:views_block__solr_search_content__block_1'
-filter_key: null
-url_processor: query_string
-breadcrumb: {  }

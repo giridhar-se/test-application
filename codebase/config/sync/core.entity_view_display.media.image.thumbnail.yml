@@ -15,7 +15,7 @@ dependencies:
     - image.style.document_page
     - media.type.image
   module:
-    - image
+    - islandora
 _core:
   default_config_hash: mH-3GLriL2Vx34DOnmHTqPxMCEmqJLtesug6_H_6piM
 id: media.image.thumbnail
@@ -24,13 +24,14 @@ bundle: image
 mode: thumbnail
 content:
   field_media_image:
-    type: image
+    type: islandora_image
     label: hidden
     settings:
       image_link: content
       image_style: document_page
       image_loading:
         attribute: lazy
+      image_alt_text: local
     third_party_settings: {  }
     weight: 0
     region: content

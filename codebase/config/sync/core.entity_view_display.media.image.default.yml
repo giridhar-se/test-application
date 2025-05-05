@@ -25,10 +25,11 @@ content:
     type: islandora_image
     label: hidden
     settings:
-      image_link: ''
+      image_link: content
       image_style: ''
       image_loading:
         attribute: lazy
+      image_alt_text: original_file_fallback
     third_party_settings: {  }
     weight: 0
     region: content

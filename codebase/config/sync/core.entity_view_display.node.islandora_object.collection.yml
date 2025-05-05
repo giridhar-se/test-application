@@ -87,7 +87,7 @@ content:
     type: media_thumbnail
     label: hidden
     settings:
-      image_link: ''
+      image_link: content
       image_style: max_325x325
       image_loading:
         attribute: lazy
