@@ -38,8 +38,8 @@ services:
       - --providers.docker.network=gateway
       - --providers.docker.exposedByDefault=false
       - --providers.file.filename=/etc/traefik/tls.yml
+      - --providers.file.filename=/etc/traefik/dynamic.yml
       - '--providers.docker.defaultRule=Host(`${DOMAIN}`)'
-      - --providers.file.filename=/etc/traefik/dynamic.yaml
     ports:
       - 80:80       # drupal, cantaloupe
       - 443:443     # https for ^^^
@@ -55,7 +55,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ../../build/traefik-tls.yml:/etc/traefik/tls.yml
-      - ../../build/dynamic.yml:/etc/traefik/dynamic.yml
+      - ../../build/dynamic.yml:/etc/traefik/tls.yml
       - ../../certs:/etc/ssl/traefik
     labels:
       # Do not expose in production.
