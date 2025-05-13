@@ -93,10 +93,11 @@ third_party_settings:
         width_breakpoint: 640
     group_details:
       children:
-        - field_date_ksul_published
         - field_language
         - field_full_title
         - field_edtf_date_created
+        - field_edtf_date_issued
+        - field_date_ksul_published
         - field_linked_agent
         - field_ksul_note
         - field_note
@@ -149,7 +150,7 @@ third_party_settings:
       label: Subjects
       parent_name: group_details
       region: content
-      weight: 7
+      weight: 9
       format_type: html_element
       format_settings:
         classes: field
@@ -219,14 +220,14 @@ content:
       day_format: dd
       year_format: 'y'
     third_party_settings: {  }
-    weight: 0
+    weight: 5
     region: content
   field_description:
     type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 10
     region: content
   field_edtf_date_created:
     type: edtf_default
@@ -240,13 +241,25 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_edtf_date_issued:
+    type: edtf_default
+    label: inline
+    settings:
+      date_separator: dash
+      date_order: big_endian
+      month_format: mm
+      day_format: dd
+      year_format: 'y'
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_extent:
     type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 14
+    weight: 16
     region: content
   field_full_title:
     type: basic_string
@@ -261,7 +274,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 9
+    weight: 11
     region: content
   field_geographic_subject:
     type: entity_reference_label
@@ -277,7 +290,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 15
+    weight: 17
     region: content
   field_isbn:
     type: string
@@ -285,14 +298,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 16
+    weight: 18
     region: content
   field_ksul_citation:
     type: basic_string
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 17
+    weight: 19
     region: content
   field_ksul_journal_issue:
     type: string
@@ -300,7 +313,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 18
+    weight: 20
     region: content
   field_ksul_journal_volume:
     type: string
@@ -308,21 +321,21 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 19
+    weight: 21
     region: content
   field_ksul_note:
     type: basic_string
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 7
     region: content
   field_ksul_rights_statement:
     type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 12
     region: content
   field_language:
     type: entity_reference_label
@@ -338,7 +351,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
+    weight: 6
     region: content
   field_member_of:
     type: entity_reference_label
@@ -346,14 +359,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 12
+    weight: 14
     region: content
   field_note:
     type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 8
     region: content
   field_publication_link:
     type: link
@@ -365,7 +378,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 13
+    weight: 15
     region: content
   field_rights:
     type: string
@@ -373,7 +386,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 11
+    weight: 13
     region: content
   field_subject:
     type: entity_reference_label
@@ -441,7 +454,6 @@ hidden:
   field_dewey_classification: true
   field_edition: true
   field_edtf_date: true
-  field_edtf_date_issued: true
   field_fgsc_depositor: true
   field_fgsc_distributor: true
   field_fgsc_member: true

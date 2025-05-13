@@ -7,13 +7,19 @@ dependencies:
     - core.entity_view_mode.node.teaser_no_image
     - field.storage.node.field_description
     - field.storage.node.field_note
+    - taxonomy.vocabulary.corporate_body
+    - taxonomy.vocabulary.country
+    - taxonomy.vocabulary.family
     - taxonomy.vocabulary.fgsc_depositors
     - taxonomy.vocabulary.genotype
     - taxonomy.vocabulary.genre
+    - taxonomy.vocabulary.geo_location
     - taxonomy.vocabulary.islandora_models
+    - taxonomy.vocabulary.language
     - taxonomy.vocabulary.person
     - taxonomy.vocabulary.resource_types
     - taxonomy.vocabulary.subject
+    - taxonomy.vocabulary.temporal_subjects
   module:
     - manage_display
     - node
@@ -638,13 +644,19 @@ display:
             fail: 'not found'
           validate_options:
             bundles:
+              corporate_body: corporate_body
+              country: country
+              family: family
               fgsc_depositors: fgsc_depositors
               genotype: genotype
               genre: genre
+              geo_location: geo_location
               islandora_models: islandora_models
+              language: language
               person: person
               resource_types: resource_types
               subject: subject
+              temporal_subjects: temporal_subjects
             access: true
             operation: view
             multiple: 0
