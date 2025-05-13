@@ -1,0 +1,6 @@
+http:
+  middlewares:
+    ksul-ratelimit:
+      rateLimit:
+        average: 50     # 50 requests per second on average
+        burst:   50      # allow occasional bursts of 50 extra requests
