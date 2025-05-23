@@ -37,8 +37,8 @@ services:
       - traefik.http.services.${COMPOSE_PROJECT_NAME-isle-dc}-drupal.loadbalancer.server.port=80
       - traefik.http.middlewares.drupal-redirectscheme.redirectscheme.scheme=https
       - traefik.http.middlewares.drupal-redirectscheme.redirectscheme.permanent=true
-      - traefik.http.middlewares.ksul-ratelimit.ratelimit.average=25
-      - traefik.http.middlewares.ksul-ratelimit.ratelimit.burst=350
+      - traefik.http.middlewares.ksul-ratelimit.ratelimit.average=100
+      - traefik.http.middlewares.ksul-ratelimit.ratelimit.burst=1000
       - traefik.http.middlewares.ksul-ratelimit.ratelimit.period=1m
       - traefik.http.middlewares.ksul-ratelimit.ratelimit.sourcecriterion.ipstrategy.depth=1
       # - traefik.http.middlewares.ksul-inflightreq.inflightreq.amount=50
