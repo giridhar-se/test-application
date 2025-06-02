@@ -255,7 +255,7 @@ docker-compose.yml: $(SERVICES:%=build/docker-compose/docker-compose.%.yml) .env
 .SILENT: up
 ## Brings up the containers or builds starter if no containers were found.
 up:
-	test -f docker-compose.yml && docker compose up -d --remove-orphans || $(MAKE) starter
+	test -f docker-compose.yml && docker compose up -d --remove-orphans --force-recreate || $(MAKE) starter
 	@echo "\n Sleeping for 10 seconds to wait for Drupal to finish building.\n"
 	sleep 10
 	docker compose exec -T drupal with-contenv bash -lc "for_all_sites update_settings_php"
