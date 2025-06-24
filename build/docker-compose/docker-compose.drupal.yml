@@ -37,17 +37,19 @@ services:
       - traefik.http.services.${COMPOSE_PROJECT_NAME-isle-dc}-drupal.loadbalancer.server.port=80
       - traefik.http.middlewares.drupal-redirectscheme.redirectscheme.scheme=https
       - traefik.http.middlewares.drupal-redirectscheme.redirectscheme.permanent=true
-      - traefik.http.middlewares.ksul-ratelimit.ratelimit.average=100
-      - traefik.http.middlewares.ksul-ratelimit.ratelimit.burst=1000
-      - traefik.http.middlewares.ksul-ratelimit.ratelimit.period=1m
-      - traefik.http.middlewares.ksul-ratelimit.ratelimit.sourcecriterion.ipstrategy.depth=1
+# TM - Commented out the next 4 lines on 6/10/25 -- Added WAF + ALB in front, and don't want to rate limit that traffic.
+#      - traefik.http.middlewares.ksul-ratelimit.ratelimit.average=100
+#      - traefik.http.middlewares.ksul-ratelimit.ratelimit.burst=1000
+#      - traefik.http.middlewares.ksul-ratelimit.ratelimit.period=1m
+#      - traefik.http.middlewares.ksul-ratelimit.ratelimit.sourcecriterion.ipstrategy.depth=1
       # - traefik.http.middlewares.ksul-inflightreq.inflightreq.amount=50
       # - traefik.http.middlewares.ksul-inflightreq.inflightreq.sourcecriterion.ipstrategy.depth=1
       - traefik.http.routers.${COMPOSE_PROJECT_NAME-isle-dc}-drupal_http.service=${COMPOSE_PROJECT_NAME-isle-dc}-drupal
       - traefik.http.routers.${COMPOSE_PROJECT_NAME-isle-dc}-drupal_http.entrypoints=http
       - traefik.http.routers.${COMPOSE_PROJECT_NAME-isle-dc}-drupal_http.rule=Host(`${DOMAIN}`)
       - traefik.http.routers.${COMPOSE_PROJECT_NAME-isle-dc}-drupal_http.middlewares=drupal-redirectscheme
-      - traefik.http.routers.${COMPOSE_PROJECT_NAME-isle-dc}-drupal_https.middlewares=ksul-ratelimit
+      # Tom commented out - 6/10/25
+      #- traefik.http.routers.${COMPOSE_PROJECT_NAME-isle-dc}-drupal_https.middlewares=ksul-ratelimit
       # - traefik.http.routers.${COMPOSE_PROJECT_NAME-isle-dc}-drupal_https.middlewares=ksul-inflightreq
       - traefik.http.routers.${COMPOSE_PROJECT_NAME-isle-dc}-drupal_https.entrypoints=https
       - traefik.http.routers.${COMPOSE_PROJECT_NAME-isle-dc}-drupal_https.rule=Host(`${DOMAIN}`)

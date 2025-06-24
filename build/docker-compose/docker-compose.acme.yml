@@ -17,6 +17,8 @@ services:
       - --entryPoints.activemq.address=:8161
       - --entryPoints.solr.address=:8983
       - --entryPoints.code-server.address=:8443
+      - --entryPoints.http.forwardedHeaders.trustedIPs=10.251.112.0/20
+      - --entryPoints.https.forwardedHeaders.trustedIPs=10.251.112.0/20
       - --log.level=${TRAEFIK_LOG_LEVEL:-ERROR}
       - --providers.docker
       - --providers.docker.network=gateway
