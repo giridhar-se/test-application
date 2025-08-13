@@ -98,6 +98,11 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  reposito_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   show_title:
     settings: {  }
     third_party_settings: {  }

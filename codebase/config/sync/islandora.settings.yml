@@ -2,7 +2,9 @@ _core:
   default_config_hash: XgeYJpPmZIOwE_nA73tYvFw-Rcj-HtlbNwfktqSVsaQ
 broker_url: 'tcp://activemq:61613'
 jwt_expiry: '+2 hour'
+allow_header_links: true
 delete_media_and_files: true
+fast_term_queries: true
 upload_form_location: ''
 upload_form_allowed_mimetypes: ''
 gemini_pseudo_bundles:
@@ -12,5 +14,3 @@ gemini_pseudo_bundles:
   'image:media': 'image:media'
   'video:media': 'video:media'
 gemini_url: ''
-allow_header_links: true
-fast_term_queries: true
