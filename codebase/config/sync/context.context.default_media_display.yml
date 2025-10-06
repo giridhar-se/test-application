@@ -12,7 +12,7 @@ name: default_media_display
 group: Display
 description: 'Displays the Service File or Original File in its "Source" view mode'
 requireAllConditions: true
-disabled: false
+disabled: true
 conditions:
   node_has_term:
     id: node_has_term
@@ -22,6 +22,7 @@ conditions:
       node: '@node.node_route_context:node'
     uri: 'http://openseadragon.github.io,http://mozilla.github.io/pdf.js'
     logic: or
+    naive_references: 0
 reactions:
   blocks:
     id: blocks
@@ -37,6 +38,23 @@ reactions:
         weight: '0'
         custom_id: views_block_media_display_blocks_source
         theme: olivero
+        css_class: ''
+        unique: 0
+        context_id: default_media_display
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: none
+        third_party_settings: {  }
+      05f38df6-da76-444b-b40e-de9ed8ace31a:
+        uuid: 05f38df6-da76-444b-b40e-de9ed8ace31a
+        id: 'views_block:media_display_blocks-source'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: content
+        weight: '0'
+        custom_id: views_block_media_display_blocks_source
+        theme: kstate_theme
         css_class: ''
         unique: 0
         context_id: default_media_display
