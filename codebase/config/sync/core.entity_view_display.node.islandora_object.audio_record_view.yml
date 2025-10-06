@@ -208,7 +208,7 @@ third_party_settings:
       label: 'Subject Items'
       parent_name: group_subjects
       region: content
-      weight: 20
+      weight: 9
       format_type: html_element
       format_settings:
         classes: 'field__items m-0'
@@ -546,7 +546,7 @@ content:
     region: content
   field_subject_general:
     type: entity_reference_label
-    label: inline
+    label: visually_hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -567,6 +567,11 @@ content:
       link: true
     third_party_settings: {  }
     weight: 20
+    region: content
+  permalink_uri:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
     region: content
   show_title:
     settings: {  }
@@ -634,7 +639,6 @@ hidden:
   pdfjs_media_evas_entity_view_1: true
   pdfjs_media_evas_entity_view_2: true
   pdfjs_media_evas_service_file: true
-  permalink_uri: true
   reposito_entity_view_1: true
   search_api_excerpt: true
   search_within_this_collection_link_entity_view_1: true
