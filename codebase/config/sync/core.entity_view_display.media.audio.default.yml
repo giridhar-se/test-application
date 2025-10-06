@@ -20,20 +20,6 @@ targetEntityType: media
 bundle: audio
 mode: default
 content:
-  field_file_size:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_gemini_uri:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
   field_media_audio_file:
     type: islandora_file_audio
     label: visually_hidden
@@ -43,56 +29,20 @@ content:
       loop: false
       multiple_file_display_type: tags
     third_party_settings: {  }
-    weight: 1
-    region: content
-  field_media_of:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_media_use:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  field_mime_type:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_original_name:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
-    region: content
-  name:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
     weight: 0
-    region: content
-  pdfjs_media_evas_entity_view_2:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
     region: content
 hidden:
   created: true
+  field_file_size: true
+  field_gemini_uri: true
+  field_media_of: true
+  field_media_use: true
+  field_mime_type: true
+  field_original_name: true
   field_track: true
   langcode: true
+  name: true
+  pdfjs_media_evas_entity_view_2: true
   search_api_excerpt: true
   thumbnail: true
   uid: true

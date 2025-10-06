@@ -24,7 +24,7 @@ content:
   field_gemini_uri:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 1
     region: content
   field_media_audio_file:
     type: islandora_file_audio
@@ -37,11 +37,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  pdfjs_media_evas_entity_view_2:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
 hidden:
   created: true
   field_file_size: true
@@ -52,6 +47,7 @@ hidden:
   field_track: true
   langcode: true
   name: true
+  pdfjs_media_evas_entity_view_2: true
   search_api_excerpt: true
   thumbnail: true
   uid: true
