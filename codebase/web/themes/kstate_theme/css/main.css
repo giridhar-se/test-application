@@ -881,3 +881,7 @@ footer .footer__media__icons {
 .ksul .node--view-mode-collection .field--name-did-image img {
   margin: auto;
 }
+
+#transcription-text .field__item {
+  display: block;
+}
