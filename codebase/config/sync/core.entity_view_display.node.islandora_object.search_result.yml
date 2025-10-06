@@ -98,16 +98,6 @@ targetEntityType: node
 bundle: islandora_object
 mode: search_result
 content:
-  content_eva_entity_view_1:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  display_media_eva_remote_video:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
   display_media_thumbnail:
     settings: {  }
     third_party_settings: {  }
@@ -122,11 +112,6 @@ content:
       strict: false
     third_party_settings: {  }
     weight: 1
-    region: content
-  reposito_entity_view_1:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
     region: content
   show_title:
     settings: {  }
@@ -145,12 +130,16 @@ content:
     region: content
 hidden:
   addtoany: true
+  content_eva_entity_view_1: true
   created: true
   did_image: true
+  display_media_audio_view_eva: true
   display_media_entity_view_1: true
   display_media_entity_view_2: true
   display_media_entity_view_3: true
   display_media_entity_view_4: true
+  display_media_entity_view_5: true
+  display_media_eva_remote_video: true
   display_media_original_download: true
   display_media_service_file: true
   fgsc_deposit_entity_view_1: true
@@ -229,6 +218,7 @@ hidden:
   pdfjs_media_evas_entity_view_2: true
   pdfjs_media_evas_service_file: true
   permalink_uri: true
+  reposito_entity_view_1: true
   search_api_excerpt: true
   search_within_this_collection_link_entity_view_1: true
   uid: true

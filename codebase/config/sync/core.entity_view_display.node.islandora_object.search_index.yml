@@ -100,7 +100,7 @@ third_party_settings:
       label: 'Collection Items'
       parent_name: ''
       region: content
-      weight: 20
+      weight: 2
       format_type: html_element
       format_settings:
         classes: repository-item-children
@@ -170,10 +170,12 @@ hidden:
   content_eva_entity_view_1: true
   created: true
   did_image: true
+  display_media_audio_view_eva: true
   display_media_entity_view_1: true
   display_media_entity_view_2: true
   display_media_entity_view_3: true
   display_media_entity_view_4: true
+  display_media_entity_view_5: true
   display_media_eva_remote_video: true
   display_media_service_file: true
   fgsc_deposit_entity_view_1: true
