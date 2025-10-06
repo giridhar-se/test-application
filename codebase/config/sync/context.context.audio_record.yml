@@ -1,0 +1,26 @@
+uuid: 2a078295-e736-4f4c-8102-5cee2666ee0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+label: 'Audio record'
+name: audio_record
+group: Display
+description: 'Sets default view mode for audio records'
+requireAllConditions: false
+disabled: false
+conditions:
+  media_has_mimetype:
+    id: media_has_mimetype
+    negate: false
+    uuid: df412428-93ca-453b-9fc7-9c042646ed68
+    context_mapping:
+      node: '@node.node_route_context:node'
+    mimetypes: audio/mpeg
+reactions:
+  view_mode_alter:
+    id: view_mode_alter
+    saved: false
+    mode: node.audio_record_view
+weight: 0

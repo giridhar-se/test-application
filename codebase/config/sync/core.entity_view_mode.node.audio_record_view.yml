@@ -1,0 +1,11 @@
+uuid: 7fe7bec9-6aef-460d-9f81-69f56541c18d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.audio_record_view
+label: 'Audio Record View'
+description: 'Custom view mode for displaying audio records'
+targetEntityType: node
+cache: true
