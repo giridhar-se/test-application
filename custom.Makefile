@@ -30,3 +30,34 @@ access_secure:
 
 site_check:
 	./ksul_system_check.sh
+
+# Usage:
+# make revert              -> prompts for both number of commits and revert type
+# make revert n=3          -> skips number prompt, still asks for revert type
+# make revert n=3 type=hard -> skips all prompts (both number and type)
+revert:
+	@if [ -z "$(n)" ]; then \
+		read -p "How many commits to revert? " n; \
+	fi; \
+	if [ -z "$(type)" ]; then \
+		echo "Choose revert type:"; \
+		echo "  1) soft  - keep changes staged"; \
+		echo "  2) mixed - keep changes unstaged"; \
+		echo "  3) hard  - discard all changes"; \
+		read -p "Enter choice (1-3): " choice; \
+		case $$choice in \
+			1) type=soft ;; \
+			2) type=mixed ;; \
+			3) type=hard ;; \
+			*) echo "Invalid choice. Defaulting to mixed."; type=mixed ;; \
+		esac; \
+	fi; \
+	echo "About to perform a '$${type}' reset $${n} commit(s) back."; \
+	read -p "Are you sure? [y/N]: " confirm; \
+	if [ "$$confirm" = "y" ] || [ "$$confirm" = "Y" ]; then \
+		echo "Reverting $${n} commit(s) back with '$${type}' reset..."; \
+		git reset --$${type} HEAD~$${n}; \
+		echo "Successfully reverted $${n} commit(s) with '$${type}' reset."; \
+	else \
+		echo "Operation cancelled."; \
+	fi
