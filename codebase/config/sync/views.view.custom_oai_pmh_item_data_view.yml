@@ -565,7 +565,12 @@ display:
               family:
                 display_method: label
                 view_mode: default
+              fgsc_depositors:
+                display_method: label
               frequencies:
+                display_method: label
+                view_mode: default
+              genotype:
                 display_method: label
                 view_mode: default
               genre:
@@ -574,6 +579,8 @@ display:
               geo_location:
                 display_method: label
                 view_mode: default
+              islandora_display:
+                display_method: label
               islandora_media_use:
                 display_method: label
                 view_mode: default
@@ -583,6 +590,8 @@ display:
               issuance_modes:
                 display_method: label
                 view_mode: default
+              ksul_media_type:
+                display_method: label
               language:
                 display_method: label
                 view_mode: default

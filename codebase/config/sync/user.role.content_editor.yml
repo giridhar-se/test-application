@@ -15,6 +15,7 @@ dependencies:
     - path
     - system
     - taxonomy
+    - taxonomy_manager
     - toolbar
 _core:
   default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
@@ -28,6 +29,8 @@ permissions:
   - 'access contextual links'
   - 'access files overview'
   - 'access help pages'
+  - 'access taxonomy manager list'
+  - 'access taxonomy overview'
   - 'access toolbar'
   - 'administer url aliases'
   - 'create article content'
