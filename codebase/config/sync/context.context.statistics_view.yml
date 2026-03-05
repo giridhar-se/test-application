@@ -1,0 +1,46 @@
+uuid: 6025777d-933c-43c2-9298-aa0060f1da16
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.content_statistics
+  module:
+    - views
+label: 'Statistics View'
+name: statistics_view
+group: Display
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    uuid: d4643cc1-6511-4ee9-847e-fdb48c0d5979
+    context_mapping: {  }
+    view_inclusion:
+      view-content_statistics-page_1: view-content_statistics-page_1
+reactions:
+  blocks:
+    id: blocks
+    uuid: 6c362bf0-911f-464c-af29-ac648fbc09e9
+    blocks:
+      af1921de-eedb-41b3-abbd-f16972f5d692:
+        uuid: af1921de-eedb-41b3-abbd-f16972f5d692
+        id: 'views_exposed_filter_block:content_statistics-page_1'
+        label: ''
+        provider: views
+        label_display: visible
+        region: breadcrumb
+        weight: '0'
+        custom_id: views_exposed_filter_block_content_statistics_page_1
+        theme: kstate_theme
+        css_class: ''
+        unique: 0
+        context_id: statistics_view
+        context_mapping: {  }
+        views_label: ''
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0
