@@ -5,10 +5,20 @@ dependencies:
   config:
     - node.type.article
     - node.type.page
+    - taxonomy.vocabulary.corporate_body
+    - taxonomy.vocabulary.country
+    - taxonomy.vocabulary.family
+    - taxonomy.vocabulary.frequencies
+    - taxonomy.vocabulary.genre
+    - taxonomy.vocabulary.geo_location
+    - taxonomy.vocabulary.language
+    - taxonomy.vocabulary.person
+    - taxonomy.vocabulary.subject
     - taxonomy.vocabulary.tags
   module:
     - comment
     - contextual
+    - field_ui
     - file
     - help
     - node
@@ -32,9 +42,20 @@ permissions:
   - 'access taxonomy manager list'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term form display'
   - 'administer url aliases'
   - 'create article content'
   - 'create page content'
+  - 'create terms in corporate_body'
+  - 'create terms in country'
+  - 'create terms in family'
+  - 'create terms in frequencies'
+  - 'create terms in genre'
+  - 'create terms in geo_location'
+  - 'create terms in language'
+  - 'create terms in person'
+  - 'create terms in subject'
   - 'create terms in tags'
   - 'create url aliases'
   - 'delete article revisions'
@@ -44,6 +65,12 @@ permissions:
   - 'edit own article content'
   - 'edit own comments'
   - 'edit own page content'
+  - 'edit terms in corporate_body'
+  - 'edit terms in country'
+  - 'edit terms in family'
+  - 'edit terms in genre'
+  - 'edit terms in person'
+  - 'edit terms in subject'
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'view all revisions'
