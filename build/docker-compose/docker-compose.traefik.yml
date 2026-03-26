@@ -15,7 +15,7 @@ networks:
 services:
   traefik:
     restart: ${RESTART_POLICY:-unless-stopped}
-    image: traefik:v3.6.1
+    image: traefik:v3.6.11
     container_name: traefik
     # Do not set `api.insecure`, `api.dashboard`, `api.debug` to `true` in production.
     # Also do not expose database 3306/5432, as an entry point.
