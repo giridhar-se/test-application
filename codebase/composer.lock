@@ -768,25 +768,25 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "4.10.4",
+            "version": "4.10.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "69d29da4acac31a43caa4cea13b6b948f4e5c56d"
+                "reference": "78abf3b6853d7ff9044babd2b9c002ff433207d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/69d29da4acac31a43caa4cea13b6b948f4e5c56d",
-                "reference": "69d29da4acac31a43caa4cea13b6b948f4e5c56d",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/78abf3b6853d7ff9044babd2b9c002ff433207d8",
+                "reference": "78abf3b6853d7ff9044babd2b9c002ff433207d8",
                 "shasum": ""
             },
             "require": {
                 "consolidation/output-formatters": "^4.3.1",
                 "php": ">=7.1.3",
                 "psr/log": "^1 || ^2 || ^3",
-                "symfony/console": "^4.4.8 || ^5 || ^6 || ^7",
-                "symfony/event-dispatcher": "^4.4.8 || ^5 || ^6 || ^7",
-                "symfony/finder": "^4.4.8 || ^5 || ^6 || ^7"
+                "symfony/console": "^4.4.8 || ^5 || ^6 || ^7 || ^8",
+                "symfony/event-dispatcher": "^4.4.8 || ^5 || ^6 || ^7 || ^8",
+                "symfony/finder": "^4.4.8 || ^5 || ^6 || ^7 || ^8"
             },
             "require-dev": {
                 "composer-runtime-api": "^2.0",
@@ -818,9 +818,9 @@
             "description": "Initialize Symfony Console commands from annotated command class methods.",
             "support": {
                 "issues": "https://github.com/consolidation/annotated-command/issues",
-                "source": "https://github.com/consolidation/annotated-command/tree/4.10.4"
+                "source": "https://github.com/consolidation/annotated-command/tree/4.10.5"
             },
-            "time": "2025-11-14T22:57:49+00:00"
+            "time": "2026-03-29T00:50:52+00:00"
         },
         {
             "name": "consolidation/config",
@@ -934,22 +934,22 @@
         },
         {
             "name": "consolidation/log",
-            "version": "3.1.1",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/log.git",
-                "reference": "c1a87a94c01957697ec347fd67404d7f0030d1aa"
+                "reference": "a0c85d40ca18c22c93fdf78d7e8115cd438ccfe6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/log/zipball/c1a87a94c01957697ec347fd67404d7f0030d1aa",
-                "reference": "c1a87a94c01957697ec347fd67404d7f0030d1aa",
+                "url": "https://api.github.com/repos/consolidation/log/zipball/a0c85d40ca18c22c93fdf78d7e8115cd438ccfe6",
+                "reference": "a0c85d40ca18c22c93fdf78d7e8115cd438ccfe6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0.0",
                 "psr/log": "^3",
-                "symfony/console": "^5 || ^6 || ^7"
+                "symfony/console": "^5 || ^6 || ^7 || ^8"
             },
             "require-dev": {
                 "phpunit/phpunit": "^7.5.20 || ^8 || ^9",
@@ -980,36 +980,36 @@
             "description": "Improved Psr-3 / Psr\\Log logger based on Symfony Console components.",
             "support": {
                 "issues": "https://github.com/consolidation/log/issues",
-                "source": "https://github.com/consolidation/log/tree/3.1.1"
+                "source": "https://github.com/consolidation/log/tree/3.1.2"
             },
-            "time": "2025-11-14T21:11:00+00:00"
+            "time": "2026-03-28T23:36:49+00:00"
         },
         {
             "name": "consolidation/output-formatters",
-            "version": "4.7.0",
+            "version": "4.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/output-formatters.git",
-                "reference": "dfc464c4d4a47594cac5eac01ce265e04b70cb94"
+                "reference": "a112df9a74854c8438b33b334ed619fa43edf31a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/dfc464c4d4a47594cac5eac01ce265e04b70cb94",
-                "reference": "dfc464c4d4a47594cac5eac01ce265e04b70cb94",
+                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/a112df9a74854c8438b33b334ed619fa43edf31a",
+                "reference": "a112df9a74854c8438b33b334ed619fa43edf31a",
                 "shasum": ""
             },
             "require": {
                 "dflydev/dot-access-data": "^1.1.0 || ^2 || ^3",
                 "php": ">=7.1.3",
-                "symfony/console": "^4 || ^5 || ^6 || ^7",
-                "symfony/finder": "^4 || ^5 || ^6 || ^7"
+                "symfony/console": "^4 || ^5 || ^6 || ^7 || ^8",
+                "symfony/finder": "^4 || ^5 || ^6 || ^7 || ^8"
             },
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.4.2",
                 "phpunit/phpunit": "^7 || ^8 || ^9",
                 "squizlabs/php_codesniffer": "^3",
-                "symfony/var-dumper": "^4 || ^5 || ^6 || ^7",
-                "symfony/yaml": "^4 || ^5 || ^6 || ^7",
+                "symfony/var-dumper": "^4 || ^5 || ^6 || ^7 || ^8",
+                "symfony/yaml": "^4 || ^5 || ^6 || ^7 || ^8",
                 "yoast/phpunit-polyfills": "^1"
             },
             "suggest": {
@@ -1034,9 +1034,9 @@
             "description": "Format text by applying transformations provided by plug-in formatters.",
             "support": {
                 "issues": "https://github.com/consolidation/output-formatters/issues",
-                "source": "https://github.com/consolidation/output-formatters/tree/4.7.0"
+                "source": "https://github.com/consolidation/output-formatters/tree/4.7.1"
             },
-            "time": "2025-11-14T21:06:10+00:00"
+            "time": "2026-03-28T23:34:39+00:00"
         },
         {
             "name": "consolidation/robo",
@@ -1168,29 +1168,29 @@
         },
         {
             "name": "consolidation/site-alias",
-            "version": "4.1.2",
+            "version": "4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/site-alias.git",
-                "reference": "d92058201fc8475a33fb9a2b80ffe5c89472f5af"
+                "reference": "7e1364aec7be0be23bb45799045fd9838a93f2ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/site-alias/zipball/d92058201fc8475a33fb9a2b80ffe5c89472f5af",
-                "reference": "d92058201fc8475a33fb9a2b80ffe5c89472f5af",
+                "url": "https://api.github.com/repos/consolidation/site-alias/zipball/7e1364aec7be0be23bb45799045fd9838a93f2ad",
+                "reference": "7e1364aec7be0be23bb45799045fd9838a93f2ad",
                 "shasum": ""
             },
             "require": {
                 "consolidation/config": "^1.2.1 || ^2 || ^3",
                 "php": ">=7.4",
-                "symfony/filesystem": "^5.4 || ^6 || ^7",
-                "symfony/finder": "^5 || ^6 || ^7"
+                "symfony/filesystem": "^5.4 || ^6 || ^7 || ^8",
+                "symfony/finder": "^5 || ^6 || ^7 || ^8"
             },
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.4.2",
                 "phpunit/phpunit": ">=7",
                 "squizlabs/php_codesniffer": "^3",
-                "symfony/var-dumper": "^4",
+                "symfony/var-dumper": "^4 || ^5 || ^6 || ^7 || ^8",
                 "yoast/phpunit-polyfills": "^0.2.0"
             },
             "type": "library",
@@ -1221,9 +1221,9 @@
             "description": "Manage alias records for local and remote sites.",
             "support": {
                 "issues": "https://github.com/consolidation/site-alias/issues",
-                "source": "https://github.com/consolidation/site-alias/tree/4.1.2"
+                "source": "https://github.com/consolidation/site-alias/tree/4.1.3"
             },
-            "time": "2025-11-14T21:08:14+00:00"
+            "time": "2026-03-28T23:34:58+00:00"
         },
         {
             "name": "consolidation/site-process",
@@ -1852,17 +1852,17 @@
         },
         {
             "name": "drupal/advanced_search",
-            "version": "2.4.1",
+            "version": "2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/advanced_search.git",
-                "reference": "2.4.1"
+                "reference": "2.4.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/advanced_search-2.4.1.zip",
-                "reference": "2.4.1",
-                "shasum": "9ed4b1428eeb5c3ffca07396b084c71c7458ef57"
+                "url": "https://ftp.drupal.org/files/projects/advanced_search-2.4.2.zip",
+                "reference": "2.4.2",
+                "shasum": "c33c86cbbcbaa0ecc97e9feb7137bc760fa2440a"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10 || ^11",
@@ -1882,8 +1882,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.4.1",
-                    "datestamp": "1774546639",
+                    "version": "2.4.2",
+                    "datestamp": "1774961377",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2382,17 +2382,17 @@
         },
         {
             "name": "drupal/citation_select",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/citation_select.git",
-                "reference": "2.1.0"
+                "reference": "2.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/citation_select-2.1.0.zip",
-                "reference": "2.1.0",
-                "shasum": "43fa775fd9832b86ba3c604bb4081379f4545077"
+                "url": "https://ftp.drupal.org/files/projects/citation_select-2.1.1.zip",
+                "reference": "2.1.1",
+                "shasum": "aa9cc34e135356ebf4d5b7ea3c70f31174b2f727"
             },
             "require": {
                 "adci/full-name-parser": "^0.2.4",
@@ -2404,8 +2404,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.0",
-                    "datestamp": "1774284684",
+                    "version": "2.1.1",
+                    "datestamp": "1774634511",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -4769,17 +4769,17 @@
         },
         {
             "name": "drupal/islandora_mirador",
-            "version": "2.4.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/islandora_mirador.git",
-                "reference": "2.4.0"
+                "reference": "2.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/islandora_mirador-2.4.0.zip",
-                "reference": "2.4.0",
-                "shasum": "ba01f6d00d0dd5ed120c935ff438d87cb0220d54"
+                "url": "https://ftp.drupal.org/files/projects/islandora_mirador-2.4.1.zip",
+                "reference": "2.4.1",
+                "shasum": "a978b49f463cfeebcdbd8538993b563b80a31a70"
             },
             "require": {
                 "drupal/core": "^10 || ^11",
@@ -4797,8 +4797,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.4.0",
-                    "datestamp": "1774034991",
+                    "version": "2.4.1",
+                    "datestamp": "1774961150",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7327,17 +7327,17 @@
         },
         {
             "name": "drupal/views_data_export",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_data_export.git",
-                "reference": "8.x-1.8"
+                "reference": "8.x-1.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_data_export-8.x-1.8.zip",
-                "reference": "8.x-1.8",
-                "shasum": "4a82d6defc226f208193fe3632253db2a2113608"
+                "url": "https://ftp.drupal.org/files/projects/views_data_export-8.x-1.9.zip",
+                "reference": "8.x-1.9",
+                "shasum": "b9692e81431e2aff1672b51467227d848c91f6b3"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11",
@@ -7355,8 +7355,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.8",
-                    "datestamp": "1761320258",
+                    "version": "8.x-1.9",
+                    "datestamp": "1774617979",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7871,16 +7871,16 @@
         },
         {
             "name": "firebase/php-jwt",
-            "version": "v7.0.3",
+            "version": "v7.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "28aa0694bcfdfa5e2959c394d5a1ee7a5083629e"
+                "reference": "e41f1bd7dbe3c5455c3f72d4338cfeb083b71931"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/28aa0694bcfdfa5e2959c394d5a1ee7a5083629e",
-                "reference": "28aa0694bcfdfa5e2959c394d5a1ee7a5083629e",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/e41f1bd7dbe3c5455c3f72d4338cfeb083b71931",
+                "reference": "e41f1bd7dbe3c5455c3f72d4338cfeb083b71931",
                 "shasum": ""
             },
             "require": {
@@ -7888,6 +7888,7 @@
             },
             "require-dev": {
                 "guzzlehttp/guzzle": "^7.4",
+                "phpfastcache/phpfastcache": "^9.2",
                 "phpspec/prophecy-phpunit": "^2.0",
                 "phpunit/phpunit": "^9.5",
                 "psr/cache": "^2.0||^3.0",
@@ -7928,9 +7929,9 @@
             ],
             "support": {
                 "issues": "https://github.com/firebase/php-jwt/issues",
-                "source": "https://github.com/firebase/php-jwt/tree/v7.0.3"
+                "source": "https://github.com/firebase/php-jwt/tree/v7.0.4"
             },
-            "time": "2026-02-25T22:16:40+00:00"
+            "time": "2026-03-27T21:17:19+00:00"
         },
         {
             "name": "google/recaptcha",
