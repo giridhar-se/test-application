@@ -41,6 +41,7 @@ dependencies:
     - field.field.node.islandora_object.field_ksul_note
     - field.field.node.islandora_object.field_ksul_related_to
     - field.field.node.islandora_object.field_ksul_rights_statement
+    - field.field.node.islandora_object.field_ksul_tracking_code
     - field.field.node.islandora_object.field_language
     - field.field.node.islandora_object.field_lcc_classification
     - field.field.node.islandora_object.field_linked_agent
@@ -182,6 +183,7 @@ hidden:
   field_ksul_note: true
   field_ksul_related_to: true
   field_ksul_rights_statement: true
+  field_ksul_tracking_code: true
   field_language: true
   field_lcc_classification: true
   field_linked_agent: true
