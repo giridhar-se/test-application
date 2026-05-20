@@ -53,4 +53,10 @@ backend_config:
     http_method: AUTO
     commit_within: 1000
     jmx: false
+  optimize: false
+  fallback_multiple: false
+  rows: 10
+  index_single_documents_fallback_count: 10
+  index_empty_text_fields: false
+  suppress_missing_languages: false
   skip_schema_check: false

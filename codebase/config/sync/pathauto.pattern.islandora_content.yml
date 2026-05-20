@@ -7,7 +7,7 @@ dependencies:
 id: islandora_content
 label: 'Islandora Content'
 type: 'canonical_entities:node'
-pattern: 'item/[node:field_member_of]/[node:title]'
+pattern: '/item/[node:field_member_of]/[node:title]'
 selection_criteria:
   c4bf6775-7ef8-4a44-a2a3-1a626f79b9c9:
     id: 'entity_bundle:node'

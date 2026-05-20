@@ -7,7 +7,7 @@ dependencies:
 id: basic_page
 label: 'Basic page'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '/[node:title]'
 selection_criteria:
   866a3e12-6ed8-4af4-90e7-6736a0f29161:
     id: 'entity_bundle:node'
