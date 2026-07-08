@@ -125,28 +125,28 @@ default_options:
 iiif_server: 'https://digital.lib.k-state.edu/cantaloupe/iiif/2'
 manifest_view: iiif_manifest
 viewer_options:
-  fit_to_aspect_ratio: 0
+  fit_to_aspect_ratio: false
   tabIndex: 0
-  debugMode: 0
+  debugMode: false
   debugGridColor: '#437AB2'
   blendTime: 0
-  alwaysBlend: 0
-  autoHideControls: 1
-  immediateRender: 0
+  alwaysBlend: false
+  autoHideControls: true
+  immediateRender: false
   defaultZoomLevel: 0
   opacity: 1
   degrees: 0
-  homeFillsViewer: 0
-  panHorizontal: 0
-  panVertical: 1
-  constrainDuringPan: 0
-  wrapHorizontal: 0
-  wrapVertical: 0
+  homeFillsViewer: false
+  panHorizontal: false
+  panVertical: true
+  constrainDuringPan: false
+  wrapHorizontal: false
+  wrapVertical: false
   minZoomImageRatio: 0.9
   maxZoomPixelRatio: 1.1
   smoothTileEdgesMinZoom: 1.1
-  autoResize: 1
-  preserveImageSizeOnResize: 0
+  autoResize: true
+  preserveImageSizeOnResize: false
   minScrollDeltaTime: 50
   pixelsPerWheelLine: 40
   visibilityRatio: 0.5
@@ -158,41 +158,41 @@ viewer_options:
   springStiffness: 6.5
   animationTime: 1.2
   gestureSettingsMouse:
-    scrollToZoom: 1
-    clickToZoom: 1
-    dblClickToZoom: 0
-    pinchToZoom: 0
-    flickEnabled: 0
+    scrollToZoom: true
+    clickToZoom: true
+    dblClickToZoom: false
+    pinchToZoom: false
+    flickEnabled: false
     flickMinSpeed: 120
     flickMomentum: 0.25
-    pinchRotate: 0
+    pinchRotate: false
   gestureSettingsTouch:
-    scrollToZoom: 0
-    clickToZoom: 0
-    dblClickToZoom: 1
-    pinchToZoom: 1
-    flickEnabled: 1
+    scrollToZoom: false
+    clickToZoom: false
+    dblClickToZoom: true
+    pinchToZoom: true
+    flickEnabled: true
     flickMinSpeed: 120
     flickMomentum: 0.25
-    pinchRotate: 0
+    pinchRotate: false
   gestureSettingsPen:
-    scrollToZoom: 0
-    clickToZoom: 1
-    dblClickToZoom: 0
-    pinchToZoom: 0
-    flickEnabled: 0
+    scrollToZoom: false
+    clickToZoom: true
+    dblClickToZoom: false
+    pinchToZoom: false
+    flickEnabled: false
     flickMinSpeed: 120
     flickMomentum: 0.25
-    pinchRotate: 0
+    pinchRotate: false
   gestureSettingsUnknown:
-    scrollToZoom: 1
-    clickToZoom: 0
-    dblClickToZoom: 1
-    pinchToZoom: 1
-    flickEnabled: 1
+    scrollToZoom: true
+    clickToZoom: false
+    dblClickToZoom: true
+    pinchToZoom: true
+    flickEnabled: true
     flickMinSpeed: 120
     flickMomentum: 0.25
-    pinchRotate: 0
+    pinchRotate: false
   zoomPerClick: 2
   zoomPerScroll: 1.2
   zoomPerSecond: 1
@@ -200,31 +200,31 @@ viewer_options:
   controlsFadeLength: 1500
   maxImageCacheCount: 200
   timeout: 30000
-  useCanvas: 1
+  useCanvas: true
   minPixelRatio: 0.5
-  mouseNavEnabled: 1
+  mouseNavEnabled: true
   sequenceControlAnchor: TOP_LEFT
-  navPrevNextWrap: 0
-  showNavigator: 0
+  navPrevNextWrap: false
+  showNavigator: false
   navigatorPosition: TOP_RIGHT
   navigatorSizeRatio: 0.2
-  navigatorMaintainSizeRatio: 0
+  navigatorMaintainSizeRatio: false
   navigatorAutoResize: 1
-  navigatorAutoFade: 1
-  navigatorRotate: 1
-  showNavigationControl: 1
+  navigatorAutoFade: true
+  navigatorRotate: true
+  showNavigationControl: true
   navigationControlAnchor: TOP_LEFT
-  showZoomControl: 1
-  showHomeControl: 1
-  showFullPageControl: 1
-  showRotationControl: 0
-  preserveViewport: 0
-  preserveOverlays: 0
-  showReferenceStrip: 0
+  showZoomControl: true
+  showHomeControl: true
+  showFullPageControl: true
+  showRotationControl: false
+  preserveViewport: false
+  preserveOverlays: false
+  showReferenceStrip: false
   referenceStripScroll: horizontal
   referenceStripPosition: BOTTOM_LEFT
   referenceStripSizeRatio: 0.2
-  collectionMode: 0
+  collectionMode: false
   collectionRows: 3
   collectionColumns: 0
   collectionLayout: horizontal
