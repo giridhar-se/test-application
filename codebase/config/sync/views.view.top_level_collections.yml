@@ -1544,7 +1544,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: "<p>The Digital Collection provides access to digital resources that uniquely document the history of the university and the state. The collection spans a range of subjects that support the teaching and research needs of the K-State community. It also makes rare or fragile items of broad research value accessible to a greater number of users. Materials included in the collection are books, journal series, manuscripts, photographic images, slides, maps, and posters.</p>\r\n<h2>Browse featured collections</h2>"
+            value: "<p>The Digital Collection provides access to digital resources that uniquely document the history of the university and the state. The collection spans a range of subjects that support the teaching and research needs of the K-State community. It also makes rare or fragile items of broad research value accessible to a greater number of users. Materials included in the collection are books, journal series, manuscripts, photographic images, slides, maps, and posters.</p>\r\n<h2>Browse all collections</h2>"
             format: full_html
           tokenize: false
       display_extenders:
