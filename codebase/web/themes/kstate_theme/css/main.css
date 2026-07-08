@@ -103,7 +103,7 @@ main.ksul {
 }
 
 .homepage-content .view-header h2 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -145,11 +145,12 @@ main.ksul {
 .homepage-content .views-view-responsive-grid__item .views-field-title {
   color: #512888;
   font-weight: 700;
+  text-align: center;
 }
 
 .homepage-content .views-view-responsive-grid__item .views-field-title h3 {
   margin-bottom: 0;
-  padding: 0.5rem 0 0.5rem 0.5rem;
+  padding: 0.5rem 0;
   line-height: 1.15;
 }
 
@@ -332,7 +333,7 @@ footer .footer__media__icons {
   background-image: url("/themes/kstate_theme/img/purple-book-texture.jpg");
   background-size: cover;
   background-position: center;
-  height: 50vh;
+  height: 35vh;
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
